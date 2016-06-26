@@ -1,0 +1,865 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	outline: none !important;
+	margin: 0 ;
+	padding: 0 ;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+section{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	background: #FFD405;
+}
+
+section h1{
+    font-family: 'Lato', sans-serif;
+	font-size: 55px;
+    color: #212b5a;
+    margin-bottom: 50px;
+}
+
+#section-sub{
+	/*width: 1164px;*/
+	overflow: hidden;
+	background-color: #FFD405;
+	margin:0 auto;
+	padding-top: 45px;
+	text-align: center;
+	padding-bottom: 65px;
+}
+
+.top-bar-main{
+	width: 100%;
+	background-color: #212b5a;
+}
+
+.top-bar{
+	background-color: #212b5a;
+}
+
+.top-bar h4{
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	color: #FFD405;
+	font-weight: 600;
+	float: right;
+	margin: 7px 0px;
+}
+
+.bg-img{
+	background: url(images/slide.jpg) no-repeat center  ;
+	background-size: cover;
+	/*height: 800px;*/
+	text-align: center;
+}
+
+.overlay-opacity{
+	background: rgba(33,43,90,0.6) no-repeat center;
+	background-size: cover;
+	/*height: 823px;*/
+	padding-top: 220px;
+	padding-bottom: 150px;
+}
+
+.overlay-opacity h1{
+	font-size: 82px;
+	color: #FFD405;
+	font-family: 'Lato', sans-serif;
+}
+
+.overlay-opacity h2{
+	font-family: 'Lato', sans-serif;
+	font-size: 45px;
+	color: #FFF;
+	margin-top: 20px;
+}
+
+.book-now-btn{
+	width: 260px;
+	height: 75px;
+	background: none;
+	outline:none;
+	border: 1px solid #FFD405;
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 75px 0px 0px 50px;
+	transition: all 0.5s ease;
+}
+
+.book-now-btn:hover{
+	background-color: #FFD405;
+	transition: all 0.5s ease;
+	color: #212b5a;
+}
+
+.become-a-driver{
+	width: 290px;
+	height: 75px;
+	background-color: #FFD405;
+	color: #212b5a;
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	color: #212b5a;
+	border:none;
+	outline: none;
+	text-transform: uppercase;
+	margin-left:20px;
+	transition: all 0.5s;
+}
+
+.become-a-driver:hover{
+	background-color: #212b5a;
+	color: #FFD405;
+	transition: all 0.5s;
+}
+
+.services{
+	/*width: 100%;*/
+	/*background-color: #fff;*/
+	/*text-align: center;*/
+	/*border-radius:10px; */
+}
+
+.services-feature-img1{
+	width: 370px;
+	height: 260px;
+	background: url(images/service1.jpg) no-repeat center;
+}
+
+.services-feature-img2{
+	width: 370px;
+	height: 260px;
+	background: url(images/service2.jpg) no-repeat center;
+}
+
+.services-feature-img3{
+	width: 370px;
+	height: 260px;
+	background: url(images/service3.jpg) no-repeat center;
+}
+
+.services-overlay-opacity{
+	width: 100%;
+	height: 100%;
+	/*background: rgba(0, 0, 0, 0.53);*/
+	background: rgba(33, 43, 90, 0.53);
+	transition: all 0.3s;
+    padding-top: 135px;
+}
+
+.services-overlay-opacity:hover{
+	/*background: rgba(0,0,0,.75);	*/
+	background: rgba(33, 43, 90, 0.85);
+	transition: all 0.3s;
+	padding-top: 100px;
+}
+
+.services-text{
+	font-family: 'Lato', sans-serif;
+	font-size: 32px;
+	color: #fff;
+	position: absolute;
+	margin: 13px 0px 0px 15px;
+	transition: all 0.5s ease;
+}
+
+.services-overlay-opacity:hover .services-text{
+	color: #FFD405;
+	transition: all 0.5s ease;
+}
+
+.services-text-para{
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    padding: 55px 0px 0px 10px;
+    /*display: none;*/
+	transition: all 0.5s ease;
+} 
+
+
+.overlay-opacity-call-us{
+	background: rgba(33,43,90,0.6) no-repeat center;
+	background-size: cover;
+	height:365px;
+	padding-top:100px;
+}
+
+.call-us-img{
+	background: url(images/call_us.jpg) no-repeat center;
+	background-size: cover;
+	height: 365px;
+}
+
+.call-us{
+	width: 100%;
+	/*height: 300px;*/
+	/*background-color: #fff;*/
+	background-color: #f9f9f9;
+}
+
+.call-us-sub{
+	/*width: 1164px;*/
+	/*height: 500px;*/
+	/*background-color: #fff;*/
+	background-color: #f9f9f9;
+	margin: 0 auto;
+	text-align: center;
+    /*padding-bottom: 75px;*/
+    /*padding-top: 109px;*/
+}
+
+.call-us-sub h1{
+	font-family: 'Lato', sans-serif;
+	font-size: 4em;
+	color: #FFD405;
+    /*margin-top: 75px;*/
+}
+
+.call-us-sub h2{
+	font-family: 'Lato', sans-serif;
+	font-size: 6em;
+	color: #fff;
+}
+
+.call-us-side-img{
+    background-color: red;
+    margin: 0 auto;
+    /*width: 1164px;*/
+}
+
+
+.price{
+	width: 100%;
+	/*background: red;*/
+}
+
+
+.footer-img{
+	/*width: 2050px;*/
+	height: 462px;
+	background-image: url(images/footer-img.png);
+	background-repeat: repeat-x;
+	
+}
+
+footer{
+	width: 100%;
+	/*height: 100px;*/
+	background-color: #212b5a;
+}
+
+.footer-sub{
+	background-color: #212b5a;
+	margin:0 auto;
+	padding-top: 45px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.footer-sub p{
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	color: #fff;
+	margin-top: 20px;
+}
+
+.social-icons{
+	width: 200px;
+	height: 50px;
+	background-color: red;
+}
+
+#icon{
+	color: #212b5a;
+    position: relative;
+    top: 25%;
+    font-size: 27px;
+}
+
+.sqr-box{
+	width: 50px;
+	height: 50px;
+	background-color: #f5f5f5;
+	border-radius: 50px;
+	/*float: right;*/
+	margin-left: 15px;
+	text-align: center;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.sqr-box:hover{
+	background-color: #ffd405;
+	transition: all 0.5s;
+	transition: all 0.5s ease;
+}
+
+.pattern-taxi{
+	width: 100%;
+	height: 40px;
+	background-image: url(images/pattern_taxi.png);
+	background-repeat: repeat-x;
+}
+
+
+/**************************** Booking **********************/
+
+.booking-pg{
+	background-color:#fff;
+	margin-top: 15px;
+}
+
+.booking{
+	/*height: 900px;*/
+	/*background-color: green;*/
+	/*padding-top: 170px;
+	padding-right: 15%;
+	padding-left: 15%;*/
+	padding:170px 0 80px 0;
+}
+
+.booking h1{
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	color: #212b5a;
+	text-transform: uppercase;
+}
+
+.booking-form{
+	width: 100%;
+	/*height: 900px;*/
+    background: rgba(33, 43, 90, 0.09);
+	/*margin:0 auto;*/
+    text-align: center;
+	border: 1px solid #FFD405;
+    padding: 50px 0px 50px 0px;
+    margin-top: 10%;
+    /*padding-left: 23%; */
+	box-shadow: 0px 3px 0px -1px #ffd405;
+}
+
+.booking-form h3{
+	font-family: 'Lato', sans-serif;
+	font-size: 22px;
+	color: #212b5a;
+	margin-bottom: 20px;
+    margin-top: 45px;
+	text-transform: uppercase;
+}
+
+/*.booking-form-para{
+	font-family:'Lato', sans-serif;
+	font-size: 15px;
+	color: #212b5a;
+	margin-bottom: 10px;
+}*/
+
+.fields{
+	width: 70%;
+	height: 35px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	outline: none;
+	padding-left:10px;
+	font-size: 15px;
+	font-family: 'Lato', sans-serif; 
+	color: #212b5a;
+    border-radius: 3px;
+}
+
+.booking-ride-btn{
+    width: 165px;
+    height: 50px;
+    background-color: #FFD405;
+    margin: 15px 10px 0px 0px;
+    font-family: 'Lato',sans-serif;
+    font-size: 18px;
+    color: #212b5a;
+    border:none;
+    outline: none;
+	transition: all 0.5s;
+	text-transform: uppercase;
+}
+
+.booking-ride-btn:hover{
+	background-color: #212b5a;
+	color: #fff;
+	transition: all 0.5s;
+}
+
+
+
+hr{
+	width: 100%;
+    height: 5px;
+    border: 1px solid #ffd405;
+    background-color: #ffd405;
+    margin: -50px 0px 0px 0px;
+}
+
+/*.no-of-passenger{
+	outline: none;
+	width: 60px;
+	height: 30px;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+}*/
+
+
+/**************************** Booking end **********************/
+
+/**************************** Drive **********************/
+
+.driver{
+	background: url(images/driver.jpg) no-repeat center;
+	background-size: cover;
+	/*height: 838px;*/
+	padding-bottom: 100px;
+}
+
+.side-h1{
+	font-family: 'Lato', sans-serif;
+	font-size: 75px;
+	font-weight: 100;
+	color: #fff;
+	margin-top: 60px;
+}
+
+.side-p{
+	font-family: 'Lato', sans-serif;
+	font-size: 17px;
+	font-weight: 100;
+	color: #fff;
+	margin-top: 40px;
+	line-height: 1.3;
+}
+
+
+.form{
+	width: 75%;
+	/*height: 600px;*/
+	background-color: rgba(255,255,255,0.7);
+	margin:0 auto;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    border-radius: 3px;
+}
+
+.form h2{
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	color: #212b5a;
+	text-transform: uppercase;
+}
+
+.form-input{
+	width: 75%;
+	height: 35px;
+	margin-top: 15px;
+	border-radius: 3px;
+	border: 1px solid #ccc; 
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	outline: none;
+    padding-left: 10px;
+}
+
+.form-btn{
+	width: 75%;
+	height: 35px;
+	background-color: #212b5a;
+	border: none;
+	margin-top:20px;
+	font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #FFD405;
+    border-radius: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.form-btn:hover{
+	background-color: #314084;
+	transition: all 0.2s ease;
+}
+
+.para-container{
+	width: 75%;
+	/*background-color: red;*/
+	margin:0 auto 15px auto;
+}
+
+.para-container p{
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+	color: #212b5a;
+	margin-top: 20px;
+	line-height: 1.2;
+}
+
+.link-account{
+	margin-top: 20px;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	color: #212b5a;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+.link-account:hover{
+	color: #212b5a;
+	text-decoration: none;
+}
+
+
+
+/**************************** Driver end **********************/
+
+#logo{
+	background: url(images/taxi_logo2.png) no-repeat;
+	width: 192px;
+	height: 53px;
+	display: inline-block;
+    margin: 5px 0px 0px 0px;
+    float: left;
+}
+
+.navbar-fixed {
+	width: 100%;
+    top: 0;
+  	position: fixed;
+    transition: all 0.5s ease;
+}
+
+#nav-bar{
+	width: 100%;
+	background-color: #fff;
+	z-index: 9999;
+    box-shadow: 0px 3px 7px -3px rgba(0, 0, 0, 0.21);	
+}
+
+.nav-menu{
+	margin:0 auto;
+}
+
+.nav-menu ul{
+	margin: 15px 0px 0px 0px;
+	float: right;
+}
+
+.nav-menu ul li{
+	list-style: none;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.nav-menu ul li a{
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+	color: #212b5a;
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+}
+
+.nav-menu ul li a:hover{
+	color: #FFD405;
+	transition: all 0.3s ease;
+	border-bottom: 4px solid #FFD405;
+}
+
+.toggle-div{
+	display: none;
+}
+
+.account-btn{
+	width: 100px;
+	height: 30px;
+	background-color: #212b5a;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	color: #212b5a;
+	border: none;
+	margin: 0;
+	padding: 0; 
+	background-color: #ffd405;
+	transition: all 0.3s;
+	text-transform: none;
+}
+
+.account-btn:hover{
+	outline: none;
+	border: none;
+	border-radius: 0px;
+    transition: all 0.3s;
+    background-color: #212b5a;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 992px){ /******* media query 992px ********/ 
+	
+.toggle-div{
+	width: 100%;
+	height: 58px;
+	/*background-color: red;*/
+	margin: 0;
+	display: block;
+}
+
+.toggle-btn{
+	float: right;
+	margin-top: 13px;
+	cursor: pointer;
+}
+
+#nav-bar{
+	width: 100%;
+	position: static;
+	z-index: 9999;
+    box-shadow: 0px 3px 7px -3px rgba(0, 0, 0, 0.21) !important;
+}
+
+.nav-menu{
+	margin-left: -65%;
+	display: none; 
+	text-align: center;
+}
+
+.nav-menu-expended{
+	display: block;
+}
+
+.nav-menu ul{
+	margin: 15px 0px 0px 0px;
+	float: none;
+}
+
+.nav-menu ul li{
+	list-style: none;
+	display:block;
+	margin-left: 20px;
+	margin-bottom: 20px
+}
+
+/*.nav-menu ul li a{
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+	color: #4F4F4F;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+}
+
+.nav-menu ul li a:hover{
+	color: #FFD405;
+	transition: all 0.3s ease;
+	border-bottom: 4px solid #FFD405;
+}
+*/
+
+.form{
+	width: 100%;
+}
+
+
+.call-us-sub h1{
+	font-family: 'Lato', sans-serif;
+	font-size: 3em;
+	color: #FFD405;
+}
+
+.call-us-sub h2{
+	font-family: 'Lato', sans-serif;
+	font-size: 4em;
+}
+
+.services-text{
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	color: #fff;
+	position: absolute;
+	margin: 0px 0px 0px 15px;
+	transition: all 0.5s ease;
+}
+
+} /******* media query 992px  end ********/
+
+
+@media screen and (max-width: 768px){ /******* media query 768px ********/
+
+.top-bar h4{
+	float: left;
+}
+
+.form{
+	width: 100%;
+}
+
+.side-h1{
+	font-family: 'Lato', sans-serif;
+	font-size: 60px;
+	font-weight: 100;
+	color: #fff;
+	margin-top: 60px;
+}
+
+.overlay-opacity h1 {
+    font-size: 50px;
+    color: #FFD405;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay-opacity h2{
+	font-family: 'Lato', sans-serif;
+	font-size: 35px;
+	color: #FFF;
+	margin-top: 20px;
+}
+
+.call-us-img{
+	background: url(images/call_us.jpg) no-repeat center;
+	background-size: cover;
+	height: auto;
+	text-align: -webkit-center;
+}
+
+.overlay-opacity-call-us{
+	background: rgba(33,43,90,0.6) no-repeat center;
+	background-size: cover;
+	height: auto;
+	padding-top:100px;
+}
+
+
+
+
+
+
+.book-now-btn{
+	width: 220px;
+	height: 75px;
+	background: none;
+	outline:none;
+	border: 1px solid #FFD405;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 75px 0px 0px 0px;
+	transition: all 0.5s ease;
+}
+
+.book-now-btn:hover{
+	background-color: #FFD405;
+	transition: all 0.5s ease;
+	color: #212b5a;
+}
+
+.become-a-driver{
+	width: 220px;
+	height: 75px;
+	background-color: #FFD405;
+	color: #212b5a;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	color: #212b5a;
+	border:none;
+	outline: none;
+	text-transform: uppercase;
+	margin-left: 0px;
+	margin-top: 15px; 
+	transition: all 0.5s;
+}
+
+.become-a-driver:hover{
+	background-color: #212b5a;
+	color: #FFD405;
+	transition: all 0.5s;
+}
+
+}/******* media query 768px end ********/
+
+
+@media screen and (max-width: 480px){ /******* media query 480px ********/
+
+.side-h1{
+	font-family: 'Lato', sans-serif;
+	font-size: 45px;
+	font-weight: 100;
+	color: #fff;
+	margin-top: 60px;
+}
+
+.overlay-opacity h1 {
+    font-size: 40px;
+    color: #FFD405;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.services-text{
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	color: #fff;
+	position: absolute;
+	margin: 0px 0px 0px 15px;
+	transition: all 0.5s ease;
+}
+
+.services-overlay-opacity:hover .services-text{
+	color: #FFD405;
+	transition: all 0.5s ease;
+}
+
+.services-text-para{
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    padding: 55px 0px 0px 10px;
+    /*display: none;*/
+	transition: all 0.5s ease;
+} 
+
+}/******* media query 480px end ********/
+
+
+@media screen and (max-width: 320px) { /******* media query 320px ********/
+
+.overlay-opacity h1 {
+    font-size: 40px;
+    color: #FFD405;
+    font-family: 'Lato', sans-serif;
+} 
+
+
+
+
+}/******* media query 320px end ********/
+
+
+
