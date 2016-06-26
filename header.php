@@ -37,18 +37,22 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+
 <script>
-webshims.setOptions('forms-ext', {types: 'date'});
-webshims.polyfill('forms forms-ext');
-$.webshims.formcfg = {
-en: {
-    dFormat: '-',
-    dateSigns: '-',
-    patterns: {
-        d: "dd-mm-yy"
-    }
-}
-};
+
+	webshims.setOptions('forms-ext', {types: 'date'});
+	webshims.polyfill('forms forms-ext');
+	$.webshims.formcfg = {
+	en: {
+	    dFormat: '-',
+	    dateSigns: '-',
+	    patterns: {
+	        d: "dd-mm-yy"
+	    }
+	}
+
+	};
+
 </script>
 
 </head>
@@ -93,8 +97,8 @@ en: {
 								<li><a href="#ss">Services</a></li>
 								<li><a href="#">Price</a></li>
 								<li><a href="#">About Us</a></li>
-								<li><a href="#">Log in</a></li>
-								<li><button class="account-btn">Sign Up</button></li>
+								<!-- <li><a href="#">Log in</a></li> -->
+								<li><button class="account-btn" onclick="location.href='login.php'" >Sign In</button></li>
 							</ul>
 						</div>	
 					</div>

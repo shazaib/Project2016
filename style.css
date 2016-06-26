@@ -18,6 +18,89 @@ body{
 	overflow-x: hidden;
 }
 
+#logo{
+	background: url(images/logo4.png) no-repeat;
+	width: 288px;
+	height: 26px;
+	display: inline-block;
+    margin: 18px 0px 0px 0px;
+    float: left;
+}
+
+.navbar-fixed {
+	width: 100%;
+    top: 0;
+  	position: fixed;
+    transition: all 0.5s ease;
+}
+
+#nav-bar{
+	width: 100%;
+	background-color: #fff;
+	z-index: 9999;
+    box-shadow: 0px 3px 7px -3px rgba(0, 0, 0, 0.21);
+    padding-bottom: 15px;	
+}
+
+.nav-menu{
+	margin:0 auto;
+}
+
+.nav-menu ul{
+	margin: 15px 0px 0px 0px;
+	float: right;
+}
+
+.nav-menu ul li{
+	list-style: none;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.nav-menu ul li a{
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+	color: #000;
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+}
+
+.nav-menu ul li a:hover{
+	color: #FFD405;
+	transition: all 0.3s ease;
+	border-bottom: 4px solid #FFD405;
+}
+
+.toggle-div{
+	display: none;
+}
+
+.account-btn{
+	width: 100px;
+	height: 30px;
+	background-color: #000;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	color: #000;
+	border: none;
+	margin: 0;
+	padding: 0; 
+	background-color: #ffd405;
+	transition: all 0.3s;
+	text-transform: none;
+}
+
+.account-btn:hover{
+	outline: none;
+	border: none;
+	border-radius: 0px;
+    transition: all 0.3s;
+    background-color: #000;
+    color: #fff;
+}
+
 section{
 	width: 100%;
 	height: auto;
@@ -28,7 +111,7 @@ section{
 section h1{
     font-family: 'Lato', sans-serif;
 	font-size: 55px;
-    color: #212b5a;
+    color: #000;
     margin-bottom: 50px;
 }
 
@@ -44,11 +127,11 @@ section h1{
 
 .top-bar-main{
 	width: 100%;
-	background-color: #212b5a;
+	background-color: #000;
 }
 
 .top-bar{
-	background-color: #212b5a;
+	background-color: #000;
 }
 
 .top-bar h4{
@@ -68,7 +151,7 @@ section h1{
 }
 
 .overlay-opacity{
-	background: rgba(33,43,90,0.6) no-repeat center;
+	background: rgba(0,0,0,0.60) no-repeat center;
 	background-size: cover;
 	/*height: 823px;*/
 	padding-top: 220px;
@@ -89,7 +172,7 @@ section h1{
 }
 
 .book-now-btn{
-	width: 260px;
+	width: 255px;
 	height: 75px;
 	background: none;
 	outline:none;
@@ -105,17 +188,17 @@ section h1{
 .book-now-btn:hover{
 	background-color: #FFD405;
 	transition: all 0.5s ease;
-	color: #212b5a;
+	color: #000;
 }
 
 .become-a-driver{
 	width: 290px;
 	height: 75px;
 	background-color: #FFD405;
-	color: #212b5a;
+	color: #000;
 	font-family: 'Lato', sans-serif;
 	font-size: 25px;
-	color: #212b5a;
+	color: #000;
 	border:none;
 	outline: none;
 	text-transform: uppercase;
@@ -124,7 +207,7 @@ section h1{
 }
 
 .become-a-driver:hover{
-	background-color: #212b5a;
+	background-color: #000;
 	color: #FFD405;
 	transition: all 0.5s;
 }
@@ -157,15 +240,13 @@ section h1{
 .services-overlay-opacity{
 	width: 100%;
 	height: 100%;
-	/*background: rgba(0, 0, 0, 0.53);*/
-	background: rgba(33, 43, 90, 0.53);
+	background: rgba(0, 0, 0, 0.60);
 	transition: all 0.3s;
     padding-top: 135px;
 }
 
 .services-overlay-opacity:hover{
-	/*background: rgba(0,0,0,.75);	*/
-	background: rgba(33, 43, 90, 0.85);
+	background: rgba(0,0,0,.75);	
 	transition: all 0.3s;
 	padding-top: 100px;
 }
@@ -196,7 +277,7 @@ section h1{
 
 
 .overlay-opacity-call-us{
-	background: rgba(33,43,90,0.6) no-repeat center;
+	background: rgba(0,0,0,0.60) no-repeat center;
 	background-size: cover;
 	height:365px;
 	padding-top:100px;
@@ -263,11 +344,11 @@ section h1{
 footer{
 	width: 100%;
 	/*height: 100px;*/
-	background-color: #212b5a;
+	background-color: #000;
 }
 
 .footer-sub{
-	background-color: #212b5a;
+	background-color: #000;
 	margin:0 auto;
 	padding-top: 45px;
     padding-bottom: 45px;
@@ -288,7 +369,7 @@ footer{
 }
 
 #icon{
-	color: #212b5a;
+	color: #000;
     position: relative;
     top: 25%;
     font-size: 27px;
@@ -340,36 +421,38 @@ footer{
 .booking h1{
 	font-family: 'Lato', sans-serif;
 	font-size: 25px;
-	color: #212b5a;
+	color: #000;
 	text-transform: uppercase;
 }
 
 .booking-form{
 	width: 100%;
 	/*height: 900px;*/
-    background: rgba(33, 43, 90, 0.09);
-	/*margin:0 auto;*/
+    background: #f3f3f3;
     text-align: center;
-	border: 1px solid #FFD405;
+	/*border: 1px solid #FFD405;*/
     padding: 50px 0px 50px 0px;
     margin-top: 10%;
     /*padding-left: 23%; */
-	box-shadow: 0px 3px 0px -1px #ffd405;
+	/*box-shadow: 0px 3px 0px -1px #ffd405;*/
+	box-shadow: 0px 0px 120px -1px rgba(0,0,0,0.23);
 }
 
 .booking-form h3{
 	font-family: 'Lato', sans-serif;
 	font-size: 22px;
-	color: #212b5a;
-	margin-bottom: 20px;
-    margin-top: 45px;
+	color: #000;
+	/*margin-bottom: 20px;*/
+    /*margin-top: 45px;*/
 	text-transform: uppercase;
+    /*margin-left: 14.5%;*/
+    margin:45px 0px 20px 0px;
 }
 
 /*.booking-form-para{
 	font-family:'Lato', sans-serif;
 	font-size: 15px;
-	color: #212b5a;
+	color: #000;
 	margin-bottom: 10px;
 }*/
 
@@ -382,7 +465,7 @@ footer{
 	padding-left:10px;
 	font-size: 15px;
 	font-family: 'Lato', sans-serif; 
-	color: #212b5a;
+	color: #000;
     border-radius: 3px;
 }
 
@@ -393,7 +476,7 @@ footer{
     margin: 15px 10px 0px 0px;
     font-family: 'Lato',sans-serif;
     font-size: 18px;
-    color: #212b5a;
+    color: #000;
     border:none;
     outline: none;
 	transition: all 0.5s;
@@ -401,19 +484,19 @@ footer{
 }
 
 .booking-ride-btn:hover{
-	background-color: #212b5a;
+	background-color: #000;
 	color: #fff;
 	transition: all 0.5s;
 }
 
 
 
-hr{
-	width: 100%;
-    height: 5px;
-    border: 1px solid #ffd405;
-    background-color: #ffd405;
-    margin: -50px 0px 0px 0px;
+.booking-hr{
+	width: 55%;
+    height: 1px;
+    /*border: 1px solid #ffd405;*/
+    background-color: #a7a7a7;
+    /*margin: -50px 0px 0px 0px;*/
 }
 
 /*.no-of-passenger{
@@ -468,7 +551,7 @@ hr{
 	font-family: 'Lato', sans-serif;
 	font-size: 20px;
 	font-weight: 600;
-	color: #212b5a;
+	color: #000;
 	text-transform: uppercase;
 }
 
@@ -487,7 +570,7 @@ hr{
 .form-btn{
 	width: 75%;
 	height: 35px;
-	background-color: #212b5a;
+	background-color: #000;
 	border: none;
 	margin-top:20px;
 	font-family: 'Lato', sans-serif;
@@ -513,7 +596,7 @@ hr{
 .para-container p{
 	font-family: 'Lato', sans-serif;
 	font-size: 13px;
-	color: #212b5a;
+	color: #000;
 	margin-top: 20px;
 	line-height: 1.2;
 }
@@ -523,101 +606,108 @@ hr{
 	font-family: 'Lato', sans-serif;
 	font-size: 14px;
 	font-weight: 600;
-	color: #212b5a;
+	color: #000;
 	text-transform: uppercase;
 	text-decoration: underline;
 }
 
 .link-account:hover{
-	color: #212b5a;
+	color: #000;
 	text-decoration: none;
 }
-
 
 
 /**************************** Driver end **********************/
 
-#logo{
-	background: url(images/taxi_logo2.png) no-repeat;
-	width: 192px;
-	height: 53px;
-	display: inline-block;
-    margin: 5px 0px 0px 0px;
-    float: left;
-}
 
-.navbar-fixed {
+/**************************** Login  **************************/
+
+.login{
 	width: 100%;
-    top: 0;
-  	position: fixed;
-    transition: all 0.5s ease;
+	/*height: 700px;*/
+	/*background-color: blue;*/
+	margin: 50px 0px 0px 0px;
 }
 
-#nav-bar{
-	width: 100%;
-	background-color: #fff;
-	z-index: 9999;
-    box-shadow: 0px 3px 7px -3px rgba(0, 0, 0, 0.21);	
+.login-form{
+	width: 45%;
+	/*height: 400px;*/
+	background-color: #f3f3f3;
+    box-shadow: 0px 43px 99px -5px rgba(0,0,0,0.21);
+    /*padding-top: 40px;*/
+    /*padding-bottom: 40px;*/
+    padding: 40px 0;
 }
 
-.nav-menu{
-	margin:0 auto;
-}
-
-.nav-menu ul{
-	margin: 15px 0px 0px 0px;
-	float: right;
-}
-
-.nav-menu ul li{
-	list-style: none;
-	display: inline-block;
-	margin-left: 20px;
-}
-
-.nav-menu ul li a{
+.login-h1{
 	font-family: 'Lato', sans-serif;
-	font-size: 12px;
-	color: #212b5a;
-	font-weight: 600;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	text-transform: uppercase;
+	font-size: 35px;
+	color: #000;
+	margin-bottom: 40px;
+    font-weight: 100;
 }
 
-.nav-menu ul li a:hover{
+.login-fields{
+	width: 60%;
+    height: 45px;
+    margin-top: 20px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    /*color: #000;*/
+    /*color: #FFD405;*/
+}
+
+.login-btn{
+	width: 60%;
+	height: 45px;
+	margin-top: 20px;
+	background-color: #000;
+	border: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 17px;
 	color: #FFD405;
-	transition: all 0.3s ease;
-	border-bottom: 4px solid #FFD405;
-}
-
-.toggle-div{
-	display: none;
-}
-
-.account-btn{
-	width: 100px;
-	height: 30px;
-	background-color: #212b5a;
-	font-family: 'Lato', sans-serif;
-	font-size: 14px;
-	color: #212b5a;
-	border: none;
-	margin: 0;
-	padding: 0; 
-	background-color: #ffd405;
-	transition: all 0.3s;
-	text-transform: none;
-}
-
-.account-btn:hover{
+	border-radius: 3px;
+	font-weight: 600;
 	outline: none;
-	border: none;
-	border-radius: 0px;
-    transition: all 0.3s;
-    background-color: #212b5a;
-    color: #fff;
 }
+
+.login-ul{
+	display: block;
+}
+
+.login-hr{
+	width: 45%;
+	height: 1px;
+	background-color: #a7a7a7;
+	border: none;
+    margin: -10px 0px 0px 0px;  
+}
+
+.login-para {
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	color: #000;
+	margin-top: 20px;
+	/*transition: all 0.5s;*/
+	display: inline-block;
+}
+
+.login-para:hover{
+	/*transition: all 0.5s;*/
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+/**************************** Login end **********************/
 
 
 @media screen and (max-width: 992px){ /******* media query 992px ********/ 
@@ -625,7 +715,6 @@ hr{
 .toggle-div{
 	width: 100%;
 	height: 58px;
-	/*background-color: red;*/
 	margin: 0;
 	display: block;
 }
@@ -706,6 +795,18 @@ hr{
 	transition: all 0.5s ease;
 }
 
+.login-form{
+	width: 65%;
+	/*height: 400px;*/
+	background-color: #fff;
+    box-shadow: 0px 43px 99px -5px rgba(0,0,0,0.21);
+    /*padding-top: 40px;*/
+    /*padding-bottom: 40px;*/
+    padding: 40px 0;
+}
+
+
+
 } /******* media query 992px  end ********/
 
 
@@ -748,16 +849,11 @@ hr{
 }
 
 .overlay-opacity-call-us{
-	background: rgba(33,43,90,0.6) no-repeat center;
+	background: rgba(0,0,0,0.6) no-repeat center;
 	background-size: cover;
 	height: auto;
 	padding-top:100px;
 }
-
-
-
-
-
 
 .book-now-btn{
 	width: 220px;
@@ -776,17 +872,17 @@ hr{
 .book-now-btn:hover{
 	background-color: #FFD405;
 	transition: all 0.5s ease;
-	color: #212b5a;
+	color: #000;
 }
 
 .become-a-driver{
 	width: 220px;
 	height: 75px;
 	background-color: #FFD405;
-	color: #212b5a;
+	color: #000;
 	font-family: 'Lato', sans-serif;
 	font-size: 20px;
-	color: #212b5a;
+	color: #000;
 	border:none;
 	outline: none;
 	text-transform: uppercase;
@@ -796,9 +892,19 @@ hr{
 }
 
 .become-a-driver:hover{
-	background-color: #212b5a;
+	background-color: #000;
 	color: #FFD405;
 	transition: all 0.5s;
+}
+
+.login-form{
+	width: 80%;
+	/*height: 400px;*/
+	background-color: #fff;
+    box-shadow: 0px 43px 99px -5px rgba(0,0,0,0.21);
+    /*padding-top: 40px;*/
+    /*padding-bottom: 40px;*/
+    padding: 40px 0;
 }
 
 }/******* media query 768px end ********/
@@ -845,6 +951,16 @@ hr{
 	transition: all 0.5s ease;
 } 
 
+.login-form{
+	width: 100%;
+	/*height: 400px;*/
+	background-color: #fff;
+    box-shadow: 0px 43px 99px -5px rgba(0,0,0,0.21);
+    /*padding-top: 40px;*/
+    /*padding-bottom: 40px;*/
+    padding: 40px 0;
+}
+
 }/******* media query 480px end ********/
 
 
@@ -863,4 +979,3 @@ hr{
 
 
 
-@media screen and (max-width: )

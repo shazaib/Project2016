@@ -29,7 +29,7 @@
 								<option>Social networks</option>
 								<option>Other</option>
 							</select>
-							<button class="form-btn">Submit</button>
+							<button  type="submit" name="" class="form-btn">Submit</button>
 						</form>
 						<div class="para-container">
 							<p>
@@ -37,7 +37,7 @@
 							</p>
 						</div>
 						<h2 style="margin-bottom: 15px;">OR</h2>
-						<a class="link-account" href="#">Already have an account ?</a>
+						<a class="link-account" href="login.php">Already have an account ?</a>
 					</div>
 				</div>
 

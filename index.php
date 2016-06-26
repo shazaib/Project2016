@@ -1,10 +1,10 @@
-<?php include'header.php' ?>
+<?php include'header.php'; ?>
 		
 			<div class="bg-img img-responsive">
 				<div class="overlay-opacity">
 					<h1>WE ARE ALWAYS THERE AT YOUR SERVICE</h1>
 					<h2>WE'LL TAKE YOU WHEREVER YOU NEED</h2>
-					<button class="book-now-btn" type="button" name="" onclick="location.href='booking.php'">Book your ride</button>
+					<button class="book-now-btn" type="button" name="" onclick="location.href='booking.php'">Signup to ride</button>
 
 					<button class="become-a-driver" type="button" name="" onclick="location.href='driver.php'">Become a driver</button>
 					
@@ -101,23 +101,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4 col-md-4 col-sm-4 ">
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
-								<h1>This is heading</h1>
+								
 							</div>
 						</div>	
 
@@ -125,8 +109,7 @@
 				</div>
 
 
-
 			<!------------------------ Price end ---------------------->
 
 
-	<?php include'footer.php' ?>
+	<?php include'footer.php'; ?>
