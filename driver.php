@@ -1,6 +1,5 @@
 <?php include'header.php'; ?>
 
-
 	<div class="driver">
 		
 		<div class="container">
@@ -13,23 +12,23 @@
 				</div>
 				<div class="col-md-6 col-sm-6" style="padding-top:40px;">
 					<div class="form" style="text-align:center;">
-						<form method="post" >
+						<form method="post">
 							<h2>Create An Account</h2>
-							<input style="margin-top:25px;" class="form-input" type="text" name="" placeholder="First Name"><br>
-							<input class="form-input" type="text" name="" placeholder="Last Name"><br>
-							<input class="form-input" type="text" name="" placeholder="Email"><br>
-							<input class="form-input" type="text" name="" placeholder="Password"><br>
-							<input class="form-input" type="text" name="" placeholder="City"><br>
-							<input class="form-input" type="text" name="" placeholder="Phone"><br>
-							<select class="form-input">
-								<option>Where did you hear about us?</option>
-								<option>Friends & Family</option>
-								<option>Email</option>
-								<option>TV Ad</option>
-								<option>Social networks</option>
-								<option>Other</option>
+							<input style="margin-top:25px;" class="form-input" type="text" name="fname" placeholder="First Name"><br>
+							<input class="form-input" type="text" name="lname" placeholder="Last Name"><br>
+							<input class="form-input" type="text" name="email" placeholder="Email"><br>
+							<input class="form-input" type="password" name="pass" placeholder="Password"><br>
+							<input class="form-input" type="text" name="city" placeholder="City"><br>
+							<input class="form-input" type="text" name="phone" placeholder="Phone"><br>
+							<select class="form-input" name="select_driver">
+								<option value="none">Where did you hear about us?</option>
+								<option value="Friends & Family">Friends & Family</option>
+								<option value="Email">Email</option>
+								<option value="TV Ad">TV Ad</option>
+								<option value="Social networks">Social networks</option>
+								<option value="Other">Other</option>
 							</select>
-							<button  type="submit" name="" class="form-btn">Submit</button>
+							<button  type="submit" name="btn_submit" class="form-btn">Submit</button>
 						</form>
 						<div class="para-container">
 							<p>
@@ -49,4 +48,37 @@
 	</div>
 
 
+
+<!--Start Drvier PHP Coding -->
+
+
+<?php  if (isset($_POST['btn_submit'])) {
+
+	include ('includes/config.php');
+
+
+	$fname=$_POST['fname'];
+	$lname=$_POST['lname'];
+	$email=$_POST['email'];
+	$pass=$_POST['pass'];
+	$city=$_POST['city'];
+	$phone=$_POST['phone'];
+	$select_driver=$_POST['select_driver'];
+
+
+	$sql="INSERT into tb_driver VALUES('','$fname','$lname','$email','$pass','$city','$phone','$select_driver')";
+	$obj=new config();
+	$obj->dbconfig($sql);
+	echo "<script> alert('Inserted') </script>";							
+
+
+
+							} ?>
+
+
+<!--End Drvier PHP Coding -->
+
 <?php include'footer.php'; ?>
+
+
+

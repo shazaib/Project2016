@@ -20,7 +20,7 @@
 
 				else {
 
-					die("404 Wrong".$conn-> error);
+					die("404 Wrong ".$conn-> error);
 				}
 			}
 		}	
