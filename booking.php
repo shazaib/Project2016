@@ -42,7 +42,6 @@
 								<input class="fields" type="text" name="" placeholder="Address">
 								<br>
 								
-
 								<button class="booking-ride-btn" type="submit" name="">create</button>
 								<button class="booking-ride-btn" type="reset" name="">Reset</button>
 							</form>

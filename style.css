@@ -580,10 +580,11 @@ footer{
     font-weight: 600;
     text-transform: uppercase;
     transition: all 0.2s ease;
+    outline: none;
 }
 
 .form-btn:hover{
-	background-color: #314084;
+	/*background-color: #314084;*/
 	transition: all 0.2s ease;
 }
 
