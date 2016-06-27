@@ -54,8 +54,6 @@
 
 <?php  if (isset($_POST['btn_submit'])) {
 
-	include ('includes/config.php');
-
 
 	$fname=$_POST['fname'];
 	$lname=$_POST['lname'];

@@ -3,6 +3,8 @@
 <head>
 	<title></title>
 
+<?php include ('includes/config.php'); ?>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
