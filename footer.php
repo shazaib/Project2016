@@ -2,8 +2,13 @@
 			 		<div class="footer-sub">
 			 			<div class="row">
 			 				<div class="container">
+
+				 				<div class="col-md-12 col-sm-12">
+									<!-- <div style="float:none;" id="logo"></div> -->
+									<img src="images/taxi_logo4.png">
+								</div>			 				
+			 					
 			 					<div class="col-md-12 col-sm-12" >
-			 						<!-- <div class="social-icons"> -->
 				 						<div class="sqr-box">
 				 							<i id="icon" class="fa fa-google-plus" aria-hidden="true"></i>
 				 						</div>
@@ -13,7 +18,7 @@
 				 						<div class="sqr-box">
 				 							<i id="icon" class="fa fa-facebook" aria-hidden="true"></i>
 				 						</div>
-			 						<!-- </div> -->
+			 						
 			 					</div>
 
 								<div class="col-md-12 col-sm-12">

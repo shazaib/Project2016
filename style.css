@@ -19,15 +19,15 @@ body{
 }
 
 #logo{
-	background: url(images/logo4.png) no-repeat;
-	width: 288px;
-	height: 26px;
+	background: url(images/taxi_logo3.png) no-repeat;
+	width: 222px;
+	height: 53px;
 	display: inline-block;
-    margin: 18px 0px 0px 0px;
+    margin: 3px 0px 0px 0px;
     float: left;
 }
 
-.navbar-fixed {
+.navbar-fixed{
 	width: 100%;
     top: 0;
   	position: fixed;
@@ -39,7 +39,7 @@ body{
 	background-color: #fff;
 	z-index: 9999;
     box-shadow: 0px 3px 7px -3px rgba(0, 0, 0, 0.21);
-    padding-bottom: 15px;	
+    padding-bottom: 4px;	
 }
 
 .nav-menu{
