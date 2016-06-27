@@ -73,6 +73,10 @@
 		<div class="footer-img"></div>
 	</div>
 
+<div>
+</div>
+
+
 <?php include 'footer.php' ?>
 
 
