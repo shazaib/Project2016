@@ -39,7 +39,7 @@
 								<br>
 								<input class="fields" type="text" name="" placeholder="City">
 								<br>
-								<input class="fields" type="date" name="" placeholder="Address">
+								<input class="fields" type="text" name="" placeholder="Address">
 								<br>
 								<!-- <input class="fields" type="time" name="" > -->
 								<!-- <br> -->
