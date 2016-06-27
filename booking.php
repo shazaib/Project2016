@@ -41,25 +41,7 @@
 								<br>
 								<input class="fields" type="text" name="" placeholder="Address">
 								<br>
-								<!-- <input class="fields" type="time" name="" > -->
-								<!-- <br> -->
-								<!-- <input class="fields" type="" name=""> -->
-								<!-- <select class="fields" name="">
-									<option value="TaxiType">-- Taxi Type --</option>
-									<option value="Town Taxi 2 seater">Town Taxi 2 seater</option>
-									<option value="Town Taxi 4 seater">Town Taxi 4 seater</option>
-								</select> -->	
-
-								<br>
-								<!-- <input class="fields" type="text" name=""> -->
-								<!-- <select class="fields" name="">
-									<option>-- No of Passenger --</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-								</select>
-								<br> -->
+								
 
 								<button class="booking-ride-btn" type="submit" name="">create</button>
 								<button class="booking-ride-btn" type="reset" name="">Reset</button>
