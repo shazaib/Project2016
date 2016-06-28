@@ -57,6 +57,11 @@
 
 </script>
 
+
+<!--parallax Scrolling-->
+<script src="jquery.stellar.min.js"></script>  
+
+
 </head>
 
 <body>
@@ -151,3 +156,11 @@ $(document).ready(function() {
 });
 
 </script>
+
+<!-------------------Parallax Scrolling---------------------->
+
+	<script>
+	    jQuery.stellar();
+	</script>
+
+<!-------------------Parallax Scrolling end---------------------->

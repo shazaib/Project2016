@@ -1,7 +1,7 @@
 <?php include'header.php'; ?>
 		
 			<div class="bg-img img-responsive">
-				<div class="overlay-opacity">
+				<div class="overlay-opacity" data-stellar-background-ratio="0.3">
 					<h1>WE ARE ALWAYS THERE AT YOUR SERVICE</h1>
 					<h2>WE'LL TAKE YOU WHEREVER YOU NEED</h2>
 					<button class="book-now-btn" type="button" name="" onclick="location.href='booking.php'">Signup to ride</button>
@@ -113,3 +113,12 @@
 
 
 	<?php include'footer.php'; ?>
+
+
+<!-------------------Parallax Scrolling---------------------->
+
+	<script>
+	    jQuery.stellar();
+	</script>
+
+<!-------------------Parallax Scrolling end---------------------->
