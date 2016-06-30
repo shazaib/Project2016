@@ -120,7 +120,7 @@
 		
 	jQuery("#toggle-icon").click(function() {
 		
-		jQuery(".nav-menu").slideToggle(400, function() {
+		jQuery(".nav-menu").slideToggle(300, function() {
 			jQuery(this).toggleClass("nav-menu-expended").css('display', '');
 		});;
 	});
