@@ -150,7 +150,6 @@ section h1{
 	max-height: 100%;
 	text-align: center;
 	overflow: auto;
-	
 }
 
 .overlay-opacity{
@@ -202,7 +201,7 @@ section h1{
 	font-family: 'Lato', sans-serif;
 	font-size: 25px;
 	color: #000;
-	border:none;
+	border:1px solid #FFD405;
 	outline: none;
 	text-transform: uppercase;
 	margin-left:20px;
@@ -213,6 +212,7 @@ section h1{
 	background-color: #000;
 	color: #FFD405;
 	transition: all 0.5s;
+	border: 1px solid #000;
 }
 
 .services{
@@ -706,11 +706,6 @@ footer{
 }
 
 
-
-
-
-
-
 /**************************** Login end **********************/
 
 
@@ -887,7 +882,7 @@ footer{
 	font-family: 'Lato', sans-serif;
 	font-size: 20px;
 	color: #000;
-	border:none;
+	border:1px solid #FFD405;
 	outline: none;
 	text-transform: uppercase;
 	margin-left: 0px;
@@ -899,6 +894,7 @@ footer{
 	background-color: #000;
 	color: #FFD405;
 	transition: all 0.5s;
+	border:1px solid #000;
 }
 
 .login-form{

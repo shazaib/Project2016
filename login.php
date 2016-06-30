@@ -69,7 +69,6 @@
 						<a href="#"><p class="login-para">Forgot your password</p></a><br>
 						<!-- <p style="text-decoration:none;" class="login-para">Don't have an account &nbsp <a href="#">SignUp</a></p> -->
 						
-
 					</div>
 				</div>
 			</div>
@@ -78,15 +77,4 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-	
 

@@ -13,7 +13,7 @@
 
 	<!------------------------ section ---------------------->
 	 
-	 <section id="ss">
+	<section id="ss">
 	 	<div id="section-sub">
 	 	<h1>Services</h1> 
 	 	<div class="row">
@@ -54,7 +54,7 @@
 
 			</div><!-- section sub -->
 
-	 		</section>
+	</section>
 
 			<!------------------section end------------------>
 
@@ -95,7 +95,7 @@
 			<!------------------------ call us end ---------------------->
 
 
-			<!------------------------ Price ---------------------->
+			<!------------------------ Price ---------------------------->
 
 				<div class="price">
 					<div class="container">
