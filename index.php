@@ -101,30 +101,22 @@
 					<div class="container">
 						<div class="row">
 							<h1 class="price-h1">our price</h1>
-
 							<div class="col-md-4 col-sm-4">
 								<img class="img-responsive" src="images/standard_class.png">
 								<h1 style="font-size:25px;" class="price-h1">Standard Class</h1>
-								
 								<h1 style="font-size:35px; font-weight:600; color:#ffd405; padding:0;" class="price-h1">Rs 150<span style="font-size:20px; color:#000;">/KM</span></h1>
 							</div>
-							
-
-
 							<div class="col-md-4 col-sm-4">
 								<img class="img-responsive" src="images/business_class.png">	
 								<h1 style="font-size:25px;" class="price-h1">Business Class</h1>
-								
 								<h1 style="font-size:35px; font-weight:600; color:#ffd405; padding:0;" class="price-h1">Rs 300<span style="font-size:20px; color:#000;">/KM</span></h1>
 							</div>
 							<div class="col-md-4 col-sm-4">
 								<img class="img-responsive" src="images/minivan_class.png">	
 								<h1 style="font-size:25px;" class="price-h1">Minivan Class</h1>
-								
 								<h1 style="font-size:35px; font-weight:600; color:#ffd405; padding:0;" class="price-h1">Rs 1000<span style="font-size:20px; color:#000;">/KM</span></h1>
 							</div>
 						</div>	
-
 					</div>
 				</div>
 
