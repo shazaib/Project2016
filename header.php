@@ -58,38 +58,40 @@
 
 </script>
 
+
+<!--parallax Scrolling-->
+<script src="jquery.stellar.min.js"></script>  
+
+
 </head>
 
 <body>
 		<div class="top-bar-main">
 			<div class="container" >
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6">
-					<div class="top-bar">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="top-bar">
+							<h4 style="float:left;"><i style="color:#fff; font-size: 30px;" class="fa fa-home" aria-hidden="true"></i> &nbsp <span style="color:#fff;">Address</span> &nbsp&nbsp <span style="font-size:18px;">8901 MARMORA ROAD, GLASGOW, D04 89GR.</span></h4>
+						</div>
+					</div>
 
-						<h4 style="float:left;"><i style="color:#fff; font-size: 30px;" class="fa fa-home" aria-hidden="true"></i> &nbsp <span style="color:#fff;">Address</span>&nbsp&nbsp <span style="font-size:18px;">8901 MARMORA ROAD, GLASGOW, D04 89GR.</span></h4>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="top-bar">
+							<h4><i style="color:#fff; font-size: 30px;" class="fa fa-mobile" aria-hidden="true"></i>&nbsp <span style="color:#fff;">Call Us 24 HOUR</span> &nbsp&nbsp <span style="font-size:20px;">800 666 7777</span> </h4>
+						</div>
 					</div>
 				</div>
-
-				<div class="col-lg-6 col-md-6 col-sm-6">
-					<div class="top-bar">
-						<h4><i style="color:#fff; font-size: 30px;" class="fa fa-mobile" aria-hidden="true"></i>&nbsp <span style="color:#fff;">Call Us 24 HOUR</span>&nbsp&nbsp <span style="font-size:20px;">800 666 7777</span> </h4>
-					</div>
-				</div>
-			</div>
 			</div>
 		</div>
 
 
-	<div id="nav-bar">				
+		<div id="nav-bar">				
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 						<div id="logo"></div>
 					</div>
 						
-						<!-- <div class="container">
-						<div class="row"> -->
 					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
 						<div class="toggle-div">
 							<img id="toggle-icon" class="toggle-btn" src="images/menu-icon3.png">
@@ -106,12 +108,10 @@
 						</div>	
 					</div>
 
-					<!-- </div>
-					</div> -->
-
 				</div>
 			</div>
-	</div>
+		</div>
+
 	
 <!-------------------Toggle Navigation---------------->
 
@@ -121,7 +121,7 @@
 		
 	jQuery("#toggle-icon").click(function() {
 		
-		jQuery(".nav-menu").slideToggle(400, function() {
+		jQuery(".nav-menu").slideToggle(300, function() {
 			jQuery(this).toggleClass("nav-menu-expended").css('display', '');
 		});;
 	});
@@ -132,6 +132,7 @@
 
 
 <!-------------------Toggle Navigation end---------------------->
+
 
 <script type="text/javascript">
 
@@ -152,3 +153,4 @@ $(document).ready(function() {
 });
 
 </script>
+

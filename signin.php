@@ -46,7 +46,7 @@
 	<div class="container" style="text-align:-webkit-center;">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
-			<img src="images/logo4.png" style="margin-top:100px;">
+			<img src="images/taxi_logo3.png" style="margin-top:100px;">
 				<div class="login">
 					<div class="login-form">
 						
@@ -68,8 +68,6 @@
 						<hr class="login-hr" style="margin-top:20px;">
 						<a href="#"><p class="login-para">Forgot your password</p></a><br>
 						<!-- <p style="text-decoration:none;" class="login-para">Don't have an account &nbsp <a href="#">SignUp</a></p> -->
-						
-
 					</div>
 				</div>
 			</div>
@@ -78,15 +76,4 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-	
 

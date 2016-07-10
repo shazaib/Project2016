@@ -1,7 +1,7 @@
 <?php include'header.php'; ?>
 		
 			<div class="bg-img img-responsive">
-				<div class="overlay-opacity">
+				<div class="overlay-opacity" data-stellar-background-ratio="0.3">
 					<h1>WE ARE ALWAYS THERE AT YOUR SERVICE</h1>
 					<h2>WE'LL TAKE YOU WHEREVER YOU NEED</h2>
 					<button class="book-now-btn" type="button" name="" onclick="location.href='booking.php'">Signup to ride</button>
@@ -13,7 +13,7 @@
 
 	<!------------------------ section ---------------------->
 	 
-	 <section id="ss">
+	<section id="ss">
 	 	<div id="section-sub">
 	 	<h1>Services</h1> 
 	 	<div class="row">
@@ -54,7 +54,7 @@
 
 			</div><!-- section sub -->
 
-	 		</section>
+	</section>
 
 			<!------------------section end------------------>
 
@@ -95,16 +95,28 @@
 			<!------------------------ call us end ---------------------->
 
 
-			<!------------------------ Price ---------------------->
+			<!------------------------ Price ---------------------------->
 
 				<div class="price">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-4 col-md-4 col-sm-4 ">
-								
+							<h1 class="price-h1">our price</h1>
+							<div class="col-md-4 col-sm-4">
+								<img class="img-responsive" src="images/standard_class.png">
+								<h1 style="font-size:25px;" class="price-h1">Standard Class</h1>
+								<h1 style="font-size:35px; font-weight:600; color:#ffd405; padding:0;" class="price-h1">Rs 150<span style="font-size:20px; color:#000;">/KM</span></h1>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<img class="img-responsive" src="images/business_class.png">	
+								<h1 style="font-size:25px;" class="price-h1">Business Class</h1>
+								<h1 style="font-size:35px; font-weight:600; color:#ffd405; padding:0;" class="price-h1">Rs 300<span style="font-size:20px; color:#000;">/KM</span></h1>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<img class="img-responsive" src="images/minivan_class.png">	
+								<h1 style="font-size:25px;" class="price-h1">Minivan Class</h1>
+								<h1 style="font-size:35px; font-weight:600; color:#ffd405; padding:0;" class="price-h1">Rs 1000<span style="font-size:20px; color:#000;">/KM</span></h1>
 							</div>
 						</div>	
-
 					</div>
 				</div>
 
@@ -113,3 +125,12 @@
 
 
 	<?php include'footer.php'; ?>
+
+
+<!-------------------Parallax Scrolling---------------------->
+
+	<script>
+	    jQuery.stellar();
+	</script>
+
+<!-------------------Parallax Scrolling end---------------------->

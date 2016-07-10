@@ -53,6 +53,7 @@
 <?php  
 
 
+<<<<<<< HEAD
 if (isset($_POST['btn_submit'])) {
 
 
@@ -92,6 +93,9 @@ if (isset($_POST['btn_submit'])) {
 </div> ';
 */
 ?>
+=======
+
+>>>>>>> 64f9406a757deda1af7b786f4a32ad12eb58224f
 
 <!--End Drvier PHP Coding -->
 
