@@ -14,7 +14,7 @@
 					<div class="form" style="text-align:center;">
 						<form method="post">
 							<h2>Create An Account</h2>
-							<input style="margin-top:25px;" class="form-input" type="text" name="fname" placeholder="First Name"><br>
+							<input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name"><br>
 							<input class="form-input" type="text" name="lname" placeholder="Last Name"><br>
 							<input class="form-input" type="text" name="email" placeholder="Email"><br>
 							<input class="form-input" type="password" name="pass" placeholder="Password"><br>
@@ -28,7 +28,7 @@
 								<option value="Social networks">Social networks</option>
 								<option value="Other">Other</option>
 							</select>
-							<button  type="submit" name="btn_submit" class="form-btn" data-toggle="modal" data-target="#myModal">Submit</button>
+							<button  type="submit" name="btn_submit" class="form-btn" data-toggle="modal" data-target="myModal">Submit</button>
 						</form>
 						<div class="para-container">
 							<p>
@@ -47,12 +47,13 @@
 		</div>
 	</div>
 
-
-
 <!--Start Drvier PHP Coding -->
 
 
-<?php  if (isset($_POST['btn_submit'])) {
+<?php  
+
+
+if (isset($_POST['btn_submit'])) {
 
 
 	$fname=$_POST['fname'];
@@ -66,11 +67,13 @@
 
 	$sql="INSERT into tb_driver VALUES('','$fname','$lname','$email','$pass','$city','$phone','$select_driver')";
 	$obj=new config();
-	$obj->dbconfig($sql);						
+	$obj->dbconfig($sql);
 
-	 } ?>
 
-	<div class="modal fade" id="myModal" role="dialog">
+						} ?>
+
+
+<?php /* echo '<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -86,18 +89,10 @@
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-
-						<?php } ?>
-
+</div> ';
+*/
+?>
 
 <!--End Drvier PHP Coding -->
 
 <?php include'footer.php'; ?>
-
-
-

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2016 at 01:05 PM
+-- Generation Time: Jul 10, 2016 at 08:29 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.35
 
@@ -80,22 +80,24 @@ CREATE TABLE `tb_driver` (
 --
 
 INSERT INTO `tb_driver` (`id`, `firstname`, `lastname`, `email`, `password`, `city`, `phone`, `select_driver`) VALUES
-(5, 'shahzaib', 'khan', 'shezy@flicker.com', 'asas', 'karchi', 321485369, 'Other'),
-(6, 'sas', 'asas', 'asas', 'asas', 'assa', 0, 'TV Ad'),
-(7, 'sas', 'asas', 'asas', 'asas', 'assa', 0, 'TV Ad'),
-(8, '', '', '', '', '', 0, 'none'),
-(9, 'asas', 'asasas', 'asassa', 'sas', 'asas', 0, 'Social networks'),
-(10, 'shahzaib', 'khan', 'shazaib.shez11@yahoo.com', 'sss', 'karachi', 314, 'Other'),
-(11, 'shahzaib', 'khan', 'shazaib.shez11@yahoo.com', 'asasas', 'karachi', 314, 'Other'),
-(12, 'shahzaib', 'khan', 'shazaib.shez11@yahoo.com', '12345', 'karachi', 31422, 'Other'),
-(13, 'shahzaib', 'khan', 'shazaib.shez11@yahoo.com', 'sss', 'karachi', 31422444, 'Other'),
-(14, 'shahzaib', 'khan', 'shazaib.shez11@yahoo.com', '333', 'karachi', 31422444, 'Other'),
-(15, 'shahzaib', 'khan', 'shazaib.shez11@yahoo.com', '0000', 'karachi', 31422444, 'Other'),
-(16, 'shahzaib', 'khan', 'shazaib.shez11@yahoo.com', '0000', 'karachi', 31422444, 'Other'),
-(17, '', '', '', '', '', 0, 'none'),
-(18, 'sdda', 'sdsa', 'asdasd', 'asdasd', 'asdasd', 0, 'Email'),
-(19, 'sdda', 'sdsa', 'asdasd', '000', 'asdasd', 0, 'Email'),
-(20, 'sdda', 'sdsa', 'asdasd', '000', 'asdasd', 0, 'Email');
+(20, 'zzxzx', '', '', '', '', 0, 'none'),
+(21, '', 'as', '', '', '', 0, 'none'),
+(22, '', '', '', '', '', 0, 'none'),
+(23, '', '', '', '', '', 0, 'none'),
+(24, '', '', '', '', '', 0, 'none'),
+(25, '', '', '', '', '', 0, 'none'),
+(26, '', '', '', '', '', 0, 'none'),
+(27, '', '', '', '', '', 0, 'none'),
+(28, '', '', '', '', '', 0, 'none'),
+(29, '', '', '', '', '', 0, 'none'),
+(30, '', '', '', '', '', 0, 'none'),
+(31, '', '', '', '', '', 0, 'none'),
+(32, '', '', '', '', '', 0, 'none'),
+(33, '', '', '', '', '', 0, 'none'),
+(34, '', '', '', '', '', 0, 'none'),
+(35, '', '', '', '', '', 0, 'none'),
+(36, '', '', '', '', '', 0, 'none'),
+(37, '', '', '', '', '', 0, 'none');
 
 --
 -- Indexes for dumped tables
@@ -115,7 +117,7 @@ ALTER TABLE `tb_driver`
 -- AUTO_INCREMENT for table `tb_driver`
 --
 ALTER TABLE `tb_driver`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
