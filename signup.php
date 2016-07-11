@@ -17,7 +17,7 @@
 								
 								<!-- <input class="fields" type="text" name="" placeholder="Person">  -->
 								<select class="fields">
-									<option>-- Person --</option>
+									<option selected disabled >-- Person --</option>
 									<option>Mr</option>
 									<option>Mrs</option>
 									<option>Ms</option>

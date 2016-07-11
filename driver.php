@@ -14,7 +14,7 @@
 					<div class="form" style="text-align:center;">
 						<form method="post">
 							<h2>Create An Account</h2>
-							<input style="margin-top:25px;" class="form-input" type="text" name="fname" placeholder="First Name"><br>
+							<input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name"><br>
 							<input class="form-input" type="text" name="lname" placeholder="Last Name"><br>
 							<input class="form-input" type="text" name="email" placeholder="Email"><br>
 							<input class="form-input" type="password" name="pass" placeholder="Password"><br>
@@ -28,7 +28,7 @@
 								<option value="Social networks">Social networks</option>
 								<option value="Other">Other</option>
 							</select>
-							<button  type="submit" name="btn_submit" class="form-btn" data-toggle="modal" data-target="#myModal">Submit</button>
+							<button  type="submit" name="btn_submit" class="form-btn" data-toggle="modal" data-target="myModal">Submit</button>
 						</form>
 						<div class="para-container">
 							<p>
@@ -47,16 +47,56 @@
 		</div>
 	</div>
 
-
-
 <!--Start Drvier PHP Coding -->
 
 
+<?php  
 
+
+<<<<<<< HEAD
+if (isset($_POST['btn_submit'])) {
+
+
+	$fname=$_POST['fname'];
+	$lname=$_POST['lname'];
+	$email=$_POST['email'];
+	$pass=$_POST['pass'];
+	$city=$_POST['city'];
+	$phone=$_POST['phone'];
+	$select_driver=$_POST['select_driver'];
+
+
+	$sql="INSERT into tb_driver VALUES('','$fname','$lname','$email','$pass','$city','$phone','$select_driver')";
+	$obj=new config();
+	$obj->dbconfig($sql);
+
+
+						} ?>
+
+
+<?php /* echo '<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Driver has been added ..!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Thankyou Mr Driver</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> ';
+*/
+?>
+=======
+
+>>>>>>> 64f9406a757deda1af7b786f4a32ad12eb58224f
 
 <!--End Drvier PHP Coding -->
 
 <?php include'footer.php'; ?>
-
-
-
