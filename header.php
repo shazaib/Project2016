@@ -102,7 +102,7 @@
 								<li><a href="#">Price</a></li>
 								<li><a href="#">About Us</a></li>
 								<!-- <li><a href="#">Log in</a></li> -->
-								<li><button class="account-btn" onclick="location.href='login.php'" >Sign In</button></li>
+								<li><button class="account-btn" onclick="location.href='signin.php'" >Sign In</button></li>
 							</ul>
 						</div>	
 					</div>
