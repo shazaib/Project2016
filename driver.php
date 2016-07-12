@@ -12,7 +12,7 @@
 				</div>
 				<div class="col-md-6 col-sm-6" style="padding-top:40px;">
 					<div class="form" style="text-align:center;">
-						<form method="post">
+						<form method="post" id="idform">
 							<h2>Create An Account</h2>
 							<input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name"><br>
 							<input class="form-input" type="text" name="lname" placeholder="Last Name"><br>
@@ -28,7 +28,9 @@
 								<option value="Social networks">Social networks</option>
 								<option value="Other">Other</option>
 							</select>
-							<button  type="submit" name="btn_submit" class="form-btn" data-toggle="modal" data-target="myModal">Submit</button>
+						<button type="submit" name="btn_submit" class="form-btn">Submit</button>
+						</br>
+						<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
 						</form>
 						<div class="para-container">
 							<p>
@@ -49,6 +51,28 @@
 
 <!--Start Drvier PHP Coding -->
 
+<!-- Modal -->
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Driver Has been registered</h4>
+        </div>
+        <div class="modal-body">
+          <p>Hy! Mr.<?php echo $_POST['fname']; ?> Welcome to our site , I hope u drive taxi to make money Thank You .. </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <?php  
 
@@ -68,29 +92,33 @@ if (isset($_POST['btn_submit'])) {
 	$obj=new config();
 	$obj->dbconfig($sql);
 
+	echo '<script> document.getElementById("btn").click(); </script>';
 
-						} ?>
+						}
 
-
-<?php /* echo '<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Driver has been added ..!</h4>
-        </div>
-        <div class="modal-body">
-          <p>Thankyou Mr Driver</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> ';
-*/
 ?>
+
+
 <!--End Drvier PHP Coding -->
 
 <?php include'footer.php'; ?>
+
+
+<!--<SCRIPT TYPE="text/javascript">
+
+$(function() {
+	$("#idform").submit(function(e) {
+	e.preventDefault();	
+
+   	$form = $(this);
+
+   	$.post(document.location.url, $(this).serialize(), function(data) {
+   	$feedback=$("<div>").html(data).find(".popup").hide();
+
+   	$form.prepend($feedback);
+   	$feedback.fadeIn(1500);
+
+   });
+   });
+});
+</SCRIPT>-->
