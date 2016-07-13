@@ -14,13 +14,16 @@
 					<div class="form" style="text-align:center;">
 						<form method="post">
 							<h2>Create An Account</h2>
-							<input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name"><br>
-							<input class="form-input" type="text" name="lname" placeholder="Last Name"><br>
-							<input class="form-input" type="text" name="email" placeholder="Email"><br>
-							<input class="form-input" type="password" name="pass" placeholder="Password"><br>
-							<input class="form-input" type="text" name="city" placeholder="City"><br>
-							<input class="form-input" type="text" name="phone" placeholder="Phone"><br>
-							<select class="form-input" name="select_driver">
+							<input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name" pattern="[A-Za-z]{1,15}" required><br>
+							<input class="form-input" type="text" name="lname" placeholder="Last Name" 
+							pattern="[A-Za-z]{1,15}" required><br>
+							<input class="form-input" type="text" name="email" placeholder="Email" 
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br>
+							<input class="form-input" type="password" name="pass" placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required ><br>
+							<input class="form-input" type="text" name="city" placeholder="City"
+							pattern="[A-Za-z]{20}" required><br>
+							<input class="form-input" type="text" name="phone" placeholder="Phone"  pattern="03[0-9]{2}-([0-9])(?!\1{6})[0-9]{6}" required><br>
+							<select class="form-input" name="select_driver" required>
 								<option value="none">Where did you hear about us?</option>
 								<option value="Friends & Family">Friends & Family</option>
 								<option value="Email">Email</option>
