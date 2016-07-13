@@ -36,7 +36,7 @@
 							</p>
 						</div>
 						<h2 style="margin-bottom: 15px;">OR</h2>
-						<a class="link-account" href="login.php">Already have an account ?</a>
+						<a class="link-account" href="signin.php">Already have an account ?</a>
 					</div>
 				</div>
 
@@ -72,7 +72,8 @@ if (isset($_POST['btn_submit'])) {
 						} ?>
 
 
-<?php /* echo '<div class="modal fade" id="myModal" role="dialog">
+<?php 
+/* echo '<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">

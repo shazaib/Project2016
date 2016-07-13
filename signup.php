@@ -8,14 +8,12 @@
 						<h1 style="font-size:50px; text-align:center; margin-top: -90px;">SignUp</h1>
 						<div class="booking-form">
 							
-
 							<form>
 
 								<h1 style="font-size:25px; text-align:center;">Sign up to ride</h1>
 								<hr class="booking-hr">
 								<h3>Personal Details</h3>
 								
-								<!-- <input class="fields" type="text" name="" placeholder="Person">  -->
 								<select class="fields">
 									<option selected disabled >-- Person --</option>
 									<option>Mr</option>

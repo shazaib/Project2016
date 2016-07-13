@@ -335,6 +335,8 @@ section h1{
 	width: 100%;
 	/*text-align: center;*/
 	text-align:-webkit-center;
+	text-align:-moz-center;
+	text-align:-ms-center;
 	/*background: red;*/
 	padding-bottom: 80px;
 }
