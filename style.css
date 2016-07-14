@@ -39,7 +39,8 @@ body{
 	background-color: #fff;
 	z-index: 9999;
     box-shadow: 0px 3px 7px -3px rgba(0, 0, 0, 0.21);
-    padding-bottom: 4px;	
+    padding-bottom: 4px;
+    transition: all 0.5s ease;	
 }
 
 .nav-menu{
@@ -110,7 +111,7 @@ section{
 
 section h1{
     font-family: 'Lato', sans-serif;
-	font-size: 55px;
+	font-size: 35px;
     color: #000;
     margin-bottom: 50px;
     text-transform: uppercase;
@@ -119,7 +120,7 @@ section h1{
 #section-sub{
 	/*width: 1164px;*/
 	overflow: hidden;
-	background-color: #FFD405;
+	background-color: #f8f8f8;
 	margin:0 auto;
 	padding-top: 45px;
 	text-align: center;
@@ -151,6 +152,7 @@ section h1{
 	max-height: 100%;
 	text-align: center;
 	overflow: auto;
+	background-attachment: fixed;
 }
 
 .overlay-opacity{
@@ -217,13 +219,17 @@ section h1{
 }
 
 .services{
-	/*width: 100%;*/
-	/*background-color: #fff;*/
-	/*text-align: center;*/
-	/*border-radius:10px; */
+	width: 100%;
+	transition: all 0.5s ease;
+	padding: 20px 10px; 
 }
 
-.services-feature-img1{
+.services:hover{
+	box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.19);
+	transition: all 0.5s ease;
+}
+
+/*.services-feature-img1{
 	width: 370px;
 	height: 260px;
 	background: url(images/service1.jpg) no-repeat center;
@@ -253,9 +259,31 @@ section h1{
 	background: rgba(0,0,0,.75);	
 	transition: all 0.3s;
 	padding-top: 100px;
-}
+}*/
 
 .services-text{
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	color: #000;
+	/*font-weight: 600;*/
+	/*position: absolute;*/
+	margin-top: 20px;
+	text-transform: uppercase;
+	/*text-align: center;*/
+	/*transition: all 0.5s ease;*/
+}
+
+.services-text-para{
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+    color: #585757;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+	transition: all 0.5s ease;
+} 
+
+/*.services-text{
 	font-family: 'Lato', sans-serif;
 	font-size: 32px;
 	color: #fff;
@@ -275,10 +303,9 @@ section h1{
     color: #fff;
     font-weight: 600;
     padding: 55px 0px 0px 10px;
-    /*display: none;*/
 	transition: all 0.5s ease;
 } 
-
+*/
 
 .overlay-opacity-call-us{
 	background: rgba(0,0,0,0.60) no-repeat center;
@@ -291,6 +318,8 @@ section h1{
 	background: url(images/call_us.jpg) no-repeat center;
 	background-size: cover;
 	height: 365px;
+	background-attachment: fixed;
+
 }
 
 .call-us{
@@ -343,7 +372,7 @@ section h1{
 
 .price-h1{
 	font-family: 'Lato', sans-serif;
-	font-size: 55px;
+	font-size: 35px;
 	color: #000;
 	text-transform: uppercase;
 	padding: 50px 0;
@@ -799,14 +828,14 @@ footer{
 	font-size: 4em;
 }
 
-.services-text{
+/*.services-text{
 	font-family: 'Lato', sans-serif;
 	font-size: 25px;
 	color: #fff;
 	position: absolute;
 	margin: 0px 0px 0px 15px;
 	transition: all 0.5s ease;
-}
+}*/
 
 .login-form{
 	width: 65%;
@@ -825,12 +854,24 @@ footer{
 
 @media screen and (max-width: 768px){ /******* media query 768px ********/
 
+
+
+
 .top-bar h4{
 	float: left;
 }
 
 .form{
 	width: 100%;
+}
+
+.services{
+	width: 100%;
+	/*background-color: red;*/
+	/*border: 1px solid #000;*/
+	/*text-align: center;*/
+	/*border-radius:10px; */
+	margin: 0px 0px 20px 0px; 
 }
 
 .side-h1{
@@ -859,6 +900,7 @@ footer{
 	background-size: cover;
 	height: auto;
 	text-align: -webkit-center;
+	background-attachment: fixed;
 }
 
 .overlay-opacity-call-us{
@@ -941,7 +983,7 @@ footer{
 }
 
 
-.services-text{
+/*.services-text{
 	font-family: 'Lato', sans-serif;
 	font-size: 25px;
 	color: #fff;
@@ -961,9 +1003,8 @@ footer{
     color: #fff;
     font-weight: 600;
     padding: 55px 0px 0px 10px;
-    /*display: none;*/
 	transition: all 0.5s ease;
-} 
+} */
 
 .login-form{
 	width: 100%;

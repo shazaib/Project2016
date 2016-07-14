@@ -42,7 +42,7 @@
 <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
 
 <!--parallax Scrolling-->
-<script src="js/jquery.stellar.min.js"></script>  
+	<script src="js/jquery.stellar.min.js"></script>  
 
 <script>
 
@@ -98,7 +98,7 @@
 						<div  class="nav-menu">
 							<ul>
 								<li><a href="index.php">Home</a></li>
-								<li><a href="#ss">Services</a></li>
+								<li><a href="map.php">Find Your Route</a></li>
 								<li><a href="#">Price</a></li>
 								<li><a href="#">About Us</a></li>
 								<!-- <li><a href="#">Log in</a></li> -->
@@ -138,9 +138,7 @@
 $(document).ready(function() {
   
   $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
+      
       console.log($(window).scrollTop())
     if ($(window).scrollTop() > 40) {
       $('#nav-bar').addClass('navbar-fixed');
@@ -148,8 +146,12 @@ $(document).ready(function() {
     if ($(window).scrollTop() < 40) {
       $('#nav-bar').removeClass('navbar-fixed');
     }
+
   });
 });
 
 </script>
 
+<script type="text/javascript">
+	$.stellar();
+</script>

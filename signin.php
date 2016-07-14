@@ -68,12 +68,12 @@
 						<input class="login-fields" type="password" name="" placeholder="Password">
 						<br>
 						
-						<select class="login-fields" name="">
+						<!-- <select class="login-fields" name="">
 							<option>-- Select Account --</option>
 							<option>Rider</option>
 							<option>Driver</option>
 						</select>
-						<br>
+						<br> -->
 					   
 					   <button class="login-btn" type="submit" name="" >SignIn</button>
 						<hr class="login-hr" style="margin-top:20px;">
@@ -83,7 +83,11 @@
 				</div>
 			</div>
 		</div>
+			<img class="img-responsive" src="images/feature_img.png" style="float:right; top:-420px; left:61px; position:relative;">
+			<img class="img-responsive" src="images/feature_img2.png" style="position:relative; top:-185px; left:-247px;">
+
 	</div>
+
 
 </body>
 </html>
