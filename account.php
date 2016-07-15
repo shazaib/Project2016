@@ -164,23 +164,9 @@ table,tr,td{
 					<div class="artical">
 						<div class="artical-header">
 							<h1 class="artical-header-h1">Profile</h1>
+							
+
 						</div>
-
-							<table >
-			
-								<th>Pirce</th>
-								<th>Pirce</th>
-								<th>Pirce</th>
-
-								<tr>
-								<td>Driver</td>
-								<td>Driver</td>
-								<td>Driver</td>
-								</tr>	
-
-							</table>
-
-
 					</div>	
 				</div>
 
