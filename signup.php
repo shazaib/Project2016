@@ -8,19 +8,31 @@
 						<h1 style="font-size:50px; text-align:center; margin-top: -90px;">SignUp</h1>
 						<div class="booking-form">
 							
+<<<<<<< HEAD
 
 							<form method="post" id="form">
+=======
+							<form>
+>>>>>>> 97915bd7202012d477e8351590d0d3003a8bd61c
 
 								<h1 style="font-size:25px; text-align:center;">Sign up to ride</h1>
 								<hr class="booking-hr">
 								<h3>Personal Details</h3>
 								
+<<<<<<< HEAD
 								<!-- <input class="fields" type="text" name="" placeholder="Person">  -->
 								<select name="person" class="fields" required>
 									<option value="" selected disabled>-- Person --</option>
 									<option value="Mr">Mr</option>
 									<option value="Mrs">Mrs</option>
 									<option value="Ms">Ms</option>
+=======
+								<select class="fields">
+									<option selected disabled >-- Person --</option>
+									<option>Mr</option>
+									<option>Mrs</option>
+									<option>Ms</option>
+>>>>>>> 97915bd7202012d477e8351590d0d3003a8bd61c
 								</select>
 								<br>
 								<input class="fields" type="text" name="uname" placeholder="Username" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required>

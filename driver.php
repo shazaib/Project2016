@@ -38,7 +38,7 @@
 							</p>
 						</div>
 						<h2 style="margin-bottom: 15px;">OR</h2>
-						<a class="link-account" href="login.php">Already have an account ?</a>
+						<a class="link-account" href="signin.php">Already have an account ?</a>
 					</div>
 				</div>
 
@@ -95,7 +95,34 @@
 		echo '<script> document.getElementById("btn").click(); </script>';
 
 						}
+<<<<<<< HEAD
 ?>
+=======
+
+//  <<<<<<< HEAD
+// <?php 
+// /* echo '<div class="modal fade" id="myModal" role="dialog">
+//     <div class="modal-dialog modal-sm">
+//       <div class="modal-content">
+//         <div class="modal-header">
+//           <button type="button" class="close" data-dismiss="modal">&times;</button>
+//           <h4 class="modal-title">Driver has been added ..!</h4>
+//         </div>
+//         <div class="modal-body">
+//           <p>Thankyou Mr Driver</p>
+//         </div>
+//         <div class="modal-footer">
+//           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div> ';
+// */
+// =======
+// >>>>>>> bb5a78d31dbbc703def9116c2ba5622f230fac91
+// ?>
+>>>>>>> 97915bd7202012d477e8351590d0d3003a8bd61c
 
 <!--End Drvier PHP Coding -->
 

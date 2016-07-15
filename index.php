@@ -1,7 +1,7 @@
 <?php include'header.php'; ?>
 		
-			<div class="bg-img img-responsive">
-				<div class="overlay-opacity" data-stellar-background-ratio="0.3">
+			<div class="bg-img img-responsive" data-stellar-background-ratio="0.3" >
+				<div class="overlay-opacity" >
 					<h1>WE ARE ALWAYS THERE AT YOUR SERVICE</h1>
 					<h2>WE'LL TAKE YOU WHEREVER YOU NEED</h2>
 					<button class="book-now-btn" type="button" name="" onclick="location.href='signup.php'">Signup to ride</button>
@@ -17,35 +17,47 @@
 	 	<div id="section-sub">
 	 	<h1>Services</h1> 
 	 	<div class="row">
-	 		<div class="container" style="text-align:-webkit-center;">
+	 		<div class="container">
 	 			<div class="col-lg-4 col-md-4 col-sm-4">
 	 				<div class="services">
-		 				<div class="services-feature-img1 img-responsive">
+	 					<img src="images/fast-and-save.png">
+	 					<h2 class="services-text">Fast & Save</h2>
+		 						<p class="services-text-para">Offering door-to-door service with drop-off right at your next destination.
+		 						Offering door-to-door service with drop-off right at your next destination.</p>
+		 				<!-- <div class="services-feature-img1 img-responsive">
 		 					<div class="services-overlay-opacity">
 		 						<h2 class="services-text">Door to Door Service</h2>
 		 						<p class="services-text-para">Offering door-to-door service with drop-off right at your next destination.</p>
 		 					</div>
-		 				</div>	
+		 				</div> -->
 		 			</div>
 	 			</div>
 	 			<div class="col-lg-4 col-md-4 col-sm-4">
 	 				<div class="services">
-	 					<div class="services-feature-img2 img-responsive">
+	 					<img src="images/price.png">
+	 					<h2 class="services-text">Reasonable Price</h2>
+	 					<p class="services-text-para">Offering door-to-door service with drop-off right at your next destination.</p>
+	 					<!-- <div class="services-feature-img2 img-responsive">
 	 						<div class="services-overlay-opacity">
 	 							<h2 class="services-text">Parcel Delivery</h2>
 	 							<p class="services-text-para">Offering door-to-door service with drop-off right at your next destination.</p>
 	 						</div>
-	 					</div>
+	 					</div> -->
 	 				</div>
 	 			</div>
 	 			<div class="col-lg-4 col-md-4 col-sm-4">
 	 				<div class="services">
-		 				<div class="services-feature-img3 img-responsive">
+	 					<img src="images/route.png">
+	 					<!-- <div style="text-align:-webkit-center;"> -->
+	 					<h2 class="services-text">Best Route</h2>
+		 				<!-- </div> -->
+		 				<p class="services-text-para">Offering door-to-door service with drop-off right at your next destination.</p>
+		 				<!-- <div class="services-feature-img3 img-responsive">
 		 					<div class="services-overlay-opacity">
 		 						<h2 class="services-text">Airport Transfer</h2>
 		 						<p class="services-text-para">Offering door-to-door service with drop-off right at your next destination.</p>
 		 					</div>
-		 				</div>
+		 				</div> -->
 		 			</div>
 	 			</div>
 	 		
@@ -60,12 +72,12 @@
 
 			<!------------------------ call us ---------------------->
 
-				<div class="call-us">
+				<div class="call-us" >
 					<div class="call-us-sub">
 						<!-- <div class="row"> -->
 							<!-- <div class="container"> -->
 								<!-- <div class="col-lg-12 col-md-12 col-sm-4 col-xs-2"> -->
-									<div class="call-us-img">
+									<div class="call-us-img" data-stellar-background-ratio="0.3">
 										<div class="overlay-opacity-call-us">
 											<!-- <div class="call-us-side-img"> -->
 												<div class="container">
@@ -128,9 +140,10 @@
 
 
 <!-------------------Parallax Scrolling---------------------->
-
-	<script>
-	    jQuery.stellar();
-	</script>
+	
+	
+	<!-- <script>
+	    $.stellar();
+	</script> -->
 
 <!-------------------Parallax Scrolling end---------------------->
