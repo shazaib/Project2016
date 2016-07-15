@@ -14,6 +14,16 @@
 					<div class="form" style="text-align:center;">
 						<form method="post" id="idform">
 							<h2>Create An Account</h2>
+							<!-- <input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name" pattern="[A-Za-z]{1,15}" required ><br>
+							<input class="form-input" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z]{1,15}" required ><br>
+							<input class="form-input" type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required ><br>
+							<input class="form-input" type="password" name="pass" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  required ><br>
+							<input class="form-input" type="text" name="city" placeholder="City" pattern="[A-Za-z]{20}" required ><br>
+							<input class="form-input" type="text" name="phone" placeholder="Phone" pattern="03[0-9]{2}-([0-9])(?!\1{6})[0-9]{6}" required ><br>
+							<select class="form-input" name="select_driver" required>
+								<option value="none">Where did you hear about us?</option> -->
+
+
 							<input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required><br>
 							<input class="form-input" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required><br>
 							<input class="form-input" type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="eg: online-taxi@gmail.com" required><br>
@@ -32,9 +42,10 @@
 						</br>
 						<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
 						</form>
+
 						<div class="para-container">
 							<p>
-							By proceeding, I agree that Uber or its representatives may contact me by email, phone, or SMS (including by automated means) at the email address or number I provide, including for marketing purposes. I have read and understand the Driver Privacy Statement.
+							By proceeding, I agree that Online Taxi or its representatives may contact me by email, phone, or SMS (including by automated means) at the email address or number I provide, including for marketing purposes. I have read and understand the Driver Privacy Statement.
 							</p>
 						</div>
 						<h2 style="margin-bottom: 15px;">OR</h2>
@@ -95,10 +106,14 @@
 		echo '<script> document.getElementById("btn").click(); </script>';
 
 						}
+<<<<<<< HEAD
  ?>
 
 
 <!--End Drvier PHP Coding -->
+=======
+?>
+>>>>>>> 144881e7858b92220d9acdf5cac020073eba06e8
 
 <?php include'footer.php'; ?>
 

@@ -7,46 +7,53 @@
 					<div class="booking">
 						<h1 style="font-size:50px; text-align:center; margin-top: -90px;">SignUp</h1>
 						<div class="booking-form">
-							
-<<<<<<< HEAD
 
 							<form method="post" id="form">
-=======
-							<form>
->>>>>>> 97915bd7202012d477e8351590d0d3003a8bd61c
 
 								<h1 style="font-size:25px; text-align:center;">Sign up to ride</h1>
 								<hr class="booking-hr">
 								<h3>Personal Details</h3>
 								
-<<<<<<< HEAD
-								<!-- <input class="fields" type="text" name="" placeholder="Person">  -->
 								<select name="person" class="fields" required>
 									<option value="" selected disabled>-- Person --</option>
 									<option value="Mr">Mr</option>
 									<option value="Mrs">Mrs</option>
 									<option value="Ms">Ms</option>
-=======
-								<select class="fields">
-									<option selected disabled >-- Person --</option>
-									<option>Mr</option>
-									<option>Mrs</option>
-									<option>Ms</option>
->>>>>>> 97915bd7202012d477e8351590d0d3003a8bd61c
 								</select>
 								<br>
+
+								<input class="fields" type="text" name="usname" placeholder="Username">
+								<br>
+								<input class="fields" type="email" name="email" placeholder="Email">
+								<br>
+								<input class="fields" type="password" name="pass" placeholder="Password">
+								<br>
+								<input class="fields" type="password" name="cn_pass" placeholder="Confirm Password">
+
 								<input class="fields" type="text" name="uname" placeholder="Username" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required>
 								<br>
 								<input class="fields" type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="eg:online-taxi@gmail.com" required>
 								<br>
 								<input class="fields" type="password" name="paswd" placeholder="Password" pattern=".{8,}" title="Allow eight or more characters" required>
 								<br>
-								<input class="fields" type="password" name="c_paswd" placeholder="Confirm Password" pattern=".{8,}" title="Password not same as above" required>
+								<input class="fields" type="password" name="c_paswd" placeholder="Confirm Password" pattern=".{8,}" title="Password not match" required>
+
 								<br>
 
 								<h3>Contact Details</h3>
 
 								<br>
+
+								<!-- <input class="fields" type="text" name="num" placeholder="Phone No">
+								<br>
+								<input class="fields" type="text" name="city" placeholder="City">
+								<br>
+								<input class="fields" type="text" name="add" placeholder="Address">
+								<br>
+								
+								<button class="booking-ride-btn" type="submit" name="btn_submit">create</button>
+								<button class="booking-ride-btn" type="reset" name="reset">Reset</button> -->
+
 								<input class="fields" type="text" name="num" placeholder="Phone No" pattern="^\d{4}-\d{3}-\d{4}$" title="eg:0000-000-0000" required>
 								<br>
 								<input class="fields" type="text" name="city" placeholder="City" pattern="[A-Za-z]{1,15}" required>
@@ -58,6 +65,7 @@
 								<button class="booking-ride-btn" type="reset" name="reset">Reset</button>
 									</br>
 								<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
+
 							</form>
 						</div>
 					</div>
@@ -71,6 +79,27 @@
 <div>
 </div>
 
+
+<?php  
+
+if (isset($_POST['btn_submit'])) {
+
+
+	$usname=$_POST['usname'];
+	$email=$_POST['email'];
+	$pass=$_POST['pass'];
+	$cn_pass=$_POST['cn_pass'];
+	$city=$_POST['city'];
+	$phone=$_POST['phone'];
+	$address=$_POST['add'];
+
+
+	$sql="INSERT into tb_driver VALUES('','$fname','$lname','$email','$pass','$city','$phone','$select_driver')";
+	$obj=new config();
+	$obj->dbconfig($sql);
+
+
+	} ?>
 
 <!--Start Drvier PHP Coding -->
 
@@ -129,6 +158,7 @@
 ?>
 
 <!--End Drvier PHP Coding -->
+
 
 
 <?php include 'footer.php' ?>
