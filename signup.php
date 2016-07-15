@@ -21,6 +21,15 @@
 									<option value="Ms">Ms</option>
 								</select>
 								<br>
+<<<<<<< HEAD
+								<input class="fields" type="text" name="usname" placeholder="Username">
+								<br>
+								<input class="fields" type="email" name="email" placeholder="Email">
+								<br>
+								<input class="fields" type="password" name="pass" placeholder="Password">
+								<br>
+								<input class="fields" type="password" name="cn_pass" placeholder="Confirm Password">
+=======
 								<input class="fields" type="text" name="uname" placeholder="Username" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required>
 								<br>
 								<input class="fields" type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="eg:online-taxi@gmail.com" required>
@@ -28,11 +37,23 @@
 								<input class="fields" type="password" name="paswd" placeholder="Password" pattern=".{8,}" title="Allow eight or more characters" required>
 								<br>
 								<input class="fields" type="password" name="c_paswd" placeholder="Confirm Password" pattern=".{8,}" title="Password not same as above" required>
+>>>>>>> c079e9df0c66297652cd59374f96cfae826a5a9d
 								<br>
 
 								<h3>Contact Details</h3>
 
 								<br>
+<<<<<<< HEAD
+								<input class="fields" type="text" name="num" placeholder="Phone No">
+								<br>
+								<input class="fields" type="text" name="city" placeholder="City">
+								<br>
+								<input class="fields" type="text" name="add" placeholder="Address">
+								<br>
+								
+								<button class="booking-ride-btn" type="submit" name="btn_submit">create</button>
+								<button class="booking-ride-btn" type="reset" name="reset">Reset</button>
+=======
 								<input class="fields" type="text" name="num" placeholder="Phone No" pattern="^\d{4}-\d{3}-\d{4}$" title="eg:0000-000-0000" required>
 								<br>
 								<input class="fields" type="text" name="city" placeholder="City" pattern="[A-Za-z]{1,15}" required>
@@ -44,6 +65,7 @@
 								<button class="booking-ride-btn" type="reset" name="reset">Reset</button>
 									</br>
 								<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
+>>>>>>> c079e9df0c66297652cd59374f96cfae826a5a9d
 							</form>
 						</div>
 					</div>
@@ -58,6 +80,28 @@
 </div>
 
 
+<<<<<<< HEAD
+<?php  
+
+if (isset($_POST['btn_submit'])) {
+
+
+	$usname=$_POST['usname'];
+	$email=$_POST['email'];
+	$pass=$_POST['pass'];
+	$cn_pass=$_POST['cn_pass'];
+	$city=$_POST['city'];
+	$phone=$_POST['phone'];
+	$address=$_POST['add'];
+
+
+	$sql="INSERT into tb_driver VALUES('','$fname','$lname','$email','$pass','$city','$phone','$select_driver')";
+	$obj=new config();
+	$obj->dbconfig($sql);
+
+
+						} ?>
+=======
 <!--Start Drvier PHP Coding -->
 
 <!-- Modal -->
@@ -115,6 +159,7 @@
 ?>
 
 <!--End Drvier PHP Coding -->
+>>>>>>> c079e9df0c66297652cd59374f96cfae826a5a9d
 
 
 <?php include 'footer.php' ?>
