@@ -14,14 +14,14 @@
 					<div class="form" style="text-align:center;">
 						<form method="post" id="idform">
 							<h2>Create An Account</h2>
-							<input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name"><br>
-							<input class="form-input" type="text" name="lname" placeholder="Last Name"><br>
-							<input class="form-input" type="text" name="email" placeholder="Email"><br>
-							<input class="form-input" type="password" name="pass" placeholder="Password"><br>
-							<input class="form-input" type="text" name="city" placeholder="City"><br>
-							<input class="form-input" type="text" name="phone" placeholder="Phone"><br>
-							<select class="form-input" name="select_driver">
-								<option value="none">Where did you hear about us?</option>
+							<input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required><br>
+							<input class="form-input" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required><br>
+							<input class="form-input" type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="eg: online-taxi@gmail.com" required><br>
+							<input class="form-input" type="password" name="pass" placeholder="Password" pattern=".{8,}" title="Allow eight or more characters" required><br>
+							<input class="form-input" type="text" name="city" placeholder="City" pattern="[A-Za-z]{1,15}" required><br>
+							<input class="form-input" type="text" name="phone" placeholder="Phone" pattern="^\d{11}$" title="eg: 0900-1234567" required><br>
+							<select class="form-input" name="select_driver" required>
+								<option value="" selected disabled>Where did you hear about us?</option>
 								<option value="Friends & Family">Friends & Family</option>
 								<option value="Email">Email</option>
 								<option value="TV Ad">TV Ad</option>
@@ -58,13 +58,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Driver Has been registered</h4>
+          <h2 class="modal-title">Driver has been registered !</h2>
         </div>
         <div class="modal-body">
-          <p>Hy! Mr.<?php echo $_POST['fname']; ?> Welcome to our site , I hope u drive taxi to make money Thank You .. </p>
+          <h5>Hy Mr <?php echo $_POST['fname']; ?>, Welcome to our site , I hope u drive taxi to make money from online-taxi.. </h5>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Thank You</button>
         </div>
       </div>
     </div>
@@ -76,49 +76,28 @@
 
 <?php  
 
-if (isset($_POST['btn_submit'])) {
+	if (isset($_POST['btn_submit'])) {
 
 
-	$fname=$_POST['fname'];
-	$lname=$_POST['lname'];
-	$email=$_POST['email'];
-	$pass=$_POST['pass'];
-	$city=$_POST['city'];
-	$phone=$_POST['phone'];
-	$select_driver=$_POST['select_driver'];
+		$fname=$_POST['fname'];
+		$lname=$_POST['lname'];
+		$email=$_POST['email'];
+		$pass=$_POST['pass'];
+		$city=$_POST['city'];
+		$phone=$_POST['phone'];
+		$select_driver=$_POST['select_driver'];
 
 
-	$sql="INSERT into tb_driver VALUES('','$fname','$lname','$email','$pass','$city','$phone','$select_driver')";
-	$obj=new config();
-	$obj->dbconfig($sql);
+		$sql="INSERT into tb_driver VALUES('','$fname','$lname','$email','$pass','$city','$phone','$select_driver')";
+		$obj=new config();
+		$obj->dbconfig($sql);
 
-	echo '<script> document.getElementById("btn").click(); </script>';
+		echo '<script> document.getElementById("btn").click(); </script>';
 
 						}
-
 ?>
-
 
 <!--End Drvier PHP Coding -->
 
 <?php include'footer.php'; ?>
 
-
-<!--<SCRIPT TYPE="text/javascript">
-
-$(function() {
-	$("#idform").submit(function(e) {
-	e.preventDefault();	
-
-   	$form = $(this);
-
-   	$.post(document.location.url, $(this).serialize(), function(data) {
-   	$feedback=$("<div>").html(data).find(".popup").hide();
-
-   	$form.prepend($feedback);
-   	$feedback.fadeIn(1500);
-
-   });
-   });
-});
-</SCRIPT>-->

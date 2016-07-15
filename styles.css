@@ -1,0 +1,48 @@
+/* ADMIN PANEL */
+
+table {
+
+	margin-top: 50px;
+	border-color:#3c9393;
+	width: 500px !important;
+}
+
+
+td{
+
+	font-size: 12px;
+	padding: 10px;
+	font-family:monospace;
+
+}
+
+
+.th1 {
+
+	margin-top: 50px;
+	border-color:#3c9393;
+	width: 900px !important;
+	text-align: center!important;
+	margin-left: 5px;
+}
+.button{
+
+	margin-top: 50px;
+}
+
+.button button{
+
+	width: 200px;
+}
+
+th{
+	font-size: 16px;
+	text-align: center;
+		font-family:monospace;
+
+}
+
+
+
+
+ /* eND */
