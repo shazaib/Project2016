@@ -19,7 +19,7 @@
 							<input class="form-input" type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required ><br>
 							<input class="form-input" type="password" name="pass" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  required ><br>
 							<input class="form-input" type="text" name="city" placeholder="City" pattern="[A-Za-z]{20}" required ><br>
-							<input class="form-input" type="text" name="phone" placeholder="Phone" pattern="03[0-9]{2}-[0-9]{7}" required><br>
+							<input class="form-input" type="text" name="phone" placeholder="Phone" pattern="03[0-9]{2}-([0-9])(?!\1{6})[0-9]{6}" required ><br>
 							<select class="form-input" name="select_driver" required>
 								<option value="none">Where did you hear about us?</option>
 								<option value="Friends & Family">Friends & Family</option>
