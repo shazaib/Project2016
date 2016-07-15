@@ -27,7 +27,6 @@
 			</div>
 		</div>
 
-
 	<!--products image upload select/delete and insert code -->
 <?php 
 
@@ -40,7 +39,7 @@
 		
 		<div class="col-md-12">
 			<table class="th1 table-striped table-hover table-condensed">
- 				<tr><th>Id</th><th>Firstname</th><th>Lastname</th><th>Email</th><th>Password</th><th>City</th><th>Phone</th><th>Through</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
+ 				<tr><th>Id</th><th>Firstname</th><th>Lastname</th><th>Email</th><th>Password</th><th>City</th><th>Phone</th><th>Through</th><th>Access <span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
 	
 		<?php 
 
@@ -52,7 +51,7 @@
 				{ 
  					
  				echo "<tr><td>".$row['id']."</a></td><td>".$row['firstname']."</td><td>".$row['lastname']."</td><td>".$row['email']."</td><td>".$row['password']."</td><td>".$row['city']."</td><td>".$row['phone']."</td><td>".$row['select_driver']."</td>
-				<td><button type='submit' class='btn btn-danger btn-xs' name='Access'><a style='color:white;' href='?nos=".$row['id']."'>Access</a></button></td></tr>";
+				<td><button type='submit' class='btn btn-danger btn-xs' name='Access'><a style='color:white;' href='?nos=".$row['id']."'>Allow</a></button> <button type='submit' class='btn btn-danger btn-xs' name='deny'><a style='color:white;' href='?nos1=".$row['id']."'>Deny</a></button></td></tr>";
 				}?>
 				</table>
 
@@ -61,18 +60,27 @@
 	<?php }?>
 
 
-	<?php if (isset($_GET['nos'])) {
+	<?php 
+
+	if (isset($_GET['nos'])) {
 
 					$num=$_GET['nos'];
-
 					$sql="INSERT INTO signup_driver  SELECT * FROM tb_driver WHERE id='$num'";
 					$sqls="DELETE FROM tb_driver WHERE id='$num'";
 					$obj=new config();
 					$obj->dbconfig($sql);
 					$obj->dbconfig($sqls);
 			
-			} ?>
+			}
 
+
+	 if (isset($_GET['nos1'])) {
+
+					$num=$_GET['nos1'];
+					$sql="DELETE FROM tb_driver WHERE id='$num'";
+					$obj=new config();
+					$obj->dbconfig($sql);		
+			} ?>		
 
 <!--END products image upload select delete and insert code -->	
 
