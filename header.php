@@ -33,13 +33,16 @@
 <script src="https://use.fontawesome.com/4ab730f0d1.js"></script>
 
 <!--Smooth page Scroll-->
-        <script src="smoothPageScroll.js"></script>
+        <script src="js/smoothPageScroll.js"></script>
       	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+
+<!--parallax Scrolling-->
+	<script src="js/jquery.stellar.min.js"></script>  
 
 <script>
 
@@ -57,10 +60,6 @@
 	};
 
 </script>
-
-
-<!--parallax Scrolling-->
-<script src="jquery.stellar.min.js"></script>  
 
 
 </head>
@@ -99,7 +98,7 @@
 						<div  class="nav-menu">
 							<ul>
 								<li><a href="index.php">Home</a></li>
-								<li><a href="#ss">Services</a></li>
+								<li><a href="map.php">Find Your Route</a></li>
 								<li><a href="#">Price</a></li>
 								<li><a href="#">About Us</a></li>
 								<!-- <li><a href="#">Log in</a></li> -->
@@ -139,9 +138,7 @@
 $(document).ready(function() {
   
   $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
+      
       console.log($(window).scrollTop())
     if ($(window).scrollTop() > 40) {
       $('#nav-bar').addClass('navbar-fixed');
@@ -149,8 +146,12 @@ $(document).ready(function() {
     if ($(window).scrollTop() < 40) {
       $('#nav-bar').removeClass('navbar-fixed');
     }
+
   });
 });
 
 </script>
 
+<script type="text/javascript">
+	$.stellar();
+</script>

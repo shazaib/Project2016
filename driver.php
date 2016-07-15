@@ -22,6 +22,14 @@
 							<input class="form-input" type="text" name="phone" placeholder="Phone" pattern="03[0-9]{2}-([0-9])(?!\1{6})[0-9]{6}" required ><br>
 							<select class="form-input" name="select_driver" required>
 								<option value="none">Where did you hear about us?</option>
+							<input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required><br>
+							<input class="form-input" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required><br>
+							<input class="form-input" type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="eg: online-taxi@gmail.com" required><br>
+							<input class="form-input" type="password" name="pass" placeholder="Password" pattern=".{8,}" title="Allow eight or more characters" required><br>
+							<input class="form-input" type="text" name="city" placeholder="City" pattern="[A-Za-z]{1,15}" required><br>
+							<input class="form-input" type="text" name="phone" placeholder="Phone" pattern="^\d{11}$" title="eg: 0900-1234567" required><br>
+							<select class="form-input" name="select_driver" required>
+								<option value="" selected disabled>Where did you hear about us?</option>
 								<option value="Friends & Family">Friends & Family</option>
 								<option value="Email">Email</option>
 								<option value="TV Ad">TV Ad</option>
@@ -39,7 +47,7 @@
 							</p>
 						</div>
 						<h2 style="margin-bottom: 15px;">OR</h2>
-						<a class="link-account" href="login.php">Already have an account ?</a>
+						<a class="link-account" href="signin.php">Already have an account ?</a>
 					</div>
 				</div>
 
@@ -52,48 +60,80 @@
 
 <!--Start Drvier PHP Coding -->
 
+<!-- Modal -->
 
-<?php  
-
-if (isset($_POST['btn_submit'])) {
-
-
-	$fname=$_POST['fname'];
-	$lname=$_POST['lname'];
-	$email=$_POST['email'];
-	$pass=$_POST['pass'];
-	$city=$_POST['city'];
-	$phone=$_POST['phone'];
-	$select_driver=$_POST['select_driver'];
-
-
-	$sql="INSERT into tb_driver VALUES('','$fname','$lname','$email','$pass','$city','$phone','$select_driver')";
-	$obj=new config();
-	$obj->dbconfig($sql);
-
-
-						} ?>
-
-
-<?php /* echo '<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Driver has been added ..!</h4>
+          <h2 class="modal-title">Driver has been registered !</h2>
         </div>
         <div class="modal-body">
-          <p>Thankyou Mr Driver</p>
+          <h5>Hy Mr <?php echo $_POST['fname']; ?>, Welcome to our site , I hope u drive taxi to make money from online-taxi.. </h5>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Thank You</button>
         </div>
       </div>
     </div>
   </div>
-</div> ';
-*/
+</div>
+
+
+
+
+<?php  
+
+	if (isset($_POST['btn_submit'])) {
+
+
+		$fname=$_POST['fname'];
+		$lname=$_POST['lname'];
+		$email=$_POST['email'];
+		$pass=$_POST['pass'];
+		$city=$_POST['city'];
+		$phone=$_POST['phone'];
+		$select_driver=$_POST['select_driver'];
+
+
+		$sql="INSERT into tb_driver VALUES('','$fname','$lname','$email','$pass','$city','$phone','$select_driver')";
+		$obj=new config();
+		$obj->dbconfig($sql);
+
+		echo '<script> document.getElementById("btn").click(); </script>';
+
+						}
+<<<<<<< HEAD
 ?>
+=======
+
+//  <<<<<<< HEAD
+// <?php 
+// /* echo '<div class="modal fade" id="myModal" role="dialog">
+//     <div class="modal-dialog modal-sm">
+//       <div class="modal-content">
+//         <div class="modal-header">
+//           <button type="button" class="close" data-dismiss="modal">&times;</button>
+//           <h4 class="modal-title">Driver has been added ..!</h4>
+//         </div>
+//         <div class="modal-body">
+//           <p>Thankyou Mr Driver</p>
+//         </div>
+//         <div class="modal-footer">
+//           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div> ';
+// */
+// =======
+// >>>>>>> bb5a78d31dbbc703def9116c2ba5622f230fac91
+// ?>
+>>>>>>> 97915bd7202012d477e8351590d0d3003a8bd61c
+
 <!--End Drvier PHP Coding -->
 
 <?php include'footer.php'; ?>
+
