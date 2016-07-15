@@ -170,13 +170,7 @@
 						}
 		 ?>
 
-
-
 <!--END SLider images upload select delete and insert code -->
-
-
-
-
 
   </div>
 </div>

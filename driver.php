@@ -14,16 +14,6 @@
 					<div class="form" style="text-align:center;">
 						<form method="post" id="idform">
 							<h2>Create An Account</h2>
-							<!-- <input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name" pattern="[A-Za-z]{1,15}" required ><br>
-							<input class="form-input" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z]{1,15}" required ><br>
-							<input class="form-input" type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required ><br>
-							<input class="form-input" type="password" name="pass" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  required ><br>
-							<input class="form-input" type="text" name="city" placeholder="City" pattern="[A-Za-z]{20}" required ><br>
-							<input class="form-input" type="text" name="phone" placeholder="Phone" pattern="03[0-9]{2}-([0-9])(?!\1{6})[0-9]{6}" required ><br>
-							<select class="form-input" name="select_driver" required>
-								<option value="none">Where did you hear about us?</option> -->
-
-
 							<input style="margin-top:25px;" class="form-input" type="text" name="fname"  placeholder="First Name" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required><br>
 							<input class="form-input" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z\s]{1,15}"  title="Allow 15 letters only" required><br>
 							<input class="form-input" type="text" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="eg: online-taxi@gmail.com" required><br>
@@ -103,17 +93,12 @@
 		$obj=new config();
 		$obj->dbconfig($sql);
 
-		echo '<script> document.getElementById("btn").click(); </script>';
-
-						}
-<<<<<<< HEAD
+		echo '<script> document.getElementById("btn").click(); </script>';					}
  ?>
 
 
 <!--End Drvier PHP Coding -->
-=======
-?>
->>>>>>> 144881e7858b92220d9acdf5cac020073eba06e8
+
 
 <?php include'footer.php'; ?>
 
