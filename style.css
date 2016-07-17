@@ -19,11 +19,11 @@ body{
 }
 
 #logo{
-	background: url(images/taxi_logo3.png) no-repeat;
+	background: url(images/logo3.png) no-repeat;
 	width: 222px;
-	height: 53px;
+	height: 45px;
 	display: inline-block;
-    margin: 3px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
     float: left;
 }
 

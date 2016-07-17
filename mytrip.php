@@ -41,7 +41,8 @@ th{
 	font-size: 15px;
 	color: #000;
 	font-weight: 600;
-	margin: 0px 0px 0px 0px;
+	margin: 20px 0px 0px 0px;
+	background-color: #ccc;
 }
 
 td{
@@ -56,7 +57,9 @@ td{
 
 <body>
 
-	<header></header>
+	<header>
+		<img src="images/logo3.png">
+	</header>
 	
 	<div id="main-container">
 		<div class="container">
@@ -73,23 +76,23 @@ td{
 					</div>
 					
 					<div class="artical-content" style="padding-top:20px; float:left; margin:0px 0px 0px 0px;">
-						
-						<table  style="float:left; width:100%;">
-							<th>Start Destination</th>
-							<th>End Destination</th>
-							<th>Date</th>
-							<th>Time</th>
-							<th>Payment</th>
+						<div style="overflow-x:auto;">
+							<table  style="float:left; width:100%;">
+								<th>Start Destination</th>
+								<th>End Destination</th>
+								<th>Date</th>
+								<th>Time</th>
+								<th>Payment</th>
 
-							<tr>
-								<td >BufferZone</td>
-								<td>Glushan</td>
-								<td>18-5-2016</td>
-								<td>5:00</td>
-								<td>500</td>
-							</tr>
-						</table>
-
+								<tr>
+									<td>BufferZone</td>
+									<td>Gulshan</td>
+									<td>18-5-2016</td>
+									<td>5:00</td>
+									<td>500</td>
+								</tr>
+							</table>
+						</div>
 					</div>
 
 				</div><!-- artical end -->

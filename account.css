@@ -4,13 +4,16 @@
 header{
 	width: 100%;
 	height: 100px;
-	background-color: #000;
-	/*margin-bottom: 50px;*/
+	background-color: #fff;
+    margin-bottom: 4px;
+    box-shadow: 0px 3px 7px -3px rgba(0, 0, 0, 0.21);
+    text-align: center;
+    padding-top: 30px;
 }
 
 #main-container{
 	width: 100%;
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
 	/*height: 800px;*/
 	/*background-color: green;*/
 }
@@ -26,6 +29,7 @@ header{
 	text-align: -moz-center;
 	text-align: -ms-center;
 	padding-top: 50px;
+    margin-top: -3px;
 }
 
 .profile-img{
@@ -140,7 +144,31 @@ header{
     text-align: -webkit-left;
 }
 
-
-
-
 /**************************** account end **********************/
+
+@media screen and (max-width: 320px) { /******* media query 320px ********/
+
+.txt{
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	color: #000;
+    /*float: left;*/
+    margin: 20px 0px 0px 0px !important;
+    text-align: -webkit-center;
+}
+
+.side-bar{
+	/*width: 100%;*/
+	height: auto;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	/*background-color: #ccc;*/
+	text-align: -webkit-center;
+	text-align: -webkit-center;
+	text-align: -moz-center;
+	text-align: -ms-center;
+	padding-top: 50px;
+    margin-top: -3px;
+}
+
+}

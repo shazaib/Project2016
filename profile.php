@@ -35,7 +35,9 @@
 
 <body>
 
-	<header></header>
+	<header>
+		<img src="images/logo3.png">
+	</header>
 	
 	<div id="main-container">
 		<div class="container">
@@ -62,22 +64,22 @@
 							<h1><a class="change-pic" href="#">Change Picture</a></h1><br>
 				
 							<ul>
-								<li class="txt" style="margin-top: 50px;"><label>User Name :</label></li>
+								<li class="txt" style="margin-top: 50px; font-weight:600;"><label>User Name :</label></li>
 								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>Ammar Alam</h1></li>
 
-								<li class="txt"><label>Email :</label></li>
+								<li class="txt" style="font-weight:600;"><label>Email :</label></li>
 								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>example@gmail.com</h1></li>
 								
-								<li class="txt"><label>Password :</label></li>
+								<li class="txt" style="font-weight:600;"><label>Password :</label></li>
 								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>12345678</h1></li>
 								
-								<li class="txt"><label>Phone No :</label></li>
+								<li class="txt" style="font-weight:600;"><label>Phone No :</label></li>
 								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>03052536258</h1></li>
 
-								<li class="txt"><label>City :</label></li>
+								<li class="txt" style="font-weight:600;"><label>City :</label></li>
 								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>karachi</h1></li>
 
-								<li class="txt"><h1>Address :</h1></li>
+								<li class="txt" style="font-weight:600;"><h1>Address :</h1></li>
 								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>Buffer Zone</h1></li>
 							</ul>
 

@@ -10,7 +10,6 @@
 <!-- Latest compiled and minified Bootstrap CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-
 <!-- Latest compiled Bootstrap JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
@@ -80,7 +79,9 @@
 
 <body>
 
-	<header></header>
+	<header>
+		<img src="images/logo3.png">
+	</header>
 	
 	<div id="main-container">
 		<div class="container">
@@ -118,9 +119,9 @@
 				    <br>
 
 
-				     <b>Waypoints:</b> <br>
-				    <i>(multiple selection)</i> <br>
-				    <select multiple id="waypoints">
+				    <!--  <b>Waypoints:</b> <br>
+				    <i>(multiple selection)</i> <br> -->
+				    <select multiple id="waypoints" hidden>
 				 <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
 				      <option value="Gulberg Town,Karachi">Gulberg Town</option>
 				      <option value="Nagan Chowrangi, Karachi">Nagan Chowrangi</option>
