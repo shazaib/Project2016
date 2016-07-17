@@ -48,48 +48,43 @@
 
 				<div class="col-lg-9 col-md-9 col-sm-9">
 
-				<div class="artical">
-					<div class="artical-header">
-						<h1 class="artical-header-h1">Profile</h1>
-					</div>
+					<div class="artical">
+						<div class="artical-header">
+							<h1 class="artical-header-h1">Profile</h1>
+						</div>
+						
+						<div class="artical-content">
+
+							<div class="profile-img" style="margin:-165px 0px 0px 50px; float:left;">
+								<img src="images/profile-img.png" style="margin-top:30px;">
+							</div>
+							
+							<div class="artical-sub-content">
+								<h1><a class="change-pic" href="#">Change Picture</a></h1><br>
 					
-					<div class="artical-content">
+								<ul>
+									<li class="txt" style="margin-top: 50px; font-weight:600;"><label>First Name :</label></li>
+									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>Ammar</h1></li>
 
-						<div class="profile-img" style="margin:-165px 0px 0px 50px; float:left;">
-							<img src="images/profile-img.png" style="margin-top:30px;">
+									<li class="txt" style="margin-top: 50px; font-weight:600;"><label>Last Name :</label></li>
+									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>Alam</h1></li>
+
+									<li class="txt" style="font-weight:600;"><label>Email :</label></li>
+									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>example@gmail.com</h1></li>
+									
+									<li class="txt" style="font-weight:600;"><label>Password :</label></li>
+									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>12345678</h1></li>
+									
+									<li class="txt" style="font-weight:600;"><label>Phone No :</label></li>
+									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>03052536258</h1></li>
+
+									<li class="txt" style="font-weight:600;"><label>City :</label></li>
+									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>karachi</h1></li>
+
+								</ul>
+							</div>
 						</div>
-						
-						
-						<div class="artical-sub-content">
-							<h1><a class="change-pic" href="#">Change Picture</a></h1><br>
-				
-							<ul>
-								<li class="txt" style="margin-top: 50px; font-weight:600;"><label>User Name :</label></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>Ammar Alam</h1></li>
-
-								<li class="txt" style="font-weight:600;"><label>Email :</label></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>example@gmail.com</h1></li>
-								
-								<li class="txt" style="font-weight:600;"><label>Password :</label></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>12345678</h1></li>
-								
-								<li class="txt" style="font-weight:600;"><label>Phone No :</label></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>03052536258</h1></li>
-
-								<li class="txt" style="font-weight:600;"><label>City :</label></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>karachi</h1></li>
-
-								<li class="txt" style="font-weight:600;"><h1>Address :</h1></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>Buffer Zone</h1></li>
-							</ul>
-
-						</div>
-
 					</div>
-
-				</div>
-
-
 				</div>
 
 			</div>
