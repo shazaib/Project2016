@@ -1,0 +1,146 @@
+	
+/**************************** account **********************/
+
+header{
+	width: 100%;
+	height: 100px;
+	background-color: #000;
+	/*margin-bottom: 50px;*/
+}
+
+#main-container{
+	width: 100%;
+    padding-bottom: 50px;
+	/*height: 800px;*/
+	/*background-color: green;*/
+}
+
+.side-bar{
+	/*width: 100%;*/
+	height: 800px;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	/*background-color: #ccc;*/
+	text-align: -webkit-center;
+	text-align: -webkit-center;
+	text-align: -moz-center;
+	text-align: -ms-center;
+	padding-top: 50px;
+}
+
+.profile-img{
+	width: 130px;
+	height: 130px;
+	/*background-color: #000;*/
+	border-radius: 100px;
+	border: 2px solid #ccc;
+	/*margin-top: 40px;*/
+	overflow: hidden;
+}
+
+.profile-img-name{
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	color: #000;
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+
+.side-bar-btn{
+	width: 100%;
+	height: 50px;
+	background: none;
+	outline: none;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: none;
+	border-right: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	font-weight: 600;
+	color: #000;
+	display: inline-block;
+}
+
+.side-bar-btn:hover{
+	color: #ffd405;
+	background-color: #000;
+}
+
+.btn-img-user{
+	background: url(images/user.png) no-repeat;
+	background-position: left;
+}
+
+.btn-img-trip{
+	background: url(images/trip.png) no-repeat;
+	background-position: left;
+}
+
+.btn-img-payment{
+	background: url(images/payment.png) no-repeat;
+	background-position: left;
+}
+
+.btn-img-signout{
+	background: url(images/signout.png) no-repeat;
+	background-position: left;
+}
+
+.artical{
+	/*width: 100%;*/
+	height: 800px;
+	/*background-color: #ccc;*/
+	text-align: -webkit-center;
+}
+
+.artical-header{
+	width: 100%;
+	height: 100px;
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+}
+
+.artical-header-h1{
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	color: #000;
+	padding-top: 40px;
+    text-transform: uppercase;
+}
+
+.artical-content{
+	width: 100%;
+	height: 600px;
+	/*background-color: #03A9F4;*/
+    padding-top: 220px;	
+}
+
+.artical-sub-content{
+	width: 100%;
+    height: 300px;
+    /*background-color: #6f6fea;*/
+    /*margin: 235px 0px 0px 0px;*/
+}
+
+.change-pic{
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	color: #000;
+    float: left;
+    margin: 0px 0px 0px 75px;
+}
+
+.txt{
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	color: #000;
+    /*float: left;*/
+    margin: 50px 0px 0px 75px;
+    text-align: -webkit-left;
+}
+
+
+
+
+/**************************** account end **********************/

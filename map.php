@@ -67,10 +67,10 @@
       <option value="Sea View Karachi, Sea View Road, Karachi">Sea View Karachi, Sea View Road</option>
       <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
 
-
-
     </select>
     <br>
+
+
      <b>Waypoints:</b> <br>
     <i>(multiple selection)</i> <br>
     <select multiple id="waypoints">
@@ -86,10 +86,12 @@
       <option value="Mausoleum of Quiad Azam, M. A. Jinnah Road, Karachi">Mausoleum of Quiad Azam, M. A. Jinnah Road</option>
       <option value="Sea View Karachi, Sea View Road, Karachi">Sea View Karachi, Sea View Road</option>
       <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
-
-
     </select>
-    <br>
+    
+    <!-- <br> -->
+
+
+
     <b>End:</b>
     <select id="end">
       <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
@@ -111,6 +113,7 @@
     </div>
     <div id="directions-panel"></div>
     </div>
+
     <script>
       function initMap() {
         var directionsService = new google.maps.DirectionsService;
@@ -165,8 +168,10 @@
         });
       }
     </script>
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjmANqiA3CjCY2QjYSfI9GapQ8khcICOA&callback=initMap">
     </script>
+
   </body>
 </html>
