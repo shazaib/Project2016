@@ -43,7 +43,7 @@
 	
 		<?php 
 
-				$sql="SELECT * FROM tb_driver ORDER BY id desc";
+				$sql="SELECT * FROM signup_driver where Access='No' ORDER BY id desc";
 				$obj=new config();
 				$res=$obj->select($sql);
 
@@ -65,112 +65,22 @@
 	if (isset($_GET['nos'])) {
 
 					$num=$_GET['nos'];
-					$sql="INSERT INTO signup_driver  SELECT * FROM tb_driver WHERE id='$num'";
-					$sqls="DELETE FROM tb_driver WHERE id='$num'";
+					$title="Yes";
+					$sql="UPDATE signup_driver SET Access='$title' WHERE id='$num'";
 					$obj=new config();
-					$obj->dbconfig($sql);
-					$obj->dbconfig($sqls);
-			
-			}
+					$obj->dbconfig($sql);	
+			} 
 
-
-	 if (isset($_GET['nos1'])) {
+	if (isset($_GET['nos1'])) {
 
 					$num=$_GET['nos1'];
-					$sql="DELETE FROM tb_driver WHERE id='$num'";
+					$sql="DELETE FROM signup_driver WHERE id='$num'";
 					$obj=new config();
-					$obj->dbconfig($sql);		
-			} ?>		
+					$obj->dbconfig($sql);	
+			} ?>					
 
 <!--END products image upload select delete and insert code -->	
 
-
-
-
-
-
-<!--START SLider images upload select delete and insert code -->
-
-<?php 
-
-	if (isset($_GET['pro1'])) 
-	
-	{?>
-
-	<div>
-			<form method="post" enctype="multipart/form-data" class="form-inline" >
-		<div class"col-md-6">
-				<table class="table table-striped table-hover table-condensed">
-					
-				<tbody>
-				<tr><td><input  class="form-control input-sm"  type="text" name="img_name" placeholder="Image Name"/></td></tr>
-				<tr><td><input  class="form-control input-sm" type="file" name="img" placeholder="Image"/></td></tr>
-				<tr><td align="right"><button  type="submit" class="btn btn-sm btn-primary" name="btn_slider_img">Insert image</button></td></tr>
-				</tbody>
-			</table>
-		</div>
-
-		
-		<div class="col-md-12">
-			<table class="th1 table-striped table-hover table-condensed">
- 				<tr><th>Id</th><th>Image Name</th><th>Image Url</th><th><span class="glyphicon glyphicon-arrow-down"></span><span class="glyphicon glyphicon-trash"></span></th></tr>
-			
-	
-
-			<?php 
-
-
-				$sql="SELECT * FROM slider";
-				$obj=new config();
-				$res=$obj->select($sql);
-
-				while($row=$res->fetch_assoc())
-				{ 
- 					
- 				echo "<tr><td>".$row['id']."</td><td>".$row['name']."</td><td>".$row['image_url']."</td>
-				<td><button type='submit' class='btn btn-danger btn-xs' name='delete'><a href='?no=".$row['id']." & ?d=delete '>Delete</a></button></td></tr>";
-
-				} ?>
-				</table>
-
-
-
-			</div>
-			</form>
-		
-	</div>
-
-			<?php 
-
-			if (isset($_POST['btn_slider_img'])) {
-
-
-
-				$img_name=$_POST['img_name'];
-				$img_file='images/'.$_FILES['img']['name'];
-
-
-				$sql="INSERT INTO slider VALUES ('','$img_name','$img_file')";
-				$obj=new config();
-				$obj->dbconfig($sql);
-					
-				}	
-          ?>
-
-<?php } ?>
-
-
-		<?php if (isset($_GET['no'])) {
-
-						$num=$_GET['no'];
-						$sql="DELETE FROM slider WHERE id='$num' ";
-						$obj=new config();
-						$obj->dbconfig($sql);
-
-						}
-		 ?>
-
-<!--END SLider images upload select delete and insert code -->
 
   </div>
 </div>

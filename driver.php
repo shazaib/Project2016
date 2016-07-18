@@ -1,5 +1,6 @@
 <?php include'header.php'; ?>
 
+	
 	<div class="driver">
 		
 		<div class="container">
@@ -79,24 +80,22 @@
 
 	if (isset($_POST['btn_submit'])) {
 
-
 		$fname=$_POST['fname'];
 		$lname=$_POST['lname'];
 		$email=$_POST['email'];
 		$pass=$_POST['pass'];
+		$paswd=md5($pass);
 		$city=$_POST['city'];
 		$phone=$_POST['phone'];
 		$select_driver=$_POST['select_driver'];
+		$access="No";
 
-
-		$sql="INSERT into tb_driver VALUES('','$fname','$lname','$email','$pass','$city','$phone','$select_driver')";
+		$sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$city','$phone','$select_driver','$access')";
 		$obj=new config();
 		$obj->dbconfig($sql);
 
 		echo '<script> document.getElementById("btn").click(); </script>';					}
  ?>
-
-
 <!--End Drvier PHP Coding -->
 
 

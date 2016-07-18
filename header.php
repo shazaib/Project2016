@@ -70,13 +70,13 @@
 				<div class="row">
 					<div class="col-lg-6 col-md-6 col-sm-6">
 						<div class="top-bar">
-							<h4 style="float:left;"><i style="color:#fff; font-size: 30px;" class="fa fa-home" aria-hidden="true"></i> &nbsp <span style="color:#fff;">Address</span> &nbsp&nbsp <span style="font-size:18px;">8901 MARMORA ROAD, GLASGOW, D04 89GR.</span></h4>
+							<h4 style="float:left;"><i style="color:#fff; font-size: 33px;" class="fa fa-home" aria-hidden="true"></i> &nbsp <span style="color:#fff;">Address</span> &nbsp&nbsp <span style="font-size:14px;">Aptech Computer Education, North Nazimabad Centre.</span></h4>
 						</div>
 					</div>
 
 					<div class="col-lg-6 col-md-6 col-sm-6">
 						<div class="top-bar">
-							<h4><i style="color:#fff; font-size: 30px;" class="fa fa-mobile" aria-hidden="true"></i>&nbsp <span style="color:#fff;">Call Us 24 HOUR</span> &nbsp&nbsp <span style="font-size:20px;">800 666 7777</span> </h4>
+							<h4><i style="color:#fff; font-size: 30px;" class="fa fa-mobile" aria-hidden="true"></i>&nbsp <span style="color:#fff;">Call Us 24 HOUR</span> &nbsp&nbsp <span style="font-size:16px;">800 666 7777</span> </h4>
 						</div>
 					</div>
 				</div>
@@ -97,12 +97,12 @@
 						</div>
 						<div  class="nav-menu">
 							<ul>
-								<li><a href="index.php">Home</a></li>
-								<li><a href="map.php">Find Your Route</a></li>
+								<li><a href="index">Home</a></li>
+								<li><a href="map">Find Your Route</a></li>
 								<li><a href="#">Price</a></li>
 								<li><a href="#">About Us</a></li>
 								<!-- <li><a href="#">Log in</a></li> -->
-								<li><button class="account-btn" onclick="location.href='signin.php'" >Sign In</button></li>
+								<li><button class="account-btn" onclick="location.href='signin'" >Sign In</button></li>
 							</ul>
 						</div>	
 					</div>

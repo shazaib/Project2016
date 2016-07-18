@@ -4,9 +4,9 @@
 				<div class="overlay-opacity" >
 					<h1>WE ARE ALWAYS THERE AT YOUR SERVICE</h1>
 					<h2>WE'LL TAKE YOU WHEREVER YOU NEED</h2>
-					<button class="book-now-btn" type="button" name="" onclick="location.href='signup.php'">Signup to ride</button>
+					<button class="book-now-btn" type="button" name="" onclick="location.href='signup'">Signup to ride</button>
 
-					<button class="become-a-driver" type="button" name="" onclick="location.href='driver.php'">Become a driver</button>
+					<button class="become-a-driver" type="button" name="" onclick="location.href='driver'">Become a driver</button>
 					
 				</div>		
 			</div>	
