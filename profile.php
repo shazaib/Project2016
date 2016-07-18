@@ -96,6 +96,7 @@
 		</div>
 	</div>
 
+<<<<<<< HEAD
 
 </body>
 </html>
@@ -105,3 +106,12 @@
 	include ('footer.php'); 
 
 	?>
+=======
+<?php include'footer.php'; ?>
+
+</body>
+
+	
+
+</html>
+>>>>>>> 514a1a68ae3419f3603d56a745f5aa8210391546

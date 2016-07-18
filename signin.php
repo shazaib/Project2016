@@ -57,7 +57,7 @@
 	<div class="container" style="text-align:-webkit-center; text-align:-moz-center; text-align:-ms-center;">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
-			<img src="images/taxi_logo3.png" style="margin-top:100px;">
+			<img src="images/logo3.png" style="margin-top:100px;">
 				<div class="login">
 					<div class="login-form">
 						
@@ -75,7 +75,11 @@
 						</select> 
 						<br> 
 					   
+<<<<<<< HEAD
 					   <button class="login-btn" type="submit" name="signin" >SignIn</button>
+=======
+					   <button class="login-btn" type="submit" name="">SignIn</button>
+>>>>>>> 514a1a68ae3419f3603d56a745f5aa8210391546
 						<hr class="login-hr" style="margin-top:20px;">
 						<a href="#"><p class="login-para">Forgot your password</p></a><br>
 						<!-- <p style="text-decoration:none;" class="login-para">Don't have an account &nbsp <a href="#">SignUp</a></p> -->
