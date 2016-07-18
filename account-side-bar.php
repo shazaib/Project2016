@@ -12,8 +12,6 @@
 
 		<button class="side-bar-btn btn-img-payment" style="border-bottom:1px solid #ccc; border-top:none;" onclick="location.href='book-now'">Book Now</button>
 
-		<button class="side-bar-btn btn-img-booking" style="border-bottom:1px solid #ccc; border-top:none;" onclick="location.href='book-now.php'">Book Now</button>
-
 		<button class="side-bar-btn btn-img-signout" style="border-bottom:1px solid #ccc; border-top:none;">Sign Out</button>
 
 	</div>
