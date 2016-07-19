@@ -15,7 +15,7 @@
 	 
 	<section id="ss">
 	 	<div id="section-sub">
-	 	<h1>Services</h1> 
+	 	<h1>Services</h1>
 	 	<div class="row">
 	 		<div class="container">
 	 			<div class="col-lg-4 col-md-4 col-sm-4">

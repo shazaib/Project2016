@@ -44,8 +44,9 @@
 								
 								<button class="booking-ride-btn" type="submit" name="create">create</button>
 								<button class="booking-ride-btn" type="reset" name="reset">Reset</button>
-									</br>
-								<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
+								</br>
+
+								<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden;" >dfsdf</button>
 
 							</form>
 						</div>
@@ -60,27 +61,13 @@
 <div>
 </div>
 
-<!--Start Drvier PHP Coding -->
 
-<!-- Modal -->
 
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">Registration Sucessfully !</h2>
-        </div>
-        <div class="modal-body">
-          <h5>Hy <?php echo $_POST['person'].",";  echo $_POST['uname']; ?> Welcome to our site , I hope to enjoy our vision.. </h5>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Thank You</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+<!--Start Driver PHP Coding -->
+
+
+
 
 
 
@@ -121,12 +108,4 @@
 <?php include 'footer.php' ?>
 
 
-<!-- <script type="text/javascript"> 
-      $(document).ready(function()
-      {  
-         $("#ap").click(function() {
-         $("#sd").slideToggle("slow")
-         // $("#su").slideUp("slow")
-         });  
-       });      
- </script> -->
+
