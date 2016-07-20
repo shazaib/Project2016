@@ -79,8 +79,9 @@
 								
 								<button class="booking-ride-btn" type="submit" name="create">create</button>
 								<button class="booking-ride-btn" type="reset" name="reset">Reset</button>
-									</br>
-								<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
+								</br>
+
+								<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden;" >dfsdf</button>
 
 							</form>
 						</div>
@@ -94,6 +95,7 @@
 
 <div>
 </div>
+
 
 <!--Start Drvier PHP Coding -->
 
@@ -115,6 +117,16 @@
         </div>
       </div>
     </div>
+
+
+
+
+<!--Start Driver PHP Coding -->
+
+
+
+
+
 
 
 <?php  
@@ -154,12 +166,4 @@
 <?php include 'footer.php' ?>
 
 
-<!-- <script type="text/javascript"> 
-      $(document).ready(function()
-      {  
-         $("#ap").click(function() {
-         $("#sd").slideToggle("slow")
-         // $("#su").slideUp("slow")
-         });  
-       });      
- </script> -->
+
