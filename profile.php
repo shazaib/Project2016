@@ -33,11 +33,31 @@
 
 </head>
 
-<body>
+<?php 
 
+ include ('includes/config.php');
+ session_start();
+
+ $email=$_SESSION['email']; 
+
+ if ($email==NULL) {
+ 	header("Location:404");
+ }
+
+
+ $sql="SELECT username,email, paswd, phone_no, city, adress,image FROM signup_user WHERE email='$email'";
+ $obj=new config();
+ $res=$obj->select($sql);
+
+ 	while ($row=$res->fetch_assoc()) {
+ 	
+?>
+
+<body>
 	<header>
 		<img src="images/logo3.png">
 	</header>
+	
 	
 	<div id="main-container">
 		<div class="container">
@@ -54,37 +74,77 @@
 					</div>
 					
 					<div class="artical-content">
-
-						<div class="profile-img" style="margin:-165px 0px 0px 50px; float:left;">
-							<img src="images/profile-img.png" style="margin-top:30px;">
+							<form method="post" enctype="multipart/form-data">
+						<div class="profile-img" style="margin:-165px 0px 0px 50px; float:left;">	
+					<!-- BLOB / LONGBLOB-->	<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" width="130px" height="130px" />'; ?>
+ 													
+    
 						</div>
-						
-						
+
 						<div class="artical-sub-content">
-							<h1><a class="change-pic" href="#">Change Picture</a></h1><br>
+							
+									<input type="file" class="change-pic" name="img"/><button style="margin-right:220px" class="btn btn-default btn-xs" type="submit" name="insertimg"  id="btn"><b>Save Image</b></button>
+									 <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
+							
+								<?php
+
+								if (isset($_POST['insertimg'])) {
+
+								  $imgdata=addslashes(file_get_contents($_FILES["img"]["tmp_name"]));
+								  $imgtype=$_FILES["img"]["type"];
+									 
+									if(substr($imgtype,0,5)=="image")
+									 { 	
+
+									 $sql="UPDATE signup_user set image='$imgdata' where email='$email' ";
+									 $obj=new config();
+									 $obj->dbconfig($sql);
+									 echo '<script> document.getElementById("refresh").click(); </script>';
+
+								 	}  } ?>
+ 							<br>
 				
-							<ul>
-								<li class="txt" style="margin-top: 50px; font-weight:600;"><label>User Name :</label></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>Ammar Alam</h1></li>
+								<div class="container" style="width:400px; margin-top:80px; margin-left:15px;">
+								  <table class="table table-hover" style="width:400px;">
+								    <tbody>
+								      <tr><th>UserName :</th><td><input style="border-color:white; border:0px;" type="text" name="uname" contenteditable  value="<?php echo $row['username'] ?>"/></td></tr>
+								      <tr><th>Email :</th><td><input  style="border-color:white; border:0px;"  type="text"  name="email" contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
+								      <tr><th>Password :</th><td><input style="border-color:white; border:0px;"  type="password" name="paswd"  contenteditable value="<?php echo $row['paswd'] ?>"/></td></tr>
+								      <tr><th>Phone No :</th><td><input  style="border-color:white; border:0px;" type="text" name="phone_no"  contenteditable value="<?php echo $row['phone_no'] ?>"/></td></tr>
+								      <tr><th>City :</th><td><input  style="border-color:white; border:0px;" type="text" name="city"  contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
+								      <tr><th>Adress :</th><td><input style="border-color:white; border:0px;"  type="text" name="adress"  contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
+									</tbody>
+								   </table>
+								   <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
+								   <button  style="margin-left:300px; margin-top:-23px;" type="submit" class="btn btn-default btn-sm" name="update_profile">Save Update &nbsp; <span class="glyphicon glyphicon-pencil"></span></button>
+								</div>
 
-								<li class="txt" style="font-weight:600;"><label>Email :</label></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>example@gmail.com</h1></li>
-								
-								<li class="txt" style="font-weight:600;"><label>Password :</label></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>12345678</h1></li>
-								
-								<li class="txt" style="font-weight:600;"><label>Phone No :</label></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>03052536258</h1></li>
+								<?php
 
-								<li class="txt" style="font-weight:600;"><label>City :</label></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>karachi</h1></li>
+								if (isset($_POST['update_profile'])) {
 
-								<li class="txt" style="font-weight:600;"><h1>Address :</h1></li>
-								<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>Buffer Zone</h1></li>
-							</ul>
+									$uname=$_POST['uname'];
+									$email=$_POST['email'];
+									$paswd=$_POST['paswd'];
+									$phone_no=$_POST['phone_no'];
+									$city=$_POST['city'];
+									$adress=$_POST['adress'];
 
+									$sql="UPDATE signup_user set username='$uname',email='$email',paswd='$paswd',phone_no='$phone_no',city='$city',adress='$adress'  where email='$email' ";
+								 	$obj=new config();
+								 	$obj->dbconfig($sql);
+								 	echo '<script> document.getElementById("refresh").click(); </script>';
+
+								 	}   ?>
+
+
+							<?php } ?>
+
+
+
+							
 						</div>
-
+						</form>	
 					</div>
 
 				</div>
@@ -96,16 +156,21 @@
 		</div>
 	</div>
 
+<script>
+function myFunction() {
+    location.reload();
+}
+</script>
+
+<?php include ('footer.php'); 
 
 
+
+?>
 </body>
 </html>
 
-<?php include'footer.php'; ?>
 
-</body>
 
-	
 
-</html>
 

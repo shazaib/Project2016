@@ -1,3 +1,38 @@
+<style type="text/css">
+
+	.modal-win-content{
+	 margin-top: 100px;
+	}
+
+	.modal-win-header{
+	 font-family: "Lato", sans-serif;
+	 font-size: 20px;
+	 color: #ffd405;
+	 background-color: #000;
+	}
+
+	.modal-win-footer{
+	 background-color: #000;
+	 text-align: center;
+	}
+
+	.modal-btn{
+	 font-family: "Lato",sans-serif;
+	 font-size: 15px;
+	 color: #000;
+	 background-color: #ffd405;
+	 outline: none;
+	 border: none;
+	}
+
+	.modal-btn:hover{
+	 background-color:#ffd405; 
+	}
+
+</style>
+
+
+
 <?php include 'header.php' ?>
 
 	<div class="booking-pg">
@@ -65,23 +100,21 @@
 <!-- Modal -->
 
 <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">Registration Sucessfully !</h2>
-        </div>
-        <div class="modal-body">
-          <h5>Hy <?php echo $_POST['person'].",";  echo $_POST['uname']; ?> Welcome to our site , I hope to enjoy our vision.. </h5>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Thank You</button>
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content modal-win-content">
+          <div class="modal-header modal-win-header">
+            <!-- <button type="button" class="close cancel-btn" data-dismiss="modal">&times;</button> -->
+            <h2 class="modal-title">Registration Sucessfully !</h2>
+          </div>
+          <div class="modal-body">
+            <h5>Hy <?php echo $_POST['person'].",";  echo $_POST['uname']; ?> Welcome to Online Drivo , I hope to enjoy our vision..</h5>
+          </div>
+          <div class="modal-footer modal-win-footer">
+            <button type="button" class="btn btn-default modal-btn" data-dismiss="modal"><span style="color:#000;">Thank You </span></button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
 
 
 <?php  
@@ -96,10 +129,9 @@
 		$num=$_POST['num'];
 		$city=$_POST['city'];
 		$adress=$_POST['adress'];
-		
+		$image='';
 
-
-		$sql="INSERT into signup_user VALUES('','$person','$uname','$email','$paswd','$c_paswd','$num','$city','$adress')";
+		$sql="INSERT into signup_user VALUES('','$person','$uname','$email','$paswd','$c_paswd','$num','$city','$adress','$image')";
 		$obj=new config();
 
 		if ($paswd==$c_paswd) {
@@ -111,6 +143,7 @@
 
 		else {
 
+			echo '<script> alert("ERROR:"); </script>';
 		}
 
 			}

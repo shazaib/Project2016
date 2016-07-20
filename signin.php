@@ -123,7 +123,7 @@ session_start(); ?>
 
 			if ($_SESSION['email']==$row['email'] && $_SESSION['paswd']==$row['paswd']) {
 					
-					header("Location:profile");
+					header("Location:profile.php");
 				}
 
 				else
@@ -186,5 +186,4 @@ session_start(); ?>
 }	
 
 
-	
  ?>
