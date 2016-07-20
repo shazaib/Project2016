@@ -11,5 +11,11 @@
 
 	<h3 style="font-family: 'Lato',sans-serif;font-size: 20px;margin-top: 30px;"> This link you followed may be broken, or the page may have been removed.</h3>
 
+<<<<<<< HEAD
+=======
+</br></br>
+<?php  echo '<img src="http://www.picgifs.com/job-graphics/job-graphics/taxi-driver/chauffeur10.gif" border="0"/><img src="http://www.animatedimages.org/data/media/679/animated-taxi-image-0007.gif" border="0" alt="animated-taxi-image-0007"/>' ?>
+</br></br></br></br></br></br>
+>>>>>>> 9471e59d5e28bf52999620c3328c0e3ab21e3067
 </body>
 </html>
