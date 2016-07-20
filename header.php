@@ -99,9 +99,8 @@
 							<ul>
 								<li><a href="index">Home</a></li>
 								<li><a href="map">Find Your Route</a></li>
-								<li><a href="#">Price</a></li>
 								<li><a href="#">About Us</a></li>
-								<!-- <li><a href="#">Log in</a></li> -->
+								<li><a href="#">Contact</a></li>
 								<li><button class="account-btn" onclick="location.href='signin'" >Sign In</button></li>
 							</ul>
 						</div>	

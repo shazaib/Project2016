@@ -1,10 +1,19 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>find your ride</title>
+    <title>find your ride</title> -->
+<?php include'header.php'; ?>
+
     <style>
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
       #right-panel {
         font-family: 'Roboto','sans-serif';
         line-height: 30px;
@@ -22,34 +31,56 @@
       #right-panel i {
         font-size: 12px;
       }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+      
       #map {
-        height: 500px;
+        /*height: 500px;*/
         float: left;
-        width: 70%;
+        width: 100%;
         height: 100%;
+        margin-top: -106px;
+        /*z-index: -1;*/
       }
+
       #right-panel {
-        margin: 20px;
+        margin: 23px 20px 20px 20px;
         border-width: 2px;
         width: 20%;
         float: left;
         text-align: left;
-        padding-top: 20px;
+        padding: 20px;
+        position: absolute;
+        background-color: #fff;
       }
+
       #directions-panel {
         margin-top: 20px;
-        background-color: #FFEE77;
+        /*background-color: #FFF;*/
         padding: 10px;
       }
+
+      input{
+        width: 100%;
+        height: 35px;
+        font-family: "Lato", sans-serif;
+        font-size: 20px;
+        color: #ffd405;
+        background-color: #000;
+        outline: none;
+        border: none;
+        margin-top: 20px;
+      }
+
+      select{
+        height: 40px;
+      }
+
     </style>
-  </head>
-  <body>
+<!--   </head>
+  <body> -->
+    
+
     <div id="map"></div>
+    
     <div id="right-panel">
     <div>
     <b>Start:</b>
@@ -71,9 +102,9 @@
     <br>
 
 
-     <b>Waypoints:</b> <br>
-    <i>(multiple selection)</i> <br>
-    <select multiple id="waypoints">
+     <!-- <b>Waypoints:</b> <br>
+    <i>(multiple selection)</i> <br> -->
+    <select multiple id="waypoints" hidden>
  <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
       <option value="Gulberg Town,Karachi">Gulberg Town</option>
       <option value="Nagan Chowrangi, Karachi">Nagan Chowrangi</option>
@@ -109,10 +140,11 @@
 
     </select>
     <br>
-      <input type="submit" id="submit">
+      <input type="submit" id="submit" value="Find">
     </div>
     <div id="directions-panel"></div>
     </div>
+
 
     <script>
       function initMap() {
@@ -173,5 +205,5 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjmANqiA3CjCY2QjYSfI9GapQ8khcICOA&callback=initMap">
     </script>
 
-  </body>
+<!--   </body>
 </html>

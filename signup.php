@@ -46,7 +46,7 @@
 								<button class="booking-ride-btn" type="reset" name="reset">Reset</button>
 								</br>
 
-								<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden;" >dfsdf</button>
+								<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden;" ></button>
 
 							</form>
 						</div>
