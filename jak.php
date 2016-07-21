@@ -6,8 +6,8 @@
 
 
  $server="localhost";
- $username="root";
- $pass="";
+ $username="project2016";
+ $pass="123";
  $db="project2016";
 
  ?>

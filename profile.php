@@ -31,6 +31,31 @@
 <!-- Account -->
 <link rel="stylesheet" type="text/css" href="account.css">
 
+<style type="text/css">	
+
+.save-btn{
+	/*width: 100px;*/
+	height: 40px;
+	background-color: #000;
+	float: left;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	color: #ffd405;
+	border: none;
+	outline: none;
+}
+
+.save-btn:hover{
+	background-color: #ffd405;
+	color: #000;
+}
+
+
+
+
+
+</style>
+
 </head>
 
 <?php 
@@ -83,7 +108,10 @@
 
 						<div class="artical-sub-content">
 							
-									<input type="file" class="change-pic" name="img"/><button style="margin-right:220px" class="btn btn-default btn-xs" type="submit" name="insertimg"  id="btn"><b>Save Image</b></button>
+									<input type="file" class="change-pic" name="img"/>
+
+									<button class="btn btn-default save-btn" type="submit" name="insertimg" id="btn" style="margin: 40px 0px 0px -295px;">Save Image</button>
+
 									 <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
 							
 								<?php
@@ -105,18 +133,24 @@
  							<br>
 				
 								<div class="container" style="width:400px; margin-top:80px; margin-left:15px;">
-								  <table class="table table-hover" style="width:400px;">
+								  <table class="table table-hover txt" style="width:400px;">
 								    <tbody>
-								      <tr><th>UserName :</th><td><input style="border-color:white; border:0px;" type="text" name="uname" contenteditable  value="<?php echo $row['username'] ?>"/></td></tr>
-								      <tr><th>Email :</th><td><input  style="border-color:white; border:0px;"  type="text"  name="email" contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
-								      <tr><th>Password :</th><td><input style="border-color:white; border:0px;"  type="password" name="paswd"  contenteditable value="<?php echo $row['paswd'] ?>"/></td></tr>
-								      <tr><th>Phone No :</th><td><input  style="border-color:white; border:0px;" type="text" name="phone_no"  contenteditable value="<?php echo $row['phone_no'] ?>"/></td></tr>
-								      <tr><th>City :</th><td><input  style="border-color:white; border:0px;" type="text" name="city"  contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
-								      <tr><th>Adress :</th><td><input style="border-color:white; border:0px;"  type="text" name="adress"  contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
+								      <tr><th style="font-weight:600;">UserName :</th><td>
+								      <input style="border-color:white; border:0px;" type="text" name="uname" contenteditable  value="<?php echo $row['username'] ?>"/></td></tr>
+								      <tr><th style="font-weight:600;">Email :</th><td>
+								      <input  style="border-color:white; border:0px;"  type="text"  name="email" contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
+								      <tr><th style="font-weight:600;">Password :</th><td>
+								      <input style="border-color:white; border:0px;"  type="password" name="paswd"  contenteditable value="<?php echo $row['paswd'] ?>"/></td></tr>
+								      <tr><th style="font-weight:600;">Phone No :</th><td>
+								      <input  style="border-color:white; border:0px;" type="text" name="phone_no"  contenteditable value="<?php echo $row['phone_no'] ?>"/></td></tr>
+								      <tr><th style="font-weight:600;">City :</th><td>
+								      <input  style="border-color:white; border:0px;" type="text" name="city"  contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
+								      <tr><th style="font-weight:600;">Address :</th><td>
+								      <input style="border-color:white; border:0px;"  type="text" name="adress"  contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
 									</tbody>
 								   </table>
 								   <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
-								   <button  style="margin-left:300px; margin-top:-23px;" type="submit" class="btn btn-default btn-sm" name="update_profile">Save Update &nbsp; <span class="glyphicon glyphicon-pencil"></span></button>
+								   <button type="submit" class="btn btn-default btn-sm save-btn" name="update_profile">Save Update &nbsp; <span class="glyphicon glyphicon-pencil"></span></button>
 								</div>
 
 								<?php
@@ -157,9 +191,9 @@
 	</div>
 
 <script>
-function myFunction() {
-    location.reload();
-}
+	function myFunction() {
+	    location.reload();
+	}
 </script>
 
 <?php include ('footer.php'); 

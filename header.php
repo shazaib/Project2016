@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>About Us</title>
 
 <?php include ('includes/config.php'); ?>
 
@@ -34,16 +34,16 @@
 <script src="https://use.fontawesome.com/4ab730f0d1.js"></script>
 
 <!--Smooth page Scroll-->
-        <script src="js/smoothPageScroll.js"></script>
-      	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+<script src="js/smoothPageScroll.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 
-
+<!-- Date and Time styling -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
 
 <!--parallax Scrolling-->
-	<script src="js/jquery.stellar.min.js"></script>  
+<script src="js/jquery.stellar.min.js"></script>  
 
 <script>
 
@@ -100,8 +100,7 @@
 							<ul>
 								<li><a href="index">Home</a></li>
 								<li><a href="map">Find Your Route</a></li>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Contact</a></li>
+								<li><a href="about-us">About Us</a></li>
 								<li><button class="account-btn" onclick="location.href='signin'" >Sign In</button></li>
 							</ul>
 						</div>	

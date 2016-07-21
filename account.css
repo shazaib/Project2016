@@ -147,25 +147,15 @@ header{
 
 .txt{
 	font-family: 'Lato', sans-serif;
-	font-size: 15px;
+	font-size: 14px;
 	color: #000;
-    /*float: left;*/
-    margin: 50px 0px 0px 75px;
-    text-align: -webkit-left;
+	
 }
 
 /**************************** account end **********************/
 
-@media screen and (max-width: 320px) { /******* media query 320px ********/
 
-.txt{
-	font-family: 'Lato', sans-serif;
-	font-size: 15px;
-	color: #000;
-    /*float: left;*/
-    margin: 20px 0px 0px 0px !important;
-    text-align: -webkit-center;
-}
+@media screen and (max-width: 767px) { /******* media query 767px ********/
 
 .side-bar{
 	/*width: 100%;*/
@@ -182,3 +172,5 @@ header{
 }
 
 }
+
+
