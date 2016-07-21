@@ -143,6 +143,7 @@
       <input type="submit" id="submit" value="Find">
     </div>
     <div id="directions-panel"></div>
+    <input type="button" value="Sigin In to Ride"  onclick="location.href='signin'">'
     </div>
 
 
@@ -188,15 +189,16 @@
             // For each route, display summary information.
             for (var i = 0; i < route.legs.length; i++) {
               var routeSegment = i + 1;
-              summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
-                  '</b><br>';
+          
               summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
               summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-              summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+              summaryPanel.innerHTML += route.legs[i].distance.text + '<br>';
+
             }
           } else {
             window.alert('Directions request failed due to ' + status);
           }
+          
         });
       }
     </script>

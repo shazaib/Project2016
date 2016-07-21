@@ -1,133 +1,90 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
-<head>
-	<title>User Account</title>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>find your ride</title> -->
+<?php include'header.php'; ?>
 
+    <style>
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-<!-- Latest compiled and minified Bootstrap CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-<!-- Latest compiled Bootstrap JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-<!-- Google font API -->
-<link href='https://fonts.googleapis.com/css?family=Lato:900italic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
-
-<!-- Reset CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
-<!-- Style sheet -->
-<link rel="stylesheet" type="text/css" href="style.css">
-
-<!-- Font Awesome -->
-<script src="https://use.fontawesome.com/4ab730f0d1.js"></script>
-
-<!-- Account -->
-<link rel="stylesheet" type="text/css" href="account.css">
-
- <style>
-      #right-panel {
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-
-      }
-
-      #right-panel select, #right-panel input {
-        font-size: 15px;
-
-      }
-
-      #right-panel select {
-
-        width: 140%;
-      }
-
-      #right-panel i {
-        font-size: 12px;
-      }
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
       }
-      #map {
-        height: 500px;
-        float: left;
-        width: 50%;
-        height: 50%;
-    
-      }
+
       #right-panel {
-        margin: 20px;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #right-panel select, #right-panel input {
+        font-size: 15px;
+      }
+
+      #right-panel select {
+        width: 100%;
+      }
+
+      #right-panel i {
+        font-size: 12px;
+      }
+      
+      #map {
+        /*height: 500px;*/
+        float: left;
+        width: 100%;
+        height: 100%;
+        margin-top: -106px;
+        /*z-index: -1;*/
+      }
+
+      #right-panel {
+        margin: 23px 20px 20px 20px;
         border-width: 2px;
         width: 20%;
         float: left;
         text-align: left;
-        padding-top: 20px;
+        padding: 20px;
+        position: absolute;
+        background-color: #fff;
       }
+
       #directions-panel {
         margin-top: 20px;
-        background-color: #FFEE77;
+        /*background-color: #FFF;*/
         padding: 10px;
       }
+
+      input{
+        width: 100%;
+        height: 35px;
+        font-family: "Lato", sans-serif;
+        font-size: 20px;
+        color: #ffd405;
+        background-color: #000;
+        outline: none;
+        border: none;
+        margin-top: 20px;
+      }
+
+      select{
+        height: 40px;
+      }
+
     </style>
+<!--   </head>
+  <body> -->
+    
 
-
-</head>
-
-<body>
-
-  <?php session_start(); 
-
-  include ('includes/config.php');
-  $email=$_SESSION['email']; 
-
-
-if ($email==NULL) {
-  header("Location:404");
- }
-
-
- $sql="SELECT username,email, paswd, phone_no, city, adress,image FROM signup_user WHERE email='$email'";
- $obj=new config();
- $res=$obj->select($sql);
-
-  while ($row=$res->fetch_assoc()) {
-  
-
-?>
-
-	<header>
-		<img src="images/logo3.png">
-	</header>
-	
-	<div id="main-container">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-3">
-					<?php include'account-side-bar.php'; ?>
-				</div>
-
-				<div class="col-lg-9 col-md-9 col-sm-9">
-
-				<div class="artical">
-					<div class="artical-header">
-						<h1 class="artical-header-h1">Book Now</h1>
-					</div>
-					
-					 <div id="map"></div>
+    <div id="map"></div>
     
     <div id="right-panel">
     <div>
-       <b>Start:</b>
-    <select id="start"  class="form-control input-sm">
-      <option selected disabled>Start Desitination</option>
+    <b>Start:</b>
+    <select id="start">
       <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
       <option value="Gulberg Town,Karachi">Gulberg Town</option>
       <option value="Nagan Chowrangi, Karachi">Nagan Chowrangi</option>
@@ -136,35 +93,19 @@ if ($email==NULL) {
       <option value="5 Star Round About, Shahrah-Sher Shah Suri, Karachi">5 Star Round About</option>
       <option value="Hyderi Bus Stop, Karachi">Hyderi </option>
       <option value="KDA Chowrangi Bus Stop, Karachi">KDA Chowrangi</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
+            <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
       <option value="Mausoleum of Quiad Azam, M. A. Jinnah Road, Karachi">Mausoleum of Quiad Azam, M. A. Jinnah Road</option>
       <option value="Sea View Karachi, Sea View Road, Karachi">Sea View Karachi, Sea View Road</option>
       <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
+
     </select>
-  
-    <b>End:</b>
-    <select id="end" class="form-control input-sm">
-          <option selected disabled>End Desitination</option>
-      <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
-      <option value="Gulberg Town,Karachi">Gulberg Town</option>
-      <option value="Nagan Chowrangi, Karachi">Nagan Chowrangi</option>
-      <option value="Anda Mor Road, Karachi">Anda Mor Road</option>
-      <option value="Serena Towers and Mobile Market, Karachi">Serena Towers and Mobile Market</option>
-      <option value="5 Star Round About, Shahrah-Sher Shah Suri, Karachi">5 Star Round About</option>
-      <option value="Hyderi Bus Stop, Karachi">Hyderi </option>
-      <option value="KDA Chowrangi Bus Stop, Karachi">KDA Chowrangi</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
-      <option value="Mausoleum of Quiad Azam, M. A. Jinnah Road, Karachi">Mausoleum of Quiad Azam, M. A. Jinnah Road</option>
-      <option value="Sea View Karachi, Sea View Road, Karachi">Sea View Karachi, Sea View Road</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
-    </select>
+    <br>
 
 
      <!-- <b>Waypoints:</b> <br>
     <i>(multiple selection)</i> <br> -->
     <select multiple id="waypoints" hidden>
-      <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option> 
-      <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
+ <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
       <option value="Gulberg Town,Karachi">Gulberg Town</option>
       <option value="Nagan Chowrangi, Karachi">Nagan Chowrangi</option>
       <option value="Anda Mor Road, Karachi">Anda Mor Road</option>
@@ -172,19 +113,36 @@ if ($email==NULL) {
       <option value="5 Star Round About, Shahrah-Sher Shah Suri, Karachi">5 Star Round About</option>
       <option value="Hyderi Bus Stop, Karachi">Hyderi </option>
       <option value="KDA Chowrangi Bus Stop, Karachi">KDA Chowrangi</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
+            <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
       <option value="Mausoleum of Quiad Azam, M. A. Jinnah Road, Karachi">Mausoleum of Quiad Azam, M. A. Jinnah Road</option>
       <option value="Sea View Karachi, Sea View Road, Karachi">Sea View Karachi, Sea View Road</option>
       <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
     </select>
     
     <!-- <br> -->
-    <input type="text" class="form-control input-sm" value="<?php echo $row['username']; ?>"> 
-  <input type="text" class="form-control input-sm" value="<?php echo $row['city']; ?>"> <input type="text" class="form-control input-sm" value="<?php echo $row['phone_no']; ?>"> 
+
+
+
+    <b>End:</b>
+    <select id="end">
+      <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
+      <option value="Gulberg Town,Karachi">Gulberg Town</option>
+      <option value="Nagan Chowrangi, Karachi">Nagan Chowrangi</option>
+      <option value="Anda Mor Road, Karachi">Anda Mor Road</option>
+      <option value="Serena Towers and Mobile Market, Karachi">Serena Towers and Mobile Market</option>
+      <option value="5 Star Round About, Shahrah-Sher Shah Suri, Karachi">5 Star Round About</option>
+      <option value="Hyderi Bus Stop, Karachi">Hyderi </option>
+      <option value="KDA Chowrangi Bus Stop, Karachi">KDA Chowrangi</option>
+      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
+      <option value="Mausoleum of Quiad Azam, M. A. Jinnah Road, Karachi">Mausoleum of Quiad Azam, M. A. Jinnah Road</option>
+      <option value="Sea View Karachi, Sea View Road, Karachi">Sea View Karachi, Sea View Road</option>
+      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
+
+    </select>
     <br>
-      <input type="submit" class="btn-danger form-control input-sm" id="submit" value="Booking Now"></br>
+      <input type="submit" id="submit" value="Find"></br>
     </div>
-    <div id="directions-panel" hidden></div>
+    <div id="directions-panel"></div>
     </div>
    
 
@@ -234,7 +192,7 @@ if ($email==NULL) {
               summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
               summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
               summaryPanel.innerHTML += route.legs[i].distance.text + '<br>';
-              summaryPanel.innerHTML += "Amount" + (parseInt(route.legs[i].distance.text)*30);
+              summaryPanel.innerHTML += "Amount" + (parseInt(route.legs[i].distance.text)*20);
 
               }
           } else {
@@ -251,8 +209,5 @@ if ($email==NULL) {
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjmANqiA3CjCY2QjYSfI9GapQ8khcICOA&callback=initMap">
     </script>
 
-
-
-<?php } ?>
-</body>
+<!--   </body>
 </html>
