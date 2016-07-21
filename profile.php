@@ -110,15 +110,15 @@
 
 						<div class="artical-sub-content">
 							
-<<<<<<< HEAD
-									<input type="file" class="change-pic" name="img"/>
 
-									<button class="btn btn-default save-btn" type="submit" name="insertimg" id="btn" style="margin: 40px 0px 0px -295px;">Save Image</button>
+						
 
-=======
-									<input type="file" class="change-pic" name="img" id="img"/><button style="margin-right:220px" class="btn btn-default btn-xs" type="submit" name="insertimg"  id="btn"><b>Save Image</b></button>
->>>>>>> 1056a2cf13d25d55fd2fba7cc3fb9a3ef798d0c9
-									 <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
+					<button class="btn btn-default save-btn" type="submit" name="insertimg" id="btn" style="margin: 40px 0px 0px -295px;">Save Image</button>
+
+
+						<input type="file" class="change-pic" name="img" id="img"/><button style="margin-right:220px" class="btn btn-default btn-xs" type="submit" name="insertimg"  id="btn"><b>Save Image</b></button>
+
+							 <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
 							
 								<?php
 
@@ -141,27 +141,16 @@
 								<div class="container" style="width:400px; margin-top:80px; margin-left:15px;">
 								  <table class="table table-hover txt" style="width:400px;">
 								    <tbody>
-<<<<<<< HEAD
-								      <tr><th style="font-weight:600;">UserName :</th><td>
-								      <input style="border-color:white; border:0px;" type="text" name="uname" contenteditable  value="<?php echo $row['username'] ?>"/></td></tr>
-								      <tr><th style="font-weight:600;">Email :</th><td>
-								      <input  style="border-color:white; border:0px;"  type="text"  name="email" contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
-								      <tr><th style="font-weight:600;">Password :</th><td>
-								      <input style="border-color:white; border:0px;"  type="password" name="paswd"  contenteditable value="<?php echo $row['paswd'] ?>"/></td></tr>
-								      <tr><th style="font-weight:600;">Phone No :</th><td>
-								      <input  style="border-color:white; border:0px;" type="text" name="phone_no"  contenteditable value="<?php echo $row['phone_no'] ?>"/></td></tr>
-								      <tr><th style="font-weight:600;">City :</th><td>
-								      <input  style="border-color:white; border:0px;" type="text" name="city"  contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
-								      <tr><th style="font-weight:600;">Address :</th><td>
-								      <input style="border-color:white; border:0px;"  type="text" name="adress"  contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
-=======
+
+								     
+
 								      <tr><th>UserName :</th><td><input  class="form-control" style="border-color:white; border:0px;" type="text" name="uname" contenteditable  value="<?php echo $row['username'] ?>"/></td></tr>
 								      <tr><th>Email :</th><td><input  class="form-control"  style="border-color:white; border:0px;"  type="text"  name="email" contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
 								      <tr><th>Password :</th><td><input class="form-control"  style="border-color:white; border:0px;"  type="password" name="paswd"  contenteditable value="<?php echo $row['paswd'] ?>"/></td></tr>
 								      <tr><th>Phone No :</th><td><input  class="form-control"  style="border-color:white; border:0px;" type="text" name="phone_no"  contenteditable value="<?php echo $row['phone_no'] ?>"/></td></tr>
 								      <tr><th>City :</th><td><input   class="form-control" style="border-color:white; border:0px;" type="text" name="city"  contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
 								      <tr><th>Adress :</th><td><input class="form-control"  style="border-color:white; border:0px;"  type="text" name="adress"  contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
->>>>>>> 1056a2cf13d25d55fd2fba7cc3fb9a3ef798d0c9
+
 									</tbody>
 								   </table>
 								   <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
