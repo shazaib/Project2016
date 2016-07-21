@@ -51,6 +51,7 @@
 
  	while ($row=$res->fetch_assoc()) {
  	
+ 
 ?>
 
 <body>
@@ -76,14 +77,15 @@
 					<div class="artical-content">
 							<form method="post" enctype="multipart/form-data">
 						<div class="profile-img" style="margin:-165px 0px 0px 50px; float:left;">	
-					<!-- BLOB / LONGBLOB-->	<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" width="130px" height="130px" />'; ?>
+					<!-- BLOB / LONGBLOB-->	<?php 
+						echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" width="130px" height="130px" />'; ?>
  													
     
 						</div>
 
 						<div class="artical-sub-content">
 							
-									<input type="file" class="change-pic" name="img"/><button style="margin-right:220px" class="btn btn-default btn-xs" type="submit" name="insertimg"  id="btn"><b>Save Image</b></button>
+									<input type="file" class="change-pic" name="img" id="img"/><button style="margin-right:220px" class="btn btn-default btn-xs" type="submit" name="insertimg"  id="btn"><b>Save Image</b></button>
 									 <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
 							
 								<?php
@@ -107,12 +109,12 @@
 								<div class="container" style="width:400px; margin-top:80px; margin-left:15px;">
 								  <table class="table table-hover" style="width:400px;">
 								    <tbody>
-								      <tr><th>UserName :</th><td><input style="border-color:white; border:0px;" type="text" name="uname" contenteditable  value="<?php echo $row['username'] ?>"/></td></tr>
-								      <tr><th>Email :</th><td><input  style="border-color:white; border:0px;"  type="text"  name="email" contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
-								      <tr><th>Password :</th><td><input style="border-color:white; border:0px;"  type="password" name="paswd"  contenteditable value="<?php echo $row['paswd'] ?>"/></td></tr>
-								      <tr><th>Phone No :</th><td><input  style="border-color:white; border:0px;" type="text" name="phone_no"  contenteditable value="<?php echo $row['phone_no'] ?>"/></td></tr>
-								      <tr><th>City :</th><td><input  style="border-color:white; border:0px;" type="text" name="city"  contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
-								      <tr><th>Adress :</th><td><input style="border-color:white; border:0px;"  type="text" name="adress"  contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
+								      <tr><th>UserName :</th><td><input  class="form-control" style="border-color:white; border:0px;" type="text" name="uname" contenteditable  value="<?php echo $row['username'] ?>"/></td></tr>
+								      <tr><th>Email :</th><td><input  class="form-control"  style="border-color:white; border:0px;"  type="text"  name="email" contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
+								      <tr><th>Password :</th><td><input class="form-control"  style="border-color:white; border:0px;"  type="password" name="paswd"  contenteditable value="<?php echo $row['paswd'] ?>"/></td></tr>
+								      <tr><th>Phone No :</th><td><input  class="form-control"  style="border-color:white; border:0px;" type="text" name="phone_no"  contenteditable value="<?php echo $row['phone_no'] ?>"/></td></tr>
+								      <tr><th>City :</th><td><input   class="form-control" style="border-color:white; border:0px;" type="text" name="city"  contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
+								      <tr><th>Adress :</th><td><input class="form-control"  style="border-color:white; border:0px;"  type="text" name="adress"  contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
 									</tbody>
 								   </table>
 								   <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>

@@ -13,7 +13,7 @@
 
 
 </br></br>
-<?php  echo '<img src="http://www.picgifs.com/job-graphics/job-graphics/taxi-driver/chauffeur10.gif" border="0"/><img src="http://www.animatedimages.org/data/media/679/animated-taxi-image-0007.gif" border="0" alt="animated-taxi-image-0007"/>' ?>
+<?php  echo '<img src="http://www.picgifs.com/job-graphics/job-graphics/taxi-driver/chauffeur10.gif" border="0" height="200px"/><img src="http://www.animatedimages.org/data/media/679/animated-taxi-image-0007.gif" border="0" alt="animated-taxi-image-0007"/>' ?>
 </br></br></br></br></br></br>
 
 </body>

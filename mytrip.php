@@ -57,6 +57,27 @@ td{
 
 <body>
 
+<?php session_start(); 
+
+	include ('includes/config.php');
+  $email=$_SESSION['email']; 
+
+
+if ($email==NULL) {
+ 	header("Location:404");
+ }
+
+
+ $sql="SELECT username,email, paswd, phone_no, city, adress,image FROM signup_user WHERE email='$email'";
+ $obj=new config();
+ $res=$obj->select($sql);
+
+ 	while ($row=$res->fetch_assoc()) {
+ 	
+ 
+ 
+?>
+
 	<header>
 		<img src="images/logo3.png">
 	</header>
@@ -104,7 +125,8 @@ td{
 		</div>
 	</div>
 
-	<?php include'footer.php'; ?>
+
+	<?php include'footer.php'; }?>
 
 
 </body>
