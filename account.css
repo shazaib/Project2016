@@ -158,11 +158,9 @@ header{
 @media screen and (max-width: 767px) { /******* media query 767px ********/
 
 .side-bar{
-	/*width: 100%;*/
 	height: auto;
 	border-right: 1px solid #ccc;
 	border-left: 1px solid #ccc;
-	/*background-color: #ccc;*/
 	text-align: -webkit-center;
 	text-align: -webkit-center;
 	text-align: -moz-center;
