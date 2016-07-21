@@ -110,13 +110,7 @@
 
 						<div class="artical-sub-content">
 							
-
-						
-
-					<button class="btn btn-default save-btn" type="submit" name="insertimg" id="btn" style="margin: 40px 0px 0px -295px;">Save Image</button>
-
-
-						<input type="file" class="change-pic" name="img" id="img"/><button style="margin-right:220px" class="btn btn-default btn-xs" type="submit" name="insertimg"  id="btn"><b>Save Image</b></button>
+					<input type="file" class="change-pic" name="img" id="img"/><button style="margin-right:220px" class="btn btn-default btn-xs" type="submit" name="insertimg"  id="btn"><b>Save Image</b></button>
 
 							 <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
 							
