@@ -21,14 +21,7 @@
 							<input class="form-input" type="password" name="pass" placeholder="Password" pattern=".{8,}" title="Allow eight or more characters" required><br>
 							<input class="form-input" type="text" name="city" placeholder="City" pattern="[A-Za-z]{1,15}" required><br>
 							<input class="form-input" type="text" name="phone" placeholder="Phone" pattern="^\d{11}$" title="eg: 0900-1234567" required><br>
-							<select class="form-input" name="select_driver" required>
-								<option value="" selected disabled>Where did you hear about us?</option>
-								<option value="Friends & Family">Friends & Family</option>
-								<option value="Email">Email</option>
-								<option value="TV Ad">TV Ad</option>
-								<option value="Social networks">Social networks</option>
-								<option value="Other">Other</option>
-							</select>
+							<input class="form-input" type="text" name="adress" placeholder="Adress" pattern=".{15,}" title="eg: Nazimabad R900" required><br>
 						<button type="submit" name="btn_submit" class="form-btn">Submit</button>
 						</br>
 						<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
@@ -83,14 +76,13 @@
 		$fname=$_POST['fname'];
 		$lname=$_POST['lname'];
 		$email=$_POST['email'];
-		$pass=$_POST['pass'];
-		$paswd=md5($pass);
+		$paswd=$_POST['pass'];
 		$city=$_POST['city'];
 		$phone=$_POST['phone'];
-		$select_driver=$_POST['select_driver'];
+		$adress=$_POST['adress'];
 		$access="No";
 
-		$sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$city','$phone','$select_driver','$access')";
+		$sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$city','$phone','$adress','$access')";
 		$obj=new config();
 		$obj->dbconfig($sql);
 

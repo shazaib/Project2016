@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About Us</title>
+	<title>Online Drivo</title>
 
 <?php include ('includes/config.php'); ?>
 

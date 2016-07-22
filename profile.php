@@ -70,7 +70,7 @@
  }
 
 
- $sql="SELECT username,email, paswd, phone_no, city, adress,image FROM signup_user WHERE email='$email'";
+ $sql="SELECT username,email, paswd, phone_no,city, adress,image FROM signup_user WHERE email='$email'";
  $obj=new config();
  $res=$obj->select($sql);
 

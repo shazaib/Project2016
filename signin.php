@@ -137,8 +137,6 @@ session_start(); ?>
 
 			}
 
-
-
 		else {
 
 				echo '<script>alert("Check Your Type")</script>';
@@ -147,7 +145,7 @@ session_start(); ?>
 
 			
 
-		 if ($type=="Driver") {
+		  if  ($type=="Driver") {
 
 			$sql="SELECT id,access,email,password FROM signup_driver where email='$email' and Access='Yes'";
 			$obj=new config();
@@ -158,7 +156,7 @@ session_start(); ?>
 
 				if ($_SESSION['email']==$row['email'] && $_SESSION['paswd']==$row['password']) {
 					
-					header("Location:map");
+					header("Location:driver-profile");
 
 				}
 
