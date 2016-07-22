@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 20, 2016 at 11:10 AM
+-- Generation Time: Jul 22, 2016 at 05:37 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.35
 
@@ -28,6 +28,39 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `config` (IN `server` VARCHAR(32), I
 SELECT * FROM `config` WHERE `server`="localhost" && `username`="root" && `password`="" && `dbname`="project2016"$$
 
 DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `booknow`
+--
+
+CREATE TABLE `booknow` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `city` varchar(40) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `start_destination` varchar(60) NOT NULL,
+  `end_destination` varchar(60) NOT NULL,
+  `date` date NOT NULL,
+  `time` date NOT NULL,
+  `Amount` varchar(33) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `booknow`
+--
+
+INSERT INTO `booknow` (`id`, `name`, `city`, `phone`, `start_destination`, `end_destination`, `date`, `time`, `Amount`) VALUES
+(1, 'name', '', 0, '', '', '0000-00-00', '0000-00-00', ''),
+(2, 'name', '', 0, '', '', '0000-00-00', '0000-00-00', ''),
+(3, 'name', 'Karachi', 2147483646, '', '', '0000-00-00', '0000-00-00', ''),
+(4, 'name', 'Karachi', 2147483646, '', '', '0000-00-00', '0000-00-00', ''),
+(5, 'name', 'Karachi', 2147483646, 'Nazimabad Petrol Pump Bus Stop, Nazimabad Underpass, Ka', 'KDA Chowrangi Bus Stop, Karachi', '0000-00-00', '0000-00-00', ''),
+(6, 'name', 'Karachi', 2147483646, 'Nazimabad No. 4, Karachi', 'Nazimabad Petrol Pump Bus Stop, Nazimabad Underpass, Ka', '0000-00-00', '0000-00-00', ''),
+(7, 'name', 'Karachi', 2147483646, 'Numaish Chowrangi, Shahrah-e-Qaideen, Karachi', 'Power House, Karachi', '0000-00-00', '0000-00-00', ''),
+(8, 'name', 'Karachi', 2147483646, 'Numaish Chowrangi, Shahrah-e-Qaideen, Karachi', 'Numaish Chowrangi, Shahrah-e-Qaideen, Karachi', '0000-00-00', '0000-00-00', ''),
+(9, 'name', 'Karachi', 2147483646, 'Water Pump, Karachi', 'Nazimabad No. 4, Karachi', '0000-00-00', '0000-00-00', '');
 
 -- --------------------------------------------------------
 
@@ -74,9 +107,36 @@ CREATE TABLE `map` (
 --
 
 INSERT INTO `map` (`starting_location`, `ending_location`) VALUES
-('Nagan Chowrangi', 'Hyderi'),
-('Anda Mor Road', 'KDA Chowrangi '),
-('Tariq Road ', 'Sea View Karachi, Sea View Road');
+('Shadman #2, Karachi', '4K Chowrangi, Karachi'),
+('Saddar Bazaar, Karachi', '5 Star Roundabout, Shahra-e-Sher Shah Suri, Karachi'),
+('Hyderi Bus Stop, Karachi', 'Ayesha Manzil, Karachi'),
+('Ayesha Manzil, Karachi', 'Board of Secondary Education Karachi'),
+('Serena Towers and Mobile Market, Shahra-e-Sher Shah Sur', 'Do Minut Ki Chorangi, Karachi'),
+('Nazimabad No. 4, Karachi', 'Golimar, Karachi'),
+('Karachi City Railway Station, Karachi', 'Gulshan Chowrangi Bus Stop, Karachi'),
+('Do Minut Ki Chorangi, Karachi', 'Habib Bank Plaza, I.I Chundrigar Road, Karachi'),
+('Tariq Road, Karachi, Sindh', 'Hyderi Bus Stop, Karachi'),
+('Shahara-e-Fasal, Karachi', 'Karachi Airport, Karachi'),
+('Gulshan Chowrangi Bus Stop, Karachi', 'Karachi City Railway Station, Karachi'),
+('5 Star Roundabout, Shahra-e-Sher Shah Suri, Karachi', 'Karimabad Bus Stop, Sharah-e-Humayun, Karachi'),
+('Karimabad Bus Stop, Sharah-e-Humayun, Karachi', 'KDA Chowrangi Bus Stop, Karachi'),
+('4K Chowrangi, Karachi', 'Malir Halt, Karachi'),
+('Liaquatabad Super Market, Karachi', 'Nagan Chowrangi, Karachi'),
+('Quaid e Azam Museum, Fatima Jinnah Road, Karachi', 'Nazimabad No. 4, Karachi'),
+('Water Pump, Karachi', 'Nazimabad Petrol Pump Bus Stop, Nazimabad Underpass, Ka'),
+('Nazimabad Petrol Pump Bus Stop, Nazimabad Underpass, Ka', 'Numaish Chowrangi, Shahrah-e-Qaideen, Karachi'),
+('Numaish Chowrangi, Shahrah-e-Qaideen, Karachi', 'Power House, Karachi'),
+('Board of Secondary Education Karachi', 'Quaid e Azam Museum, Fatima Jinnah Road, Karachi'),
+('University of Karachi, Karachi', 'Regent Plaza Hotel, Karachi'),
+('Power House, Karachi', 'Saddar Bazaar, Karachi'),
+('Suhrab Goth Mosque, Abul Hasan Isphahani Road, Karachi', 'Sea View Karachi, Sea View Road, Karachi'),
+('Habib Bank Plaza, I.I Chundrigar Road, Karachi', 'Serena Towers and Mobile Market, Shahra-e-Sher Shah Sur'),
+('Malir Halt, Karachi', 'Shadman #2, Karachi'),
+('Karachi Airport, Karachi', 'Shahara-e-Fasal, Karach'),
+('Sea View Karachi, Sea View Road, Karachi', 'Suhrab Goth Mosque, Abul Hasan Isphahani Road, Karachi'),
+('Nagan Chowrangi, Karachi', 'Tariq Road, Karachi, Sindh'),
+('Regent Plaza Hotel, Karachi', 'University of Karachi, Karachi'),
+('KDA Chowrangi Bus Stop, Karachi', 'Water Pump, Karachi');
 
 -- --------------------------------------------------------
 
@@ -135,6 +195,12 @@ INSERT INTO `signup_user` (`id`, `person`, `username`, `email`, `paswd`, `c_pasw
 --
 
 --
+-- Indexes for table `booknow`
+--
+ALTER TABLE `booknow`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `map`
 --
 ALTER TABLE `map`
@@ -158,6 +224,11 @@ ALTER TABLE `signup_user`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `booknow`
+--
+ALTER TABLE `booknow`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `signup_driver`
 --
