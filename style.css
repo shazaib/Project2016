@@ -665,7 +665,7 @@ footer{
 /**************************** Driver end **********************/
 
 
-/**************************** Login  **************************/
+/**************************** Login **************************/
 
 .login{
 	width: 100%;
@@ -675,12 +675,9 @@ footer{
 }
 
 .login-form{
-	width: 45%;
-	/*height: 400px;*/
+	width: 100%;
 	background-color: #f3f3f3;
     box-shadow: 0px 43px 99px -5px rgba(0,0,0,0.21);
-    /*padding-top: 40px;*/
-    /*padding-bottom: 40px;*/
     padding: 40px 0;
 }
 
@@ -702,8 +699,6 @@ footer{
     outline: none;
     font-family: 'Lato', sans-serif;
     font-size: 15px;
-    /*color: #000;*/
-    /*color: #FFD405;*/
 }
 
 .login-btn{
@@ -746,8 +741,26 @@ footer{
 	text-decoration: underline;
 }
 
+.login-fields-error{
+	width: 60%;
+    height: 45px;
+    margin-top: 20px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid red;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    padding-top:7px;
+    color:red;
+    display:none; 
+    box-shadow:0px 0px 10px -2px rgba(255,0,0,0.63);
+}
 
-/**************************** Login end **********************/
+
+
+
+/************************ Login end *************************/
 
 
 /**************************** About us **********************/
@@ -919,14 +932,19 @@ footer{
 }*/
 
 .login-form{
-	width: 65%;
+	width: 100%;
 	/*height: 400px;*/
-	background-color: #fff;
+	background-color: #f3f3f3;
     box-shadow: 0px 43px 99px -5px rgba(0,0,0,0.21);
     /*padding-top: 40px;*/
     /*padding-bottom: 40px;*/
     padding: 40px 0;
 }
+
+.side-feature-img{
+	display: none;
+}
+
 
 
 
@@ -1033,9 +1051,9 @@ footer{
 }
 
 .login-form{
-	width: 80%;
+	width: 100%;
 	/*height: 400px;*/
-	background-color: #fff;
+	background-color: #f3f3f3;
     box-shadow: 0px 43px 99px -5px rgba(0,0,0,0.21);
     /*padding-top: 40px;*/
     /*padding-bottom: 40px;*/
@@ -1089,7 +1107,7 @@ footer{
 .login-form{
 	width: 100%;
 	/*height: 400px;*/
-	background-color: #fff;
+	background-color: #f3f3f3;
     box-shadow: 0px 43px 99px -5px rgba(0,0,0,0.21);
     /*padding-top: 40px;*/
     /*padding-bottom: 40px;*/

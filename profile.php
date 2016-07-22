@@ -34,7 +34,6 @@
 <style type="text/css">	
 
 .save-btn{
-	/*width: 100px;*/
 	height: 40px;
 	background-color: #000;
 	float: left;
@@ -49,10 +48,6 @@
 	background-color: #ffd405;
 	color: #000;
 }
-
-
-
-
 
 </style>
 

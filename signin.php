@@ -38,16 +38,7 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 	<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
 
-<!-- <style type="text/css">
 
-.prefix{
-	text-align: :-webkit-center;
-	text-align: :-moz-center;
-	text-align: :-ms-center;
-	text-align: :center;
-}
-	
-</style> -->
 
 
 </head>
@@ -56,19 +47,27 @@
 <form method="post">
 	<div class="container" style="text-align:-webkit-center; text-align:-moz-center; text-align:-ms-center;">
 		<div class="row">
-			<div class="col-md-12 col-sm-12 col-xs-12">
+
+			<div class="col-md-3 col-sm-3 col-xs-3">
+				<img class="side-feature-img img-responsive" src="images/feature_img2.png" style="position:relative; top:500px; left:36px;">			
+			</div>
+
+
+			<div class="col-md-6 col-sm-12 col-xs-12">
 			<img src="images/logo3.png" style="margin-top:100px;">
 				<div class="login">
 					<div class="login-form">
 						
 						<h1 class="login-h1">SignIn</h1>
 						<hr class="login-hr">
-							
+						
+						<div class="login-fields-error" id="validation">Invalid Email or Password<br>Check account type</div>
+
 						<input class="login-fields" type="email" name="email" placeholder="Email" required><br>
 						<input class="login-fields" type="password" name="paswd" placeholder="Password" required>
 						<br>
 						
-						 <select class="login-fields" name="type" required>
+						<select class="login-fields" name="type" required>
 							<option value="" selected disabled>-- Select Account --</option>
 							<option value="Rider">Rider</option>
 							<option value="Driver">Driver</option>
@@ -85,9 +84,16 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="col-md-3 col-sm-3 col-xs-3">
+			<img class="side-feature-img img-responsive" src="images/feature_img.png" style="top:250px; left:-33px; position:relative;">
+			</div>
+
+
 		</div>
-			<img class="img-responsive" src="images/feature_img.png" style="float:right; top:-420px; left:61px; position:relative;">
-			<img class="img-responsive" src="images/feature_img2.png" style="position:relative; top:-185px; left:-247px;">
+			
+
+			
 
 	</div>
 
@@ -126,17 +132,16 @@ session_start(); ?>
 					header("Location:profile.php");
 				}
 
-				else
+			else
 				{
-
-					echo '<script>alert("Invalid Username or Passwords")</script>';
+					echo '<script>document.getElementById("validation").style.display="block";</script>';
 				}
 
-		
 				}
 
 			}
 
+<<<<<<< HEAD
 		else {
 
 				echo '<script>alert("Check Your Type")</script>';
@@ -146,38 +151,43 @@ session_start(); ?>
 			
 
 		  if  ($type=="Driver") {
+=======
+			else{
+					echo '<script>document.getElementById("validation").style.display="block";</script>';
+				}
+
+		 if ($type=="Driver")
+		 {
+>>>>>>> 295e137f251845e155bf12274557d5cd22717535
 
 			$sql="SELECT id,access,email,password FROM signup_driver where email='$email' and Access='Yes'";
 			$obj=new config();
 			$res=$obj->select($sql);
 
-			while ($row=$res->fetch_assoc()) {
+			while ($row=$res->fetch_assoc())
+			{
 		
-
 				if ($_SESSION['email']==$row['email'] && $_SESSION['paswd']==$row['password']) {
 					
+<<<<<<< HEAD
 					header("Location:driver-profile");
 
+=======
+					header("Location:map");
+>>>>>>> 295e137f251845e155bf12274557d5cd22717535
 				}
 
 				else
 				{
-
-					echo '<script>alert("Invalid Username or Password")</script>';
+					echo '<script>document.getElementById("validation").style.display="block";</script>';
 				}
+			}
 
+		 }
 
-			
+	else{
+			echo '<script>document.getElementById("validation").style.display="block";</script>';
 		}
-
-
-	}
-
-	else {
-
-		echo '<script>alert("Check Your Type")</script>';
-
-	}
 
 
 
