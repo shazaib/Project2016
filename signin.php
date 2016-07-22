@@ -141,9 +141,16 @@ session_start(); ?>
 
 			}
 
-			else{
-					echo '<script>document.getElementById("validation").style.display="block";</script>';
-				}
+
+		else {
+
+				echo '<script>alert("Check Your Type")</script>';
+
+		}
+
+			
+
+		 
 
 		 if ($type=="Driver")
 		 {
@@ -156,8 +163,8 @@ session_start(); ?>
 			{
 		
 				if ($_SESSION['email']==$row['email'] && $_SESSION['paswd']==$row['password']) {
-					
-					header("Location:map");
+
+					header("Location:driver-profile");
 				}
 
 				else

@@ -31,14 +31,59 @@
 <!-- Account -->
 <link rel="stylesheet" type="text/css" href="account.css">
 
+<style type="text/css">	
+
+.save-btn{
+	/*width: 100px;*/
+	height: 40px;
+	background-color: #000;
+	float: left;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	color: #ffd405;
+	border: none;
+	outline: none;
+}
+
+.save-btn:hover{
+	background-color: #ffd405;
+	color: #000;
+}
+
+
+
+
+
+</style>
 </head>
 
 <body>
 
+
+<?php 
+
+include ('includes/config.php');
+session_start();
+
+	$email=$_SESSION['email']; 
+
+	if ($email==NULL) {
+ 	header("Location:404");
+ }
+ 
+ 	$sql="SELECT firstname,email,password,phone,city,adress,image FROM signup_driver WHERE email='$email'";
+	$obj=new config();
+	$res=$obj->select($sql);
+   
+	while($row=$res->fetch_assoc()) {
+
+?>
+
+
+
 	<header>
 		<img src="images/logo3.png">
 	</header>
-	
 	<div id="main-container">
 		<div class="container">
 			<div class="row">
@@ -54,35 +99,74 @@
 						</div>
 						
 						<div class="artical-content">
+						<form method="post" enctype="multipart/form-data"> 
+						<div class="profile-img" style="margin:-165px 0px 0px 50px; float:left;">
+				<?php  echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" width="130px" height="130px"/>'; ?>
+					</div>
 
-							<div class="profile-img" style="margin:-165px 0px 0px 50px; float:left;">
-								<img src="images/profile-img.png" style="margin-top:30px;">
-							</div>
+							<input type="file" class="change-pic" name="img" id="img"/>
+							<button class="btn btn-default save-btn" type="submit" name="insertimg" id="btn" style="margin: 40px 0px 0px -295px;">Save Image</button>
+							 <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
 							
-							<div class="artical-sub-content">
-								<h1><a class="change-pic" href="#">Change Picture</a></h1><br>
-					
-								<ul>
-									<li class="txt" style="margin-top: 50px; font-weight:600;"><label>First Name :</label></li>
-									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>Ammar</h1></li>
+								<?php
 
-									<li class="txt" style="margin-top: 50px; font-weight:600;"><label>Last Name :</label></li>
-									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>Alam</h1></li>
+								if (isset($_POST['insertimg'])) {
 
-									<li class="txt" style="font-weight:600;"><label>Email :</label></li>
-									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>example@gmail.com</h1></li>
+								  $imgdata=addslashes(file_get_contents($_FILES["img"]["tmp_name"]));
+								  $imgtype=$_FILES["img"]["type"];
+									 
+									if(substr($imgtype,0,5)=="image")
+									 { 	
+
+									 $sql="UPDATE signup_driver set image='$imgdata' where email='$email' ";
+									 $obj=new config();
+									 $obj->dbconfig($sql);
+									 echo '<script> document.getElementById("refresh").click(); </script>';
+
+								 	}  } ?>	 	
+
+
+								<div class="container" style="width:400px; margin-top:80px; margin-left:15px;">
+								  <table class="table table-hover txt" style="width:400px;">
+								    <tbody>
+								      <tr><th style="font-weight:600;">Firstame :</th><td>
+								      <input  class="form-control" style="border-color:white; border:0px;" type="text" name="uname" contenteditable  value="<?php echo $row['firstname'] ?>"/></td></tr>
+								      <tr><th style="font-weight:600;">Email :</th><td>
+								      <input  class="form-control"  style="border-color:white; border:0px;"  type="text"  name="email" contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
+								      <tr><th style="font-weight:600;">Password :</th><td>
+								      <input class="form-control"  style="border-color:white; border:0px;"  type="password" name="paswd"  contenteditable value="<?php echo $row['password'] ?>"/></td></tr>
+								      <tr><th style="font-weight:600;">Phone No :</th><td>
+								      <input  class="form-control"  style="border-color:white; border:0px;" type="text" name="phone_no"  contenteditable value="<?php echo $row['phone'] ?>"/></td></tr>
+								      <tr><th style="font-weight:600;">City :</th><td>
+								      <input   class="form-control" style="border-color:white; border:0px;" type="text" name="city"  contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
+								      <tr><th style="font-weight:600;">Address :</th><td>
+								      <input class="form-control"  style="border-color:white; border:0px;"  type="text" name="adress"  contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
+
+									</tbody>
+								   </table>
+								   <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
+								   <button type="submit" class="btn btn-default btn-sm save-btn" name="update_profile">Save Update &nbsp; <span class="glyphicon glyphicon-pencil"></span></button>
+								</div>
+
+								<?php
+
+								if (isset($_POST['update_profile'])) {
+
+									$fname=$_POST['uname'];
+									$email=$_POST['email'];
+									$paswd=$_POST['paswd'];
+									$city=$_POST['city'];
+									$phone=$_POST['phone_no'];
+									$adress=$_POST['adress'];
 									
-									<li class="txt" style="font-weight:600;"><label>Password :</label></li>
-									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>12345678</h1></li>
-									
-									<li class="txt" style="font-weight:600;"><label>Phone No :</label></li>
-									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>03052536258</h1></li>
 
-									<li class="txt" style="font-weight:600;"><label>City :</label></li>
-									<li class="txt" style="margin: -13px 0px 0px 180px;"><h1>karachi</h1></li>
+									$sql="UPDATE signup_driver set firstname='$fname',email='$email',password='$paswd',phone='$phone',city='$city',adress='$adress'  where email='$email' ";
+								 	$obj=new config();
+								 	$obj->dbconfig($sql);
+								 	echo '<script> document.getElementById("refresh").click(); </script>';
 
-								</ul>
-							</div>
+								 	}   ?>
+							</form>	 	
 						</div>
 					</div>
 				</div>
@@ -90,11 +174,17 @@
 			</div>
 		</div>
 	</div>
+	
+
+	<?php  } ?>
 
 <?php include'footer.php'; ?>
 
+<script>
+	function myFunction() {
+	    location.reload();
+	}
+</script>
+
 </body>
-
-	
-
 </html>
