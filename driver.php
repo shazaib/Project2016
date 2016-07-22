@@ -1,13 +1,24 @@
 
 <?php include'header.php'; ?>
 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Driver Account</title>
+
+</head>
+
+<body>
+
+
 	<div class="driver">
 		
 		<div class="container">
 			<div class="row">
 			<!-- <div class="overlay-opacity"> -->
 				<div class="col-md-6 col-sm-6">
-					<h1 class="side-h1">TAXI NEEDS PARTNERS LIKE YOU.</h1>
+					<h1 class="side-h1">DRIVO NEEDS PARTNERS LIKE YOU.</h1>
 					<p class="side-p">Drive with Taxi and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.</p>
 
 				</div>
@@ -74,7 +85,8 @@
 </div>
 
 
-
+</body>
+</html>
 
 <?php  
 

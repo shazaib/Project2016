@@ -48,12 +48,12 @@
 	<div class="container" style="text-align:-webkit-center; text-align:-moz-center; text-align:-ms-center;">
 		<div class="row">
 
-			<div class="col-md-3 col-sm-3 col-xs-3">
+			<div class="col-md-4 col-sm-4 col-xs-4">
 				<img class="side-feature-img img-responsive" src="images/feature_img2.png" style="position:relative; top:500px; left:36px;">			
 			</div>
 
 
-			<div class="col-md-6 col-sm-12 col-xs-12">
+			<div class="col-md-4 col-sm-12 col-xs-12">
 			<img src="images/logo3.png" style="margin-top:100px;">
 				<div class="login">
 					<div class="login-form">
@@ -85,7 +85,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-3 col-sm-3 col-xs-3">
+			<div class="col-md-4 col-sm-4 col-xs-4">
 			<img class="side-feature-img img-responsive" src="images/feature_img.png" style="top:250px; left:-33px; position:relative;">
 			</div>
 
