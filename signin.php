@@ -61,8 +61,8 @@
 						<h1 class="login-h1">SignIn</h1>
 						<hr class="login-hr">
 						
-						<div class="login-fields-error" id="validation">Invalid Email or Password<br>Check account type</div>
-
+						<div class="login-fields-error" id="validation">Invalid Email or Password <br> Check account type </div>
+						<div class="login-fields-error" id="validations"></div>
 						<input class="login-fields" type="email" name="email" placeholder="Email" required><br>
 						<input class="login-fields" type="password" name="paswd" placeholder="Password" required>
 						<br>
@@ -144,7 +144,7 @@ session_start(); ?>
 
 		else {
 
-				echo '<script>alert("Check Your Type")</script>';
+			echo '<script>document.getElementById("validation").style.display="block";</script>';
 
 		}
 

@@ -132,17 +132,21 @@
 								    <tbody>
 
 								      <tr><th style="font-weight:600;">UserName :</th><td>
-								      <input  class="form-control" style="border-color:white; border:0px;" type="text" name="uname" contenteditable  value="<?php echo $row['username'] ?>"/></td></tr>
+								      <input  class="form-control" style="border-color:white; border:0px;" type="text" name="uname" pattern="[A-Za-z\s]{3,15}"  title="Maximum 3 & Allow 15 letters only" required contenteditable  value="<?php echo $row['username'] ?>"/></td></tr>
 								      <tr><th style="font-weight:600;">Email :</th><td>
-								      <input  class="form-control"  style="border-color:white; border:0px;"  type="text"  name="email" contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
+								      <input  class="form-control"  style="border-color:white; border:0px;"  type="text"  name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="eg:online-taxi@gmail.com" required contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
+
 								      <tr><th style="font-weight:600;">Password :</th><td>
-								      <input class="form-control"  style="border-color:white; border:0px;"  type="password" name="paswd"  contenteditable value="<?php echo $row['paswd'] ?>"/></td></tr>
+								      <input class="form-control"  style="border-color:white; border:0px;"  type="password" name="paswd" pattern=".{8,}" title="Allow eight or more characters" required  contenteditable value="<?php echo $row['paswd'] ?>"/></td></tr>
 								      <tr><th style="font-weight:600;">Phone No :</th><td>
-								      <input  class="form-control"  style="border-color:white; border:0px;" type="text" name="phone_no"  contenteditable value="<?php echo $row['phone_no'] ?>"/></td></tr>
+
+								      <input  class="form-control"  style="border-color:white; border:0px;" type="text" name="phone_no"  pattern="^\d{11}$" title="eg:0000-000-0000" required contenteditable value="<?php echo $row['phone_no'] ?>"/></td></tr>
 								      <tr><th style="font-weight:600;">City :</th><td>
-								      <input   class="form-control" style="border-color:white; border:0px;" type="text" name="city"  contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
+
+								      <input   class="form-control" style="border-color:white; border:0px;" type="text" name="city"  pattern="[A-Za-z]{3,15}" title="Maximum 3 & Allow 15 letters only" required contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
 								      <tr><th style="font-weight:600;">Address :</th><td>
-								      <input class="form-control"  style="border-color:white; border:0px;"  type="text" name="adress"  contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
+								      
+								      <input class="form-control"  style="border-color:white; border:0px;"  type="text" name="adress" pattern=".{3,20}" title="Maximum 3 & Allow 15 letters only" required> contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
 
 									</tbody>
 								   </table>
