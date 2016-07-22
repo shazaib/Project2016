@@ -59,7 +59,7 @@
       #map {
         height: 500px;
         float: left;
-        width: 50%;
+        width: 55%;
         height: 50%;
     
       }
@@ -69,13 +69,14 @@
         width: 20%;
         float: left;
         text-align: left;
-        padding-top: 20px;
+       margin-top: 2px;
       }
       #directions-panel {
         margin-top: 20px;
         background-color: #FFEE77;
         padding: 10px;
       }
+
     </style>
 
 
@@ -88,7 +89,6 @@
   include ('includes/config.php');
   $email=$_SESSION['email']; 
 
-
 if ($email==NULL) {
   header("Location:404");
  }
@@ -100,13 +100,15 @@ if ($email==NULL) {
 
   while ($row=$res->fetch_assoc()) {
   
+ 
 
-?>
+ ?>
 
 	<header>
 		<img src="images/logo3.png">
 	</header>
 	
+
 	<div id="main-container">
 		<div class="container">
 			<div class="row">
@@ -114,6 +116,7 @@ if ($email==NULL) {
 					<?php include'account-side-bar.php'; ?>
 				</div>
 
+        
 				<div class="col-lg-9 col-md-9 col-sm-9">
 
 				<div class="artical">
@@ -123,40 +126,45 @@ if ($email==NULL) {
 					
 					 <div id="map"></div>
     
+
     <div id="right-panel">
+  <label for="same">Name :<input type="text" id="same"  name="name"  readonly class="form-control input-sm" value="<?php echo $row['username']; ?>"> </label>
+  <label for="sames">City :<input type="text" id="sames"  name="city" readonly  class="form-control input-sm" value="<?php echo $row['city']; ?>"> </label>
+  <label for="samess">Cell Number :<input type="text" id="samess"  name="num" readonly  class="form-control input-sm" value="<?php echo $row['phone_no']; ?>"></label> 
+   
+   <?php } ?>
     <div>
        <b>Start:</b>
-    <select id="start"  class="form-control input-sm">
+    <select id="start"  class="form-control input-sm" name="start">
       <option selected disabled>Start Desitination</option>
-      <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
-      <option value="Gulberg Town,Karachi">Gulberg Town</option>
-      <option value="Nagan Chowrangi, Karachi">Nagan Chowrangi</option>
-      <option value="Anda Mor Road, Karachi">Anda Mor Road</option>
-      <option value="Serena Towers and Mobile Market, Karachi">Serena Towers and Mobile Market</option>
-      <option value="5 Star Round About, Shahrah-Sher Shah Suri, Karachi">5 Star Round About</option>
-      <option value="Hyderi Bus Stop, Karachi">Hyderi </option>
-      <option value="KDA Chowrangi Bus Stop, Karachi">KDA Chowrangi</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
-      <option value="Mausoleum of Quiad Azam, M. A. Jinnah Road, Karachi">Mausoleum of Quiad Azam, M. A. Jinnah Road</option>
-      <option value="Sea View Karachi, Sea View Road, Karachi">Sea View Karachi, Sea View Road</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
+      <?php   
+
+    $sql="SELECT starting_location FROM map";
+    $obj=new config();
+    $res=$obj->select($sql);
+
+     while ($row=$res->fetch_assoc()) {
+ 
+      echo  "<option value='".$row['starting_location']."'>".$row['starting_location']."</option>";
+      
+     } ?>
+
     </select>
   
     <b>End:</b>
-    <select id="end" class="form-control input-sm">
+    <select id="end" class="form-control input-sm" name="end">
           <option selected disabled>End Desitination</option>
-      <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
-      <option value="Gulberg Town,Karachi">Gulberg Town</option>
-      <option value="Nagan Chowrangi, Karachi">Nagan Chowrangi</option>
-      <option value="Anda Mor Road, Karachi">Anda Mor Road</option>
-      <option value="Serena Towers and Mobile Market, Karachi">Serena Towers and Mobile Market</option>
-      <option value="5 Star Round About, Shahrah-Sher Shah Suri, Karachi">5 Star Round About</option>
-      <option value="Hyderi Bus Stop, Karachi">Hyderi </option>
-      <option value="KDA Chowrangi Bus Stop, Karachi">KDA Chowrangi</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
-      <option value="Mausoleum of Quiad Azam, M. A. Jinnah Road, Karachi">Mausoleum of Quiad Azam, M. A. Jinnah Road</option>
-      <option value="Sea View Karachi, Sea View Road, Karachi">Sea View Karachi, Sea View Road</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
+      <?php   
+
+    $sql="SELECT ending_location FROM map";
+    $obj=new config();
+    $res=$obj->select($sql);
+
+     while ($row=$res->fetch_assoc()) {
+ 
+      echo  "<option value='".$row['ending_location']."'>".$row['ending_location']."</option>";
+      
+     } ?>
     </select>
 
 
@@ -179,14 +187,27 @@ if ($email==NULL) {
     </select>
     
     <!-- <br> -->
-    <input type="text" class="form-control input-sm" value="<?php echo $row['username']; ?>"> 
-  <input type="text" class="form-control input-sm" value="<?php echo $row['city']; ?>"> <input type="text" class="form-control input-sm" value="<?php echo $row['phone_no']; ?>"> 
+
+     <table><tr>
+                <td><label for="same1">Date :<input type="date" id="same1" class="form-control input-sm"></label></td>
+                 <td><label for="same2">Time :<input type="time" id="same2" class="form-control input-sm"></label></td>
+            </tr>
+      </table>
+              <!--<td><label for="same4">Class :<select id="same4" class="form-control input-sm">
+                <option>Standard class</option>
+                <option>Business class</option>
+                <option>Minivan class</option></select></label>
+              </td>
+               <td><label for="same3">Number of passanger :<input type="text" id="same3" class="form-control input-sm"> </label></td>-->
+    
+ 
+
     <br>
-      <input type="submit" class="btn-danger form-control input-sm" id="submit" value="Booking Now"></br>
+     <br>
+      <input type="submit" name="insert_record" class="btn-danger form-control input-sm" id="submit" value="Booking Now"></br>
     </div>
     <div id="directions-panel" hidden></div>
     </div>
-   
 
     <script>
       function initMap() {
@@ -251,8 +272,26 @@ if ($email==NULL) {
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjmANqiA3CjCY2QjYSfI9GapQ8khcICOA&callback=initMap">
     </script>
 
-
-
-<?php } ?>
 </body>
 </html>
+
+<?php  
+
+if (isset($_POST['insert_record'])) {
+
+    $name=$_POST['name']; 
+    $city=$_POST['city'];
+    $num=$_POST['num'];
+    $start=$_POST['start'];
+    $end=$_POST['end'];
+    $date=$_POST['date'];
+    $time=$_POST['time'];
+    $Rs="In Working";
+   
+    $sql="INSERT into booknow VALUES('','name','$city','$num','$start','$end','$date','$time','$rs')";
+    $obj=new config();
+    $obj->dbconfig($sql);
+
+
+           }
+ ?>
