@@ -21,7 +21,7 @@
 							<input class="form-input" type="password" name="pass" placeholder="Password" pattern=".{8,}" title="Allow eight or more characters" required><br>
 							<input class="form-input" type="text" name="city" placeholder="City" pattern="[A-Za-z]{1,15}" required><br>
 							<input class="form-input" type="text" name="phone" placeholder="Phone" pattern="^\d{11}$" title="eg: 0900-1234567" required><br>
-							<input class="form-input" type="text" name="adress" placeholder="Adress" pattern=".{15,}" title="eg: Nazimabad R900" required><br>
+							<input class="form-input" type="text" name="adress" placeholder="Adress" pattern=".{5,15}" title="eg: Nazimabad R900" required><br>
 						<button type="submit" name="btn_submit" class="form-btn">Submit</button>
 						</br>
 						<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
@@ -81,8 +81,9 @@
 		$phone=$_POST['phone'];
 		$adress=$_POST['adress'];
 		$access="No";
+		$image="";
 
-		$sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$city','$phone','$adress','$access')";
+		$sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$city','$phone','$adress','$access','$image')";
 		$obj=new config();
 		$obj->dbconfig($sql);
 
