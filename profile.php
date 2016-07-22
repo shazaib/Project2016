@@ -146,7 +146,7 @@
 								      <input   class="form-control" style="border-color:white; border:0px;" type="text" name="city"  pattern="[A-Za-z]{3,15}" title="Maximum 3 & Allow 15 letters only" required contenteditable value="<?php echo $row['city'] ?>"/></td></tr>	
 								      <tr><th style="font-weight:600;">Address :</th><td>
 								      
-								      <input class="form-control"  style="border-color:white; border:0px;"  type="text" name="adress" pattern=".{3,20}" title="Maximum 3 & Allow 15 letters only" required> contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
+								      <input class="form-control"  style="border-color:white; border:0px;"  type="text" name="adress" pattern=".{3,20}" title="Maximum 3 & Allow 15 letters only" required contenteditable value="<?php echo $row['adress'] ?>"/></td></tr>
 
 									</tbody>
 								   </table>
