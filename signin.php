@@ -150,11 +150,7 @@ session_start(); ?>
 
 			
 
-		  if  ($type=="Driver") {
-
-			else{
-					echo '<script>document.getElementById("validation").style.display="block";</script>';
-				}
+		 
 
 		 if ($type=="Driver")
 		 {
