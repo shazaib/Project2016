@@ -141,7 +141,7 @@ session_start(); ?>
 
 			}
 
-<<<<<<< HEAD
+
 		else {
 
 				echo '<script>alert("Check Your Type")</script>';
@@ -151,14 +151,13 @@ session_start(); ?>
 			
 
 		  if  ($type=="Driver") {
-=======
+
 			else{
 					echo '<script>document.getElementById("validation").style.display="block";</script>';
 				}
 
 		 if ($type=="Driver")
 		 {
->>>>>>> 295e137f251845e155bf12274557d5cd22717535
 
 			$sql="SELECT id,access,email,password FROM signup_driver where email='$email' and Access='Yes'";
 			$obj=new config();
@@ -168,13 +167,8 @@ session_start(); ?>
 			{
 		
 				if ($_SESSION['email']==$row['email'] && $_SESSION['paswd']==$row['password']) {
-					
-<<<<<<< HEAD
-					header("Location:driver-profile");
 
-=======
-					header("Location:map");
->>>>>>> 295e137f251845e155bf12274557d5cd22717535
+					header("Location:driver-profile");
 				}
 
 				else
