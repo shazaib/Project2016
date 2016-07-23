@@ -51,9 +51,6 @@
 }
 
 
-
-
-
 </style>
 </head>
 
@@ -182,6 +179,7 @@ session_start();
 	
 
 	<?php  } ?>
+
 
 <?php include'footer.php'; ?>
 

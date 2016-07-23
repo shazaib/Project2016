@@ -229,37 +229,6 @@ section h1{
 	transition: all 0.5s ease;
 }
 
-/*.services-feature-img1{
-	width: 370px;
-	height: 260px;
-	background: url(images/service1.jpg) no-repeat center;
-}
-
-.services-feature-img2{
-	width: 370px;
-	height: 260px;
-	background: url(images/service2.jpg) no-repeat center;
-}
-
-.services-feature-img3{
-	width: 370px;
-	height: 260px;
-	background: url(images/service3.jpg) no-repeat center;
-}
-
-.services-overlay-opacity{
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.60);
-	transition: all 0.3s;
-    padding-top: 135px;
-}
-
-.services-overlay-opacity:hover{
-	background: rgba(0,0,0,.75);	
-	transition: all 0.3s;
-	padding-top: 100px;
-}*/
 
 .services-text{
 	font-family: 'Lato', sans-serif;
@@ -283,29 +252,6 @@ section h1{
 	transition: all 0.5s ease;
 } 
 
-/*.services-text{
-	font-family: 'Lato', sans-serif;
-	font-size: 32px;
-	color: #fff;
-	position: absolute;
-	margin: 13px 0px 0px 15px;
-	transition: all 0.5s ease;
-}
-
-.services-overlay-opacity:hover .services-text{
-	color: #FFD405;
-	transition: all 0.5s ease;
-}
-
-.services-text-para{
-	font-family: 'Lato', sans-serif;
-	font-size: 14px;
-    color: #fff;
-    font-weight: 600;
-    padding: 55px 0px 0px 10px;
-	transition: all 0.5s ease;
-} 
-*/
 
 .overlay-opacity-call-us{
 	background: rgba(0,0,0,0.60) no-repeat center;
@@ -754,9 +700,6 @@ footer{
     box-shadow:0px 0px 10px -2px rgba(255,0,0,0.63);
 }
 
-
-
-
 /************************ Login end *************************/
 
 
@@ -840,6 +783,41 @@ footer{
 
 
 /**************************** About us end **********************/
+
+/**************************** Popup **********************/
+
+.modal-win-content{
+ 	margin-top: 100px;
+
+}
+
+.modal-win-header{
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	color: #ffd405;
+	background-color: #000;
+}
+
+.modal-win-footer{
+	background-color: #000;
+	text-align: center;
+}
+
+.modal-btn{
+	font-family: "Lato",sans-serif;
+	font-size: 15px;
+	color: #000;
+	background-color: #ffd405;
+	outline: none;
+	border: none;
+}
+
+.modal-btn:hover{
+ 	background-color:#ffd405; 
+}
+
+
+/**************************** Popup end **********************/
 
 
 @media screen and (max-width: 992px){ /******* media query 992px ********/ 

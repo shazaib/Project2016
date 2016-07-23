@@ -2,44 +2,11 @@
 <html>
 <head>
 	<title>SignUp</title>
+
+	<!-- Style sheet -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
-
-
-
-
-<style type="text/css">
-
-	.modal-win-content{
-	 margin-top: 100px;
-	}
-
-	.modal-win-header{
-	 font-family: "Lato", sans-serif;
-	 font-size: 20px;
-	 color: #ffd405;
-	 background-color: #000;
-	}
-
-	.modal-win-footer{
-	 background-color: #000;
-	 text-align: center;
-	}
-
-	.modal-btn{
-	 font-family: "Lato",sans-serif;
-	 font-size: 15px;
-	 color: #000;
-	 background-color: #ffd405;
-	 outline: none;
-	 border: none;
-	}
-
-	.modal-btn:hover{
-	 background-color:#ffd405; 
-	}
-
-</style>
-
 
 <body>
 

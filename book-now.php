@@ -126,7 +126,7 @@ if ($email==NULL) {
 					
 					 <div id="map"></div>
     
-
+    
     <div id="right-panel">
   <label for="same">Name :<input type="text" id="same"  name="name"  readonly class="form-control input-sm" value="<?php echo $row['username']; ?>"> </label>
   <label for="sames">City :<input type="text" id="sames"  name="city" readonly  class="form-control input-sm" value="<?php echo $row['city']; ?>"> </label>
@@ -170,6 +170,7 @@ if ($email==NULL) {
 
      <!-- <b>Waypoints:</b> <br>
     <i>(multiple selection)</i> <br> -->
+
     <select multiple id="waypoints" hidden>
       <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option> 
       <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
@@ -187,9 +188,6 @@ if ($email==NULL) {
     </select>
     
     <!-- <br> -->
-    <br>
-
-         <input type="submit" id="submit" class="btn-danger form-control input-sm" value="Find Diraction">
      <table><tr>
                 <td><label for="same1">Date :<input type="date" id="same1" class="form-control input-sm"></label></td>
                  <td><label for="same2">Time :<input type="time" id="same2" class="form-control input-sm"></label></td>
@@ -197,45 +195,46 @@ if ($email==NULL) {
       </table>
 
 
-              <!--<td><label for="same4">Class :<select id="same4" class="form-control input-sm">
-                <option>Standard class</option>
-                <option>Business class</option>
-                <option>Minivan class</option></select></label>
-              </td>
-               <td><label for="same3">Number of passanger :<input type="text" id="same3" class="form-control input-sm"> </label></td>-->
-    <form method="post">
-     <select name = "taxi">
-     <option>Select number of passenger </option>
-       <option value="1"> 1 </option>
-       <option value="2"> 2 </option>
-       <option value="3"> 3 </option>
-       <option value="4"> 4 </option>
-       <option value="5"> 5 </option>
-       <option value="6"> 6 </option>
-       <option value="7"> 7 </option>
-       <option value="8"> 8 </option>
-       <option value="9"> 9 </option>
-       <option value="10"> 10 </option>
-       <option value="11"> 11 </option>
-       <option value="12"> 12 </option>
-       <option value="13"> 13 </option>
-       <option value="14"> 14 </option>
-       <option value="15"> 15 </option>
-       <option value="16"> 16 </option>
-      
+
+  <label>No of Pasangers :</label>
+     <select name="taxi" id="taxi" onchange="check()" class="form-control input-sm" required>
+     <option>Number of Passengers </option>
+      <?php for ($i=1; $i <=12 ; $i++) { 
+        echo '<option value="'.$i.'">'.$i.'</option>';
+      } ?>
      </select>
 
-     <br>
-      <label> No: of taxis : <input id="taxi" name="taxi" readonly type="text"></label>
-     </form>
+     <script type="text/javascript">
+
+     function check() {
+       var val = document.getElementById('taxi').value;
+       if(val>=1 && val<=4) {
+        document.getElementById('psg').value = 1;
+       } 
+       else if(val>=5 && val<=8) {
+           document.getElementById('psg').value = 2;
+       }
+
+       else if(val>=9 && val<=12) {
+           document.getElementById('psg').value = 3;
+       }   
+}
+
+     </script>
+       
+  
+      <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
+    <input id="amount"  class="form-control input-sm" placeholder="Amount" name="amount" type="text">
+    <input id="Distance"  class="form-control input-sm" placeholder="Distance" name="Distance" type="text">
     <br>
-</script>
-      
-    
-      <input type="submit" name="insert_record" class="btn-danger form-control input-sm" id="submit" value="Booking Now"></br>
+<br>
+      <input type="submit" name="" class="btn-danger form-control input-sm" id="submit" value="Calculating"></br>
+     
     </div>
+   
     <div id="directions-panel" hidden></div>
     </div>
+
 
     <script>
       function initMap() {
@@ -282,15 +281,14 @@ if ($email==NULL) {
           
               summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
               summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-              summaryPanel.innerHTML += route.legs[i].distance.text + '<br>';
-              summaryPanel.innerHTML += "Amount" + (parseInt(route.legs[i].distance.text)*30);
-
+              var dis=(route.legs[i].distance.text); 
+              document.getElementById('Distance').value=dis;
+              var amounts=(parseInt(route.legs[i].distance.text)*30); 
+              document.getElementById('amount').value=amounts;
               }
           } else {
             window.alert('Directions request failed due to ' + status);
           }
-
-
 
         });
       }
@@ -305,7 +303,7 @@ if ($email==NULL) {
 
 <?php  
 
-if (isset($_POST['insert_record'])) {
+if (isset($_POST['insert'])) {
 
     $name=$_POST['name']; 
     $city=$_POST['city'];

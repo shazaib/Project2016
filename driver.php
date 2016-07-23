@@ -6,42 +6,9 @@
 <html>
 <head>
 	<title>Driver Account</title>
-
-<style type="text/css">
-
-	.modal-win-content{
-	 margin-top: 100px;
-	}
-
-	.modal-win-header{
-	 font-family: "Lato", sans-serif;
-	 font-size: 20px;
-	 color: #ffd405;
-	 background-color: #000;
-	}
-
-	.modal-win-footer{
-	 background-color: #000;
-	 text-align: center;
-	}
-
-	.modal-btn{
-	 font-family: "Lato",sans-serif;
-	 font-size: 15px;
-	 color: #000;
-	 background-color: #ffd405;
-	 outline: none;
-	 border: none;
-	}
-
-	.modal-btn:hover{
-	 background-color:#ffd405; 
-	}
-
-</style>
-
-
-
+	<!-- Style sheet -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
 </head>
 
 <body>
@@ -75,7 +42,7 @@
 
 						<div class="para-container">
 							<p>
-							By proceeding, I agree that Online Taxi or its representatives may contact me by email, phone, or SMS (including by automated means) at the email address or number I provide, including for marketing purposes. I have read and understand the Driver Privacy Statement.
+							By proceeding, I agree that Online Drivo or its representatives may contact me by email, phone, or SMS (including by automated means) at the email address or number I provide, including for marketing purposes. I have read and understand the Driver Privacy Statement.
 							</p>
 						</div>
 						<h2 style="margin-bottom: 15px;">OR</h2>
@@ -115,6 +82,8 @@
 
 </body>
 </html>
+
+
 
 <?php  
 
