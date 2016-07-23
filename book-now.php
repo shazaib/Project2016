@@ -187,23 +187,51 @@ if ($email==NULL) {
     </select>
     
     <!-- <br> -->
+    <br>
 
+         <input type="submit" id="submit" class="btn-danger form-control input-sm" value="Find Diraction">
      <table><tr>
                 <td><label for="same1">Date :<input type="date" id="same1" class="form-control input-sm"></label></td>
                  <td><label for="same2">Time :<input type="time" id="same2" class="form-control input-sm"></label></td>
             </tr>
       </table>
+
+
               <!--<td><label for="same4">Class :<select id="same4" class="form-control input-sm">
                 <option>Standard class</option>
                 <option>Business class</option>
                 <option>Minivan class</option></select></label>
               </td>
                <td><label for="same3">Number of passanger :<input type="text" id="same3" class="form-control input-sm"> </label></td>-->
-    
- 
+    <form method="post">
+     <select name = "taxi">
+     <option>Select number of passenger </option>
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+       <option value="7"> 7 </option>
+       <option value="8"> 8 </option>
+       <option value="9"> 9 </option>
+       <option value="10"> 10 </option>
+       <option value="11"> 11 </option>
+       <option value="12"> 12 </option>
+       <option value="13"> 13 </option>
+       <option value="14"> 14 </option>
+       <option value="15"> 15 </option>
+       <option value="16"> 16 </option>
+      
+     </select>
 
-    <br>
      <br>
+      <label> No: of taxis : <input id="taxi" name="taxi" readonly type="text"></label>
+     </form>
+    <br>
+</script>
+      
+    
       <input type="submit" name="insert_record" class="btn-danger form-control input-sm" id="submit" value="Booking Now"></br>
     </div>
     <div id="directions-panel" hidden></div>
