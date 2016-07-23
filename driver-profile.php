@@ -77,7 +77,7 @@ session_start();
    
 	while($row=$res->fetch_assoc()) {
 		
-	}
+	
 
 ?>
 
