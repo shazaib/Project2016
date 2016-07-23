@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp</title>
+</head>
+
+
+
+
 <style type="text/css">
 
 	.modal-win-content{
@@ -32,6 +41,7 @@
 </style>
 
 
+<body>
 
 <?php include 'header.php' ?>
 
@@ -109,7 +119,7 @@
             <h2 class="modal-title">Registration Sucessfully !</h2>
           </div>
           <div class="modal-body">
-            <h5>Hy <?php echo $_POST['person'].",";  echo $_POST['uname']; ?> Welcome to Online Drivo , I hope to enjoy our vision..</h5>
+            <h5><?php echo $_POST['person'].",";  echo $_POST['uname']; ?> Welcome to Online Drivo , I hope to enjoy our vision..</h5>
           </div>
           <div class="modal-footer modal-win-footer">
             <button type="button" class="btn btn-default modal-btn" data-dismiss="modal"><span style="color:#000;">Thank You </span></button>
@@ -118,15 +128,12 @@
       </div>
     </div>
 
+</body>
+</html>
 
 
 
 <!--Start Driver PHP Coding -->
-
-
-
-
-
 
 
 <?php  

@@ -76,6 +76,8 @@ session_start();
 	$res=$obj->select($sql);
    
 	while($row=$res->fetch_assoc()) {
+		
+	}
 
 ?>
 

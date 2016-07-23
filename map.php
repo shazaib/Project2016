@@ -105,18 +105,6 @@
      <!-- <b>Waypoints:</b> <br>
     <i>(multiple selection)</i> <br> -->
     <select multiple id="waypoints" hidden>
- <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
-      <option value="Gulberg Town,Karachi">Gulberg Town</option>
-      <option value="Nagan Chowrangi, Karachi">Nagan Chowrangi</option>
-      <option value="Anda Mor Road, Karachi">Anda Mor Road</option>
-      <option value="Serena Towers and Mobile Market, Karachi">Serena Towers and Mobile Market</option>
-      <option value="5 Star Round About, Shahrah-Sher Shah Suri, Karachi">5 Star Round About</option>
-      <option value="Hyderi Bus Stop, Karachi">Hyderi </option>
-      <option value="KDA Chowrangi Bus Stop, Karachi">KDA Chowrangi</option>
-            <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
-      <option value="Mausoleum of Quiad Azam, M. A. Jinnah Road, Karachi">Mausoleum of Quiad Azam, M. A. Jinnah Road</option>
-      <option value="Sea View Karachi, Sea View Road, Karachi">Sea View Karachi, Sea View Road</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
     </select>
     
     <!-- <br> -->

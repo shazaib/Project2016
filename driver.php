@@ -7,6 +7,41 @@
 <head>
 	<title>Driver Account</title>
 
+<style type="text/css">
+
+	.modal-win-content{
+	 margin-top: 100px;
+	}
+
+	.modal-win-header{
+	 font-family: "Lato", sans-serif;
+	 font-size: 20px;
+	 color: #ffd405;
+	 background-color: #000;
+	}
+
+	.modal-win-footer{
+	 background-color: #000;
+	 text-align: center;
+	}
+
+	.modal-btn{
+	 font-family: "Lato",sans-serif;
+	 font-size: 15px;
+	 color: #000;
+	 background-color: #ffd405;
+	 outline: none;
+	 border: none;
+	}
+
+	.modal-btn:hover{
+	 background-color:#ffd405; 
+	}
+
+</style>
+
+
+
 </head>
 
 <body>
@@ -61,16 +96,16 @@
 
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal-content  modal-win-content">
+        <div class="modal-header modal-win-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h2 class="modal-title">Driver has been registered !</h2>
         </div>
         <div class="modal-body">
-          <h5>Hy Mr <?php echo $_POST['fname']; ?>, Welcome to our site , I hope u drive taxi to make money from online-taxi.. </h5>
+          <h5>Mr <?php echo $_POST['fname']; ?>, Welcome to Online Drivo , I hope u drive taxi to make money from Online Drivo </h5>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Thank You</button>
+        <div class="modal-footer  modal-win-footer">
+          <button type="button" class="btn btn-default  modal-btn" data-dismiss="modal">Thank You</button>
         </div>
       </div>
     </div>
@@ -99,7 +134,7 @@
 		$obj=new config();
 		$obj->dbconfig($sql);
 
-		echo '<script> document.getElementById("btn").click(); </script>';					}
+		echo '<script>document.getElementById("btn").click();</script>';					}
  ?>
 <!--End Drvier PHP Coding -->
 
