@@ -74,7 +74,7 @@ session_start();
    
 	while($row=$res->fetch_assoc()) {
 		
-	}
+	
 
 ?>
 
@@ -130,6 +130,7 @@ session_start();
 								    <tbody>
 								      <tr><th style="font-weight:600;">Firstame :</th><td>
 								      <input  class="form-control" style="border-color:white; border:0px;" type="text" name="uname" pattern="[A-Za-z\s]{3,15}"  title="Maximum 3 & Allow 15 letters only" required contenteditable  value="<?php echo $row['firstname'] ?>"/></td></tr>
+								      
 								      <tr><th style="font-weight:600;">Email :</th><td>
 								      <input  class="form-control"  style="border-color:white; border:0px;"  type="text"  name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="eg:online-taxi@gmail.com" required contenteditable readonly value="<?php echo $row['email'] ?>"/></td></tr>
 								      <tr><th style="font-weight:600;">Password :</th><td>

@@ -35,7 +35,6 @@
         font-family: 'Roboto','sans-serif';
         line-height: 30px;
         padding-left: 10px;
-
       }
 
       #right-panel select, #right-panel input {
@@ -45,7 +44,7 @@
 
       #right-panel select {
 
-        width: 140%;
+        width: 100%;
       }
 
       #right-panel i {
@@ -59,14 +58,13 @@
       #map {
         height: 500px;
         float: left;
-        width: 55%;
+        width: 100%;
         height: 50%;
-    
       }
       #right-panel {
         margin: 20px;
         border-width: 2px;
-        width: 20%;
+        /*width: 20%;*/
         float: left;
         text-align: left;
        margin-top: 2px;
@@ -124,47 +122,41 @@ if ($email==NULL) {
 						<h1 class="artical-header-h1">Book Now</h1>
 					</div>
 					
-					 <div id="map"></div>
-    
-    
-    <div id="right-panel">
-  <label for="same">Name :<input type="text" id="same"  name="name"  readonly class="form-control input-sm" value="<?php echo $row['username']; ?>"> </label>
-  <label for="sames">City :<input type="text" id="sames"  name="city" readonly  class="form-control input-sm" value="<?php echo $row['city']; ?>"> </label>
-  <label for="samess">Cell Number :<input type="text" id="samess"  name="num" readonly  class="form-control input-sm" value="<?php echo $row['phone_no']; ?>"></label> 
-   
-   <?php } ?>
-    <div>
-       <b>Start:</b>
-    <select id="start"  class="form-control input-sm" name="start">
-      <option selected disabled>Start Desitination</option>
-      <?php   
+          <div id="right-panel">
+        <label for="same">Name :<input type="text" id="same"  name="name"  readonly class="form-control input-sm" value="<?php echo $row['username']; ?>"> </label>
+        <label for="sames">City :<input type="text" id="sames"  name="city" readonly  class="form-control input-sm" value="<?php echo $row['city']; ?>"> </label>
+        <label for="samess">Cell Number :<input type="text" id="samess"  name="num" readonly  class="form-control input-sm" value="<?php echo $row['phone_no']; ?>"></label> 
+         
+         <?php } ?>
+        <div>
+        <b>Start:</b>
+        <select id="start"  class="form-control input-sm" name="start">
+          <option selected disabled>Start Desitination</option>
+          <?php   
 
-    $sql="SELECT starting_location FROM map";
-    $obj=new config();
-    $res=$obj->select($sql);
+          $sql="SELECT starting_location FROM map";
+          $obj=new config();
+          $res=$obj->select($sql);
 
-     while ($row=$res->fetch_assoc()) {
- 
-      echo  "<option value='".$row['starting_location']."'>".$row['starting_location']."</option>";
-      
-     } ?>
+          while ($row=$res->fetch_assoc()) {
+            echo  "<option value='".$row['starting_location']."'>".$row['starting_location']."</option>";
+           } ?>
 
-    </select>
+        </select>
   
-    <b>End:</b>
-    <select id="end" class="form-control input-sm" name="end">
-          <option selected disabled>End Desitination</option>
-      <?php   
+        <b>End:</b>
+        <select id="end" class="form-control input-sm" name="end">
+              <option selected disabled>End Desitination</option>
+          <?php   
 
-    $sql="SELECT ending_location FROM map";
-    $obj=new config();
-    $res=$obj->select($sql);
+        $sql="SELECT ending_location FROM map";
+        $obj=new config();
+        $res=$obj->select($sql);
 
-     while ($row=$res->fetch_assoc()) {
- 
-      echo  "<option value='".$row['ending_location']."'>".$row['ending_location']."</option>";
-      
-     } ?>
+        while ($row=$res->fetch_assoc()) {
+          echo  "<option value='".$row['ending_location']."'>".$row['ending_location']."</option>";
+         } ?>
+
     </select>
 
 
@@ -188,15 +180,15 @@ if ($email==NULL) {
     </select>
     
     <!-- <br> -->
-     <table><tr>
-                <td><label for="same1">Date :<input type="date" id="same1" class="form-control input-sm"></label></td>
-                 <td><label for="same2">Time :<input type="time" id="same2" class="form-control input-sm"></label></td>
-            </tr>
+      <table>
+       <tr>
+          <td><label for="same1">Date :<input type="date" id="same1" class="form-control input-sm"></label></td>
+          <td><label for="same2">Time :<input type="time" id="same2" class="form-control input-sm"></label></td>
+       </tr>
       </table>
 
 
-
-  <label>No of Pasangers :</label>
+     <label>No of Pasangers :</label>
      <select name="taxi" id="taxi" onchange="check()" class="form-control input-sm" required>
      <option>Number of Passengers </option>
       <?php for ($i=1; $i <=12 ; $i++) { 
@@ -218,22 +210,26 @@ if ($email==NULL) {
        else if(val>=9 && val<=12) {
            document.getElementById('psg').value = 3;
        }   
-}
+      }
 
      </script>
        
   
-      <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
+    <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
     <input id="amount"  class="form-control input-sm" placeholder="Amount" name="amount" type="text">
     <input id="Distance"  class="form-control input-sm" placeholder="Distance" name="Distance" type="text">
     <br>
-<br>
+    <br>
       <input type="submit" name="" class="btn-danger form-control input-sm" id="submit" value="Calculating"></br>
      
     </div>
    
     <div id="directions-panel" hidden></div>
     </div>
+
+    <br>
+
+    <div id="map"></div>
 
 
     <script>
@@ -301,6 +297,8 @@ if ($email==NULL) {
 </body>
 </html>
 
+
+
 <?php  
 
 if (isset($_POST['insert'])) {
@@ -317,7 +315,6 @@ if (isset($_POST['insert'])) {
     $sql="INSERT into booknow VALUES('','name','$city','$num','$start','$end','$date','$time','$rs')";
     $obj=new config();
     $obj->dbconfig($sql);
+    }
 
-
-           }
  ?>
