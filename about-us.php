@@ -99,7 +99,7 @@
 						<div class="about-content">
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
-								<ul>
+								<ul style="margin-top: -70px;">
 									<li><p class="about-p-feature"><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#000;"></span>&nbsp Free waiting time</p></li>
 									<li><p class="about-p-feature"><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#000;"></span>&nbsp Book it online to get our best rates.</p></li>
 									<li><p class="about-p-feature"><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:#000;"></span>&nbsp Monitoring flight information</p></li>
@@ -114,9 +114,8 @@
 								</ul>
 							</div>
 
-							
 							<div class="col-md-6 col-sm-6">
-								<img style="width:400px; height:400px;" src="images/img3.jpg">
+								
 							</div>
 
 							</div><!-- row end-->
@@ -124,8 +123,6 @@
 						</div><!-- about-content end -->
 					</div><!-- container end-->
 				
-
-
 <?php include'footer.php'; ?>
 
 

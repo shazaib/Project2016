@@ -1,37 +1,14 @@
-<style type="text/css">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp</title>
 
-	.modal-win-content{
-	 margin-top: 100px;
-	}
+	<!-- Style sheet -->
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-	.modal-win-header{
-	 font-family: "Lato", sans-serif;
-	 font-size: 20px;
-	 color: #ffd405;
-	 background-color: #000;
-	}
+</head>
 
-	.modal-win-footer{
-	 background-color: #000;
-	 text-align: center;
-	}
-
-	.modal-btn{
-	 font-family: "Lato",sans-serif;
-	 font-size: 15px;
-	 color: #000;
-	 background-color: #ffd405;
-	 outline: none;
-	 border: none;
-	}
-
-	.modal-btn:hover{
-	 background-color:#ffd405; 
-	}
-
-</style>
-
-
+<body>
 
 <?php include 'header.php' ?>
 
@@ -109,7 +86,7 @@
             <h2 class="modal-title">Registration Sucessfully !</h2>
           </div>
           <div class="modal-body">
-            <h5>Hy <?php echo $_POST['person'].",";  echo $_POST['uname']; ?> Welcome to Online Drivo , I hope to enjoy our vision..</h5>
+            <h5><?php echo $_POST['person'].",";  echo $_POST['uname']; ?> Welcome to Online Drivo , I hope to enjoy our vision..</h5>
           </div>
           <div class="modal-footer modal-win-footer">
             <button type="button" class="btn btn-default modal-btn" data-dismiss="modal"><span style="color:#000;">Thank You </span></button>
@@ -118,15 +95,12 @@
       </div>
     </div>
 
+</body>
+</html>
 
 
 
 <!--Start Driver PHP Coding -->
-
-
-
-
-
 
 
 <?php  

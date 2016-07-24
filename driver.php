@@ -1,13 +1,26 @@
 
 <?php include'header.php'; ?>
 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Driver Account</title>
+	<!-- Style sheet -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+
+<body>
+
+
 	<div class="driver">
 		
 		<div class="container">
 			<div class="row">
 			<!-- <div class="overlay-opacity"> -->
 				<div class="col-md-6 col-sm-6">
-					<h1 class="side-h1">TAXI NEEDS PARTNERS LIKE YOU.</h1>
+					<h1 class="side-h1">DRIVO NEEDS PARTNERS LIKE YOU.</h1>
 					<p class="side-p">Drive with Taxi and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.</p>
 
 				</div>
@@ -29,7 +42,7 @@
 
 						<div class="para-container">
 							<p>
-							By proceeding, I agree that Online Taxi or its representatives may contact me by email, phone, or SMS (including by automated means) at the email address or number I provide, including for marketing purposes. I have read and understand the Driver Privacy Statement.
+							By proceeding, I agree that Online Drivo or its representatives may contact me by email, phone, or SMS (including by automated means) at the email address or number I provide, including for marketing purposes. I have read and understand the Driver Privacy Statement.
 							</p>
 						</div>
 						<h2 style="margin-bottom: 15px;">OR</h2>
@@ -50,16 +63,16 @@
 
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal-content  modal-win-content">
+        <div class="modal-header modal-win-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h2 class="modal-title">Driver has been registered !</h2>
         </div>
         <div class="modal-body">
-          <h5>Hy Mr <?php echo $_POST['fname']; ?>, Welcome to our site , I hope u drive taxi to make money from online-taxi.. </h5>
+          <h5>Mr <?php echo $_POST['fname']; ?>, Welcome to Online Drivo , I hope u drive taxi to make money from Online Drivo </h5>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Thank You</button>
+        <div class="modal-footer  modal-win-footer">
+          <button type="button" class="btn btn-default  modal-btn" data-dismiss="modal">Thank You</button>
         </div>
       </div>
     </div>
@@ -67,7 +80,8 @@
 </div>
 
 
-
+</body>
+</html>
 
 
 
@@ -89,7 +103,7 @@
 		$obj=new config();
 		$obj->dbconfig($sql);
 
-		echo '<script> document.getElementById("btn").click(); </script>';					}
+		echo '<script>document.getElementById("btn").click();</script>';					}
  ?>
 <!--End Drvier PHP Coding -->
 

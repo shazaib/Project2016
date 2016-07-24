@@ -1,5 +1,9 @@
 <?php include'header.php'; ?>
-		
+
+
+
+
+
 			<div class="bg-img img-responsive" data-stellar-background-ratio="0.3" >
 				<div class="overlay-opacity" >
 					<h1>WE ARE ALWAYS THERE AT YOUR SERVICE</h1>
@@ -140,7 +144,6 @@
 
 
 <!-------------------Parallax Scrolling---------------------->
-	
 	
 	<!-- <script>
 	    $.stellar();
