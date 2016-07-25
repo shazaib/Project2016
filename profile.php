@@ -70,7 +70,6 @@
  $res=$obj->select($sql);
 
  	while ($row=$res->fetch_assoc()) {
- 	
  
 ?>
 
@@ -106,12 +105,12 @@
 						<div class="artical-sub-content">
 							
 					<input type="file" class="change-pic" name="img" id="img"/>
-	<button class="btn btn-default save-btn" type="submit" name="insertimg" id="btn" style="margin: 40px 0px 0px -295px;">Save Image</button>
-							 <button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
+	<button class="btn btn-default save-btn" type="submit" name="inserting" id="btn" style="margin: 40px 0px 0px -295px;">Save Image</button>
+					<button onclick="myFunction()" id="refresh" visibility="hidden" style="visibility:hidden"></button>
 							
 								<?php
 
-								if (isset($_POST['insertimg'])) {
+								if (isset($_POST['inserting'])) {
 
 								  $imgdata=addslashes(file_get_contents($_FILES["img"]["tmp_name"]));
 								  $imgtype=$_FILES["img"]["type"];
@@ -194,11 +193,9 @@
 	}
 </script>
 
-<?php include ('footer.php'); 
+<?php include ('footer.php'); ?>
 
 
-
-?>
 </body>
 </html>
 
