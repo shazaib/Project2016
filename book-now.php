@@ -221,6 +221,7 @@ if ($email==NULL) {
     <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
     <input id="amount"  class="form-control input-sm" placeholder="Amount" name="amount" type="text">
     <input id="Distance"  class="form-control input-sm" placeholder="Distance" name="Distance" type="text">
+     <input id="time"  class="form-control input-sm" placeholder="Time" name="time" type="text">
     <br>
     <br>
       <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm" id="submit" value="Booknow"></td>
@@ -288,7 +289,9 @@ if ($email==NULL) {
               var dis=(route.legs[i].distance.text); 
               document.getElementById('Distance').value=dis;
               var amounts=(parseInt(route.legs[i].distance.text)*30); 
-              document.getElementById('amount').value=amounts;
+              document.getElementById('amount').value=amounts + ' Rupees';
+              var dis=(parseInt(route.legs[i].distance.text)*3); 
+              document.getElementById('time').value=dis + ' Minutes';
               }
           } else {
             window.alert('Directions request failed due to ' + status);
