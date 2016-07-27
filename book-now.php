@@ -204,7 +204,9 @@ if ($email==NULL) {
            </label>
           </td>
 
-          
+          <td>
+            <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
+          </td>
         
        </tr>
       </table>
@@ -231,12 +233,6 @@ if ($email==NULL) {
      </script>
        
   
-
-    <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
-    <input id="amount"  class="form-control input-sm" placeholder="Amount" name="amount" type="text">
-    <input id="Distance"  class="form-control input-sm" placeholder="Distance" name="Distance" type="text">
-     <input id="time"  class="form-control input-sm" placeholder="Time" name="time" type="text">
-
     
     <table>
     <tr>
@@ -257,7 +253,6 @@ if ($email==NULL) {
 
     </tr>
     </table>
-
     <br>
     <br>
       <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm book-now-btn-pg" id="submit" value="Book Now"></td>
