@@ -57,6 +57,8 @@ td{
 
 <body>
 
+<<<<<<< HEAD
+=======
 <?php 
 
 include ('includes/config.php');
@@ -76,6 +78,7 @@ session_start();
 
 ?>
 
+>>>>>>> 8f1e96701d4b4a820051b1b5720f57837c377c6c
 
 
 	<header>
@@ -93,11 +96,31 @@ session_start();
 
 				 <div class="artical">
 					<div class="artical-header">
+<<<<<<< HEAD
+						<h1 class="artical-header-h1">Monthly Status</h1>
+=======
 						<h1 class="artical-header-h1">Fares</h1>
+>>>>>>> 8f1e96701d4b4a820051b1b5720f57837c377c6c
 					</div>
 					
 					<div class="artical-content" style="padding-top:20px; float:left; margin:0px 0px 0px 0px;">
 						<div style="overflow-x:auto;">
+<<<<<<< HEAD
+							<table  style="float:left; width:100%;">
+								<th>Start Destination</th>
+								<th>End Destination</th>
+								<th>Date</th>
+								<th>Time</th>
+								<th>Payment</th>
+
+								<tr>
+									<td>BufferZone</td>
+									<td>Gulshan</td>
+									<td>18-5-2016</td>
+									<td>5:00</td>
+									<td>500</td>
+								</tr>
+=======
 						    <form method="post">
 							 <div class="btn-group" style="margin-left:600px; margin-bottom:3px;" >
 							  <button type="submit" name="available" id="available" class="btn btn-warning btn-xs">Available</button>
@@ -174,22 +197,30 @@ session_start();
 
 
 
+>>>>>>> 8f1e96701d4b4a820051b1b5720f57837c377c6c
 							</table>
 						</div>
 					</div>
 
 				</div><!-- artical end -->
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 8f1e96701d4b4a820051b1b5720f57837c377c6c
 				</div>
 
 			</div>
 		</div>
 	</div>
 
+<<<<<<< HEAD
+	<?php include'footer.php'; ?>
+=======
 	<?php include'footer.php'; }?>
 
+>>>>>>> 8f1e96701d4b4a820051b1b5720f57837c377c6c
 
 </body>
 </html>

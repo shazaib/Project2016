@@ -56,10 +56,12 @@
         padding: 0;
       }
       #map {
-        height: 500px;
+        /*height: 500px;*/
         float: left;
         width: 100%;
         height: 50%;
+        margin-top: -60px;
+        margin-bottom: 35px;
       }
       #right-panel {
         margin: 20px;
@@ -74,7 +76,23 @@
         background-color: #FFEE77;
         padding: 10px;
       }
+      .book-now-btn-pg{
+        width: 150px;
+        height: 33px;
+        background-color: #000;
+        border: none;
+        outline: none;
+        margin-top: -85px;
+      }
+      
+      .book-now-btn-pg:hover{
+        background-color: #ffd405;
+        color: #000;
+      }
 
+      label{
+        font-weight: 600;
+      }
     </style>
 
 
@@ -130,10 +148,14 @@ if ($email==NULL) {
         <label for="samess">Cell Number :<input type="text" id="samess"  name="num" readonly  class="form-control input-sm" value="<?php echo $row['phone_no']; ?>"></label> 
             <label for="sam">User Email :<input type="email" id="sam"  name="useremail" readonly  class="form-control input-sm" value="<?php echo $row['email']; ?>"></label> 
          <?php } ?>
-        <div>
-        <b>Start:</b>
-        <select id="start"  class="form-control input-sm" name="start">
-          <option selected disabled>Start Desitination</option>
+        
+
+            <br>
+
+        <!-- <b>Start:</b> -->
+        <label>Start</label>
+        <select id="start" required class="form-control input-sm" name="start">
+          <option selected disabled >Start Desitination</option>
           <?php   
 
           $sql="SELECT starting_location FROM map";
@@ -146,8 +168,8 @@ if ($email==NULL) {
 
         </select>
   
-        <b>End:</b>
-        <select id="end" class="form-control input-sm" name="end">
+        <label>End</label>
+        <select id="end" required class="form-control input-sm" name="end">
               <option selected disabled>End Desitination</option>
           <?php   
 
@@ -162,42 +184,35 @@ if ($email==NULL) {
     </select>
 
 
-     <!-- <b>Waypoints:</b> <br>
-    <i>(multiple selection)</i> <br> -->
-
-    <select multiple id="waypoints" hidden>
-      <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option> 
-      <option value="Gulshan-e-Surjani,karachi">Gulshan-e-Surjani</option>
-      <option value="Gulberg Town,Karachi">Gulberg Town</option>
-      <option value="Nagan Chowrangi, Karachi">Nagan Chowrangi</option>
-      <option value="Anda Mor Road, Karachi">Anda Mor Road</option>
-      <option value="Serena Towers and Mobile Market, Karachi">Serena Towers and Mobile Market</option>
-      <option value="5 Star Round About, Shahrah-Sher Shah Suri, Karachi">5 Star Round About</option>
-      <option value="Hyderi Bus Stop, Karachi">Hyderi </option>
-      <option value="KDA Chowrangi Bus Stop, Karachi">KDA Chowrangi</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
-      <option value="Mausoleum of Quiad Azam, M. A. Jinnah Road, Karachi">Mausoleum of Quiad Azam, M. A. Jinnah Road</option>
-      <option value="Sea View Karachi, Sea View Road, Karachi">Sea View Karachi, Sea View Road</option>
-      <option value="Tariq Road, Karachi, Sindh">Tariq Road</option>
-    </select>
     
-    <!-- <br> -->
+    <!-- multiple waypoints remove -->
+    <select multiple id="waypoints" hidden></select>
+    
+
       <table>
        <tr>
-          <td><label for="same1">Date :<input type="date" name="date" id="same1" class="form-control input-sm"></label></td>
-          <td><label for="same2">Time :<input type="time" name="time" id="same2" class="form-control input-sm"></label></td>
+          <td><label for="same1" style="margin-right:3px;">Date :<input type="date" name="date" id="same1" class="form-control input-sm" required></label></td>
+          <td><label for="same2" style="margin-right:3px;">Time :<input type="time" name="time" id="same2" class="form-control input-sm" required></label></td>
+          <td>
+           <label style="margin-right:3px;">No of Pasangers :
+           <select name="taxi" id="taxi" onchange="check()" class="form-control input-sm" required>
+            <option selected disabled>Number of Passengers </option>
+            <?php for ($i=1; $i <=12 ; $i++) { 
+              echo '<option value="'.$i.'">'.$i.'</option>';
+            } ?>
+            </select>
+           </label>
+          </td>
+
+          <td>
+            <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
+          </td>
         
        </tr>
       </table>
 
 
-     <label>No of Pasangers :</label>
-     <select name="taxi" id="taxi" onchange="check()" class="form-control input-sm" required>
-     <option>Number of Passengers </option>
-      <?php for ($i=1; $i <=12 ; $i++) { 
-        echo '<option value="'.$i.'">'.$i.'</option>';
-      } ?>
-     </select>
+     
 
      <script type="text/javascript">
 
@@ -218,14 +233,38 @@ if ($email==NULL) {
      </script>
        
   
+<<<<<<< HEAD
     <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
     <input id="amount"  class="form-control input-sm" placeholder="Amount" name="amount" type="text">
     <input id="Distance"  class="form-control input-sm" placeholder="Distance" name="Distance" type="text">
      <input id="time"  class="form-control input-sm" placeholder="Time" name="time" type="text">
+=======
+    
+    <table>
+    <tr>
+    <td>
+    <label style="margin-right:4px;">Total amount
+    <input readonly id="amount"  class="form-control input-sm" placeholder="Amount" name="amount" type="text"></label>
+    </td>
+
+    <td>
+      <label style="margin-right:4px;">Distance
+      <input readonly id="Distance"  class="form-control input-sm" placeholder="Distance" name="Distance" type="text" ></label>
+    </td>
+    
+    <td>
+      <label style="margin-right:4px;">Time
+      <input readonly id="time" class="form-control input-sm" placeholder="Time" name="time" type="text"></label>
+    </td>
+
+    </tr>
+    </table>
+>>>>>>> 56b6eee17fa42ffaffcc6a5a6ea65a8cf2a88dc3
     <br>
     <br>
-      <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm" id="submit" value="Booknow"></td>
+      <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm book-now-btn-pg" id="submit" value="Book Now"></td>
       <td><div id="error" style="margin-left:50px; color:red; font:italic 17px arial";></div></td></tr></table>
+
        </form>
     </br>
 
@@ -234,12 +273,18 @@ if ($email==NULL) {
    </form>
    
     <div id="directions-panel" hidden></div>
-    </div>
+    <!-- </div> -->
 
     <br>
 
     <div id="map"></div>
 
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <?php include'footer.php'; ?>
 
     <script>
       function initMap() {
