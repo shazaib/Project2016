@@ -98,7 +98,7 @@
 		$adress=$_POST['adress'];
 		$access="No";
 		$image="";
-
+		
 		$sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$city','$phone','$adress','$access','$image')";
 		$obj=new config();
 		$obj->dbconfig($sql);

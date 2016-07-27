@@ -122,11 +122,13 @@ if ($email==NULL) {
 						<h1 class="artical-header-h1">Book Now</h1>
 					</div>
 					
-          <div id="right-panel">
+          <form method="post">
+        <div id="right-panel">
+          <form method="post">
         <label for="same">Name :<input type="text" id="same"  name="name"  readonly class="form-control input-sm" value="<?php echo $row['username']; ?>"> </label>
         <label for="sames">City :<input type="text" id="sames"  name="city" readonly  class="form-control input-sm" value="<?php echo $row['city']; ?>"> </label>
         <label for="samess">Cell Number :<input type="text" id="samess"  name="num" readonly  class="form-control input-sm" value="<?php echo $row['phone_no']; ?>"></label> 
-         
+            <label for="sam">User Email :<input type="email" id="sam"  name="useremail" readonly  class="form-control input-sm" value="<?php echo $row['email']; ?>"></label> 
          <?php } ?>
         <div>
         <b>Start:</b>
@@ -182,8 +184,9 @@ if ($email==NULL) {
     <!-- <br> -->
       <table>
        <tr>
-          <td><label for="same1">Date :<input type="date" id="same1" class="form-control input-sm"></label></td>
-          <td><label for="same2">Time :<input type="time" id="same2" class="form-control input-sm"></label></td>
+          <td><label for="same1">Date :<input type="date" name="date" id="same1" class="form-control input-sm"></label></td>
+          <td><label for="same2">Time :<input type="time" name="time" id="same2" class="form-control input-sm"></label></td>
+        
        </tr>
       </table>
 
@@ -220,9 +223,14 @@ if ($email==NULL) {
     <input id="Distance"  class="form-control input-sm" placeholder="Distance" name="Distance" type="text">
     <br>
     <br>
-      <input type="submit" name="" class="btn-danger form-control input-sm" id="submit" value="Calculating"></br>
-     
-    </div>
+      <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm" id="submit" value="Booknow"></td>
+      <td><div id="error" style="margin-left:50px; color:red; font:italic 17px arial";></div></td></tr></table>
+       </form>
+    </br>
+
+     </div>
+
+   </form>
    
     <div id="directions-panel" hidden></div>
     </div>
@@ -242,7 +250,7 @@ if ($email==NULL) {
         });
         directionsDisplay.setMap(map);
 
-        document.getElementById('submit').addEventListener('click', function() {
+        document.getElementById('end').addEventListener('change', function() {
           calculateAndDisplayRoute(directionsService, directionsDisplay);
         });
       }
@@ -301,7 +309,7 @@ if ($email==NULL) {
 
 <?php  
 
-if (isset($_POST['insert'])) {
+if (isset($_POST['ins'])) {
 
     $name=$_POST['name']; 
     $city=$_POST['city'];
@@ -309,12 +317,41 @@ if (isset($_POST['insert'])) {
     $start=$_POST['start'];
     $end=$_POST['end'];
     $date=$_POST['date'];
-    $time=$_POST['time'];
-    $Rs="In Working";
-   
-    $sql="INSERT into booknow VALUES('','name','$city','$num','$start','$end','$date','$time','$rs')";
+    $time=$_POST['time']; 
+    $amount=$_POST['amount'];
+    $Distance=$_POST['Distance'];
+    $taxis=$_POST['psg'];
+    $useremail=$_POST['useremail'];
+    $fares='No';
+
+    $sql="SELECT id FROM booking_info";
     $obj=new config();
-    $obj->dbconfig($sql);
+    $res=$obj->select($sql);
+
+     while ($row=$res->fetch_assoc()) {
+         
+        $status=$row['status'];
+        $email=$row['email'];     
+
+        if ($status=="Available") {
+          
+           $sql="INSERT into booknow VALUES('','$useremail','$name','$city','$num','$start','$end','$date','$time','$taxis','$amount','$Distance','$email','$fares')";
+           $obj=new config();
+           $obj->dbconfig($sql);
+        }   
+		
+		  else{
+
+          echo '<script> document.getElementById("error").innerHTML="Drivers not Available for this time"; </script>';
+        }
+
+}
+
+
+
+   
+  
     }
 
  ?>
+

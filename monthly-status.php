@@ -86,14 +86,14 @@ session_start();
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-3">
-					<?php include'account-side-bar-driver.php'; ?>
+					<?php include'account-side-bar-driver.php'; }?>
 				</div>
 
 				<div class="col-lg-9 col-md-9 col-sm-9">
 
 				 <div class="artical">
 					<div class="artical-header">
-						<h1 class="artical-header-h1">Monthly Status</h1>
+						<h1 class="artical-header-h1">Recently Status</h1>
 					</div>
 					
 					<div class="artical-content" style="padding-top:20px; float:left; margin:0px 0px 0px 0px;">
@@ -104,21 +104,32 @@ session_start();
 								<th>Date</th>
 								<th>Time</th>
 								<th>Payment</th>
+		
 
+									<?php 
+
+									$sql="SELECT start_destination,end_destination,fares,dates,times,Amount FROM booknow where driver_email='$email' && fares='Yes' ORDER BY id DESC LIMIT 8";
+								 	$obj=new config();
+								 	$res=$obj->select($sql);
+
+								 	while($row=$res->fetch_assoc()) { 	
+								      ?>
 								<tr>
-									<td>BufferZone</td>
-									<td>Gulshan</td>
-									<td>18-5-2016</td>
-									<td>5:00</td>
-									<td>500</td>
+									<td><?php echo $row['start_destination']; ?></td>
+									<td><?php echo $row['end_destination']; ?></td>
+									<td><?php echo $row['dates']; ?></td>
+									<td><?php echo $row['times']; ?></td>
+									<td><?php echo $row['Amount']; ?></td>
+									
 								</tr>
+								<?php } ?>
 							</table>
 						</div>
 					</div>
 
 				</div><!-- artical end -->
 
-				<?php  } ?>
+		
 
 				</div>
 

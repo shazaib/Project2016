@@ -61,7 +61,7 @@ $email=$_SESSION['email'];
 
 				if ($email==$row['email'])
 				 {	
-					$sql="UPDATE signup_user set paswd='$paswd'";
+					$sql="UPDATE signup_user set paswd='$paswd',c_paswd='$paswd'";
 		     		$obj=new config();
 					$obj->dbconfig($sql);
 					mail('emails','Online Drivo','Your Passowrd is '.$paswd.' <br> --Thank You--','FROM:Online_Drivo@gmail.com');

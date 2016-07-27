@@ -4,7 +4,7 @@ table {
 
 	margin-top: 50px;
 	border-color:#3c9393;
-	width: 500px !important;
+	width: 100px !important;
 }
 
 
@@ -21,9 +21,9 @@ td{
 
 	margin-top: 50px;
 	border-color:#3c9393;
-	width: 900px !important;
+	width: 500px !important;
 	text-align: center!important;
-	margin-left: 5px;
+	margin-left: -25px;
 }
 .button{
 
@@ -41,6 +41,9 @@ th{
 		font-family:monospace;
 
 }
+
+
+
 
 
 
