@@ -86,11 +86,10 @@ if ($email==NULL) {
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-3">
-					<?php include'account-side-bar.php'; ?>
+					<?php include'account-side-bar.php'; }?>
 				</div>
 
 				<div class="col-lg-9 col-md-9 col-sm-9">
-
 				 <div class="artical">
 					<div class="artical-header">
 						<h1 class="artical-header-h1">My Trip</h1>
@@ -99,19 +98,34 @@ if ($email==NULL) {
 					<div class="artical-content" style="padding-top:20px; float:left; margin:0px 0px 0px 0px;">
 						<div style="overflow-x:auto;">
 							<table  style="float:left; width:100%;">
+								
 								<th>Start Destination</th>
 								<th>End Destination</th>
 								<th>Date</th>
 								<th>Time</th>
 								<th>Payment</th>
 
+								<?php 
+
+
+									$sql="SELECT start_destination,end_destination,dates,times,Amount FROM booknow where user_email='$email' && fares='Yes' ";
+								 	$obj=new config();
+								 	$res=$obj->select($sql);
+
+
+								 	while($row=$res->fetch_assoc()) {
+								 	
+								 	
+								      ?>
+
+
 								<tr>
-									<td>BufferZone</td>
-									<td>Gulshan</td>
-									<td>18-5-2016</td>
-									<td>5:00</td>
-									<td>500</td>
-								</tr>
+									<td><?php echo $row['start_destination']; ?></td>
+									<td><?php echo $row['end_destination']; ?></td>
+									<td><?php echo $row['dates']; ?></td>
+									<td><?php echo $row['times']; ?></td>
+									<td><?php echo $row['Amount']; ?></td>
+								<?php } ?>
 							</table>
 						</div>
 					</div>
@@ -126,7 +140,7 @@ if ($email==NULL) {
 	</div>
 
 
-	<?php include'footer.php'; }?>
+	<?php include'footer.php'; ?>
 
 
 </body>

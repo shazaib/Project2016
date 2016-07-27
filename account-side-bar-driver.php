@@ -3,7 +3,7 @@
 		<div class="profile-img">
 			<?php  echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'"  width="130px" height="130px"/>'; ?>
 		</div>
-		<h1 class="profile-img-name">User</h1>
+		<h1 class="profile-img-name"><?php echo $row['firstname']; ?></h1>
 
 		<button class="side-bar-btn btn-img-user" onclick="location.href='driver-profile'">Profile</button>
 		

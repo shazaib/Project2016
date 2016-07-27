@@ -30,55 +30,70 @@
 <!-- Account -->
 <link rel="stylesheet" type="text/css" href="account.css">
 
-<style>
+ <style>
+      #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
 
-#right-panel {
-  font-family: 'Roboto','sans-serif';
-  line-height: 30px;
-  padding-left: 10px;
-}
+      #right-panel select, #right-panel input {
+        font-size: 15px;
 
-#right-panel select, #right-panel input {
-  font-size: 15px;
+      }
 
-}
+      #right-panel select {
 
-#right-panel select {
+        width: 100%;
+      }
 
-  width: 100%;
-}
+      #right-panel i {
+        font-size: 12px;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        /*height: 500px;*/
+        float: left;
+        width: 100%;
+        height: 50%;
+        margin-top: -60px;
+        margin-bottom: 35px;
+      }
+      #right-panel {
+        margin: 20px;
+        border-width: 2px;
+        /*width: 20%;*/
+        float: left;
+        text-align: left;
+       margin-top: 2px;
+      }
+      #directions-panel {
+        margin-top: 20px;
+        background-color: #FFEE77;
+        padding: 10px;
+      }
+      .book-now-btn-pg{
+        width: 150px;
+        height: 33px;
+        background-color: #000;
+        border: none;
+        outline: none;
+        margin-top: -85px;
+      }
+      
+      .book-now-btn-pg:hover{
+        background-color: #ffd405;
+        color: #000;
+      }
 
-#right-panel i {
-  font-size: 12px;
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-#map {
-  /*height: 500px;*/
-  float: left;
-  width: 100%;
-  height: 50%;
-  margin-bottom: 30px;
-  margin-top: -40px;
-}
-#right-panel {
-  margin: 20px;
-  border-width: 2px;
-  /*width: 20%;*/
-  float: left;
-  text-align: left;
- margin-top: 2px;
-}
-#directions-panel {
-  margin-top: 20px;
-  background-color: #FFEE77;
-  padding: 10px;
-}
-
-</style>
+      label{
+        font-weight: 600;
+      }
+    </style>
 
 
 </head>
@@ -90,9 +105,9 @@ html, body {
   include ('includes/config.php');
   $email=$_SESSION['email']; 
 
-  if ($email==NULL) {
-    header("Location:404");
-   }
+if ($email==NULL) {
+  header("Location:404");
+ }
 
 
  $sql="SELECT username,email, paswd, phone_no, city, adress,image FROM signup_user WHERE email='$email'";
@@ -125,19 +140,22 @@ html, body {
 						<h1 class="artical-header-h1">Book Now</h1>
 					</div>
 					
-          <div id="right-panel">
           <form method="post">
-        <label for="same">Name <input type="text" id="same"  name="name"  readonly class="form-control input-sm" value="<?php echo $row['username']; ?>"> </label>
-        <label for="sames">City <input type="text" id="sames"  name="city" readonly  class="form-control input-sm" value="<?php echo $row['city']; ?>"> </label>
-        <label for="samess">Cell Number <input type="text" id="samess"  name="num" readonly  class="form-control input-sm" value="<?php echo $row['phone_no']; ?>"></label> 
-         
-        <?php } ?> 
-
+        <div id="right-panel">
+          <form method="post">
+        <label for="same">Name :<input type="text" id="same"  name="name"  readonly class="form-control input-sm" value="<?php echo $row['username']; ?>"> </label>
+        <label for="sames">City :<input type="text" id="sames"  name="city" readonly  class="form-control input-sm" value="<?php echo $row['city']; ?>"> </label>
+        <label for="samess">Cell Number :<input type="text" id="samess"  name="num" readonly  class="form-control input-sm" value="<?php echo $row['phone_no']; ?>"></label> 
+            <label for="sam">User Email :<input type="email" id="sam"  name="useremail" readonly  class="form-control input-sm" value="<?php echo $row['email']; ?>"></label> 
+         <?php } ?>
         
-        <br>
-        <b>Start</b>
-        <select id="start" class="form-control input-sm" name="start">
-          <option selected disabled>Start Desitination</option>
+
+            <br>
+
+        <!-- <b>Start:</b> -->
+        <label>Start</label>
+        <select id="start" required class="form-control input-sm" name="start">
+          <option selected disabled >Start Desitination</option>
           <?php   
 
           $sql="SELECT starting_location FROM map";
@@ -150,8 +168,8 @@ html, body {
 
         </select>
   
-        <b>End</b>
-        <select id="end" class="form-control input-sm" name="end">
+        <label>End</label>
+        <select id="end" required class="form-control input-sm" name="end">
               <option selected disabled>End Desitination</option>
           <?php   
 
@@ -163,31 +181,34 @@ html, body {
           echo  "<option value='".$row['ending_location']."'>".$row['ending_location']."</option>";
          } ?>
 
-        </select>
+    </select>
 
 
-      <select multiple id="waypoints" hidden></select>
-
+    
+    <!-- multiple waypoints remove -->
+    <select multiple id="waypoints" hidden></select>
+    
 
       <table>
-        <tr>
+       <tr>
+          <td><label for="same1" style="margin-right:3px;">Date :<input type="date" name="date" id="same1" class="form-control input-sm" required></label></td>
+          <td><label for="same2" style="margin-right:3px;">Time :<input type="time" name="time" id="same2" class="form-control input-sm" required></label></td>
           <td>
-            <label style="margin-right:3px;" for="same1">Date <input type="date" name="date" id="same1" class="form-control input-sm"></label>
-          </td>
-          <td>
-            <label style="margin-right:4px;" for="same2">Time <input type="time" name="time" id="same2" class="form-control input-sm"></label>
-          </td>
-          <td>
-            <label>No of Pasangers 
-            <select name="taxi" id="taxi" onchange="check()" class="form-control input-sm" required>
+           <label style="margin-right:3px;">No of Pasangers :
+           <select name="taxi" id="taxi" onchange="check()" class="form-control input-sm" required>
             <option selected disabled>Number of Passengers </option>
             <?php for ($i=1; $i <=12 ; $i++) { 
               echo '<option value="'.$i.'">'.$i.'</option>';
             } ?>
             </select>
-            </label>
+           </label>
           </td>
-        </tr>
+
+          <td>
+            <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
+          </td>
+        
+       </tr>
       </table>
 
 
@@ -212,39 +233,51 @@ html, body {
      </script>
        
   
-    <label> No of taxis <input id="psg" class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
-    <label> Total estimate amount <input id="amount"  class="form-control input-sm" placeholder="Amount" name="amount" type="text" readonly></label>
-    <label> Distance <input readonly id="Distance" class="form-control input-sm" placeholder="Distance" name="Distance" type="text"></label>
-
-    <br>
-    <br>
-    <input style="width:125px;height:36px;background-color:#000;border:none;outline: none;" type="submit" name="ins" class="btn btn-danger input-sm" id="submit" value="Booknow">
-    </form>
     
+    <table>
+    <tr>
+    <td>
+    <label style="margin-right:4px;">Total amount
+    <input readonly id="amount"  class="form-control input-sm" placeholder="Amount" name="amount" type="text"></label>
+    </td>
+
+    <td>
+      <label style="margin-right:4px;">Distance
+      <input readonly id="Distance"  class="form-control input-sm" placeholder="Distance" name="Distance" type="text" ></label>
+    </td>
+    
+    <td>
+      <label style="margin-right:4px;">Time
+      <input readonly id="time" class="form-control input-sm" placeholder="Time" name="time" type="text"></label>
+    </td>
+
+    </tr>
+    </table>
+    <br>
+    <br>
+      <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm book-now-btn-pg" id="submit" value="Book Now"></td>
+      <td><div id="error" style="margin-left:50px; color:red; font:italic 17px arial";></div></td></tr></table>
+
+       </form>
     </br>
 
-     <!-- </div> -->
+     </div>
 
-   <!-- </form> -->
+   </form>
    
     <div id="directions-panel" hidden></div>
-
     <!-- </div> -->
 
     <br>
 
-    
-
-    </div>
     <div id="map"></div>
 
     </div>
     </div>
     </div>
     </div>
-    
 
-    
+    <?php include'footer.php'; ?>
 
     <script>
       function initMap() {
@@ -294,7 +327,9 @@ html, body {
               var dis=(route.legs[i].distance.text); 
               document.getElementById('Distance').value=dis;
               var amounts=(parseInt(route.legs[i].distance.text)*30); 
-              document.getElementById('amount').value=amounts;
+              document.getElementById('amount').value=amounts + ' Rupees';
+              var dis=(parseInt(route.legs[i].distance.text)*3); 
+              document.getElementById('time').value=dis + ' Minutes';
               }
           } else {
             window.alert('Directions request failed due to ' + status);
@@ -307,9 +342,6 @@ html, body {
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjmANqiA3CjCY2QjYSfI9GapQ8khcICOA&callback=initMap">
     </script>
-
-
-<?php include'footer.php'; ?>
 
 </body>
 </html>
@@ -330,11 +362,35 @@ if (isset($_POST['ins'])) {
     $amount=$_POST['amount'];
     $Distance=$_POST['Distance'];
     $taxis=$_POST['psg'];
-    
+    $useremail=$_POST['useremail'];
+    $fares='No';
 
-    $sql="INSERT into booknow VALUES('','$name','$city','$num','$start','$end','$date','$time','$taxis','$amount','$Distance')";
+    $sql="SELECT id FROM booking_info";
     $obj=new config();
-    $obj->dbconfig($sql);
+    $res=$obj->select($sql);
+
+     while ($row=$res->fetch_assoc()) {
+         
+        $status=$row['status'];
+        $email=$row['email'];     
+
+        if ($status=="Available") {
+          
+           $sql="INSERT into booknow VALUES('','$useremail','$name','$city','$num','$start','$end','$date','$time','$taxis','$amount','$Distance','$email','$fares')";
+           $obj=new config();
+           $obj->dbconfig($sql);
+        }   
+		
+		  else{
+
+          echo '<script> document.getElementById("error").innerHTML="Drivers not Available for this time"; </script>';
+        }
+
+}
+
+
+
+   
   
     }
 

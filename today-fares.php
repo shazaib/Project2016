@@ -57,6 +57,28 @@ td{
 
 <body>
 
+<<<<<<< HEAD
+=======
+<?php 
+
+include ('includes/config.php');
+session_start();
+
+	$email=$_SESSION['email']; 
+
+	if ($email==NULL) {
+ 	header("Location:404");
+ }
+ 
+ 	$sql="SELECT firstname,email,password,phone,city,adress,image FROM signup_driver WHERE email='$email'";
+	$obj=new config();
+	$res=$obj->select($sql);
+   
+	while($row=$res->fetch_assoc()) {
+
+?>
+
+>>>>>>> 8f1e96701d4b4a820051b1b5720f57837c377c6c
 
 
 	<header>
@@ -74,11 +96,16 @@ td{
 
 				 <div class="artical">
 					<div class="artical-header">
+<<<<<<< HEAD
 						<h1 class="artical-header-h1">Monthly Status</h1>
+=======
+						<h1 class="artical-header-h1">Fares</h1>
+>>>>>>> 8f1e96701d4b4a820051b1b5720f57837c377c6c
 					</div>
 					
 					<div class="artical-content" style="padding-top:20px; float:left; margin:0px 0px 0px 0px;">
 						<div style="overflow-x:auto;">
+<<<<<<< HEAD
 							<table  style="float:left; width:100%;">
 								<th>Start Destination</th>
 								<th>End Destination</th>
@@ -93,19 +120,107 @@ td{
 									<td>5:00</td>
 									<td>500</td>
 								</tr>
+=======
+						    <form method="post">
+							 <div class="btn-group" style="margin-left:600px; margin-bottom:3px;" >
+							  <button type="submit" name="available" id="available" class="btn btn-warning btn-xs">Available</button>
+							  <button type="submit" name="busy" id="busy" class="btn btn-success btn-xs">Busy</button>
+							</div>
+							<form>
+							<?php 
+
+									if (isset($_POST['available'])) {
+										
+									$sql="UPDATE  signup_driver SET status='Available' where email='$email' ";
+								 	$obj=new config();
+								 	$obj->dbconfig($sql);
+								 	}	
+
+
+									if (isset($_POST['busy'])) {
+										
+									$sql="UPDATE  signup_driver SET status='Busy' where email='$email' ";
+								 	$obj=new config();
+								 	$obj->dbconfig($sql);	
+
+									}	
+
+
+
+
+							 ?>
+
+
+						</br>
+							<table  style="float:left; width:100%;">
+								<th>Name</th>
+								<th>Pick</th>
+								<th>Drop</th>
+								<th>Date</th>
+								<th>Time</th>
+								<th>Payment</th>
+								<th>fares</th>
+
+								<?php 
+
+									$sql="SELECT name,fares,start_destination,end_destination,dates,times,Amount FROM booknow where driver_email='$email' && fares='No'";
+								 	$obj=new config();
+								 	$res=$obj->select($sql);
+
+
+								 	while($row=$res->fetch_assoc()) { 	
+								      ?>
+								<tr>
+									<td><?php echo $row['name']; ?></td>
+									<td><?php echo $row['start_destination']; ?></td>
+									<td><?php echo $row['end_destination']; ?></td>
+									<td><?php echo $row['dates']; ?></td>
+									<td><?php echo $row['times']; ?></td>
+									<td><?php echo $row['Amount']; ?></td>
+									<td><?php echo '<form method="post"> <button type="submit" class="btn btn-warning btn-xs" name="got_it">Got it</button> </form>' ?></td>
+								</tr>
+								
+								<?php } 
+
+									if (isset($_POST['got_it'])) {
+										
+									$sql="UPDATE  booknow SET fares='Yes' where driver_email='$email' ";
+								 	$obj=new config();
+								 	$obj->dbconfig($sql);	
+
+									}
+
+
+
+								?>
+
+
+
+
+>>>>>>> 8f1e96701d4b4a820051b1b5720f57837c377c6c
 							</table>
 						</div>
 					</div>
 
 				</div><!-- artical end -->
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8f1e96701d4b4a820051b1b5720f57837c377c6c
 				</div>
 
 			</div>
 		</div>
 	</div>
 
+<<<<<<< HEAD
 	<?php include'footer.php'; ?>
+=======
+	<?php include'footer.php'; }?>
+
+>>>>>>> 8f1e96701d4b4a820051b1b5720f57837c377c6c
 
 </body>
 </html>

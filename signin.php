@@ -121,7 +121,7 @@ session_start(); ?>
 
 		if ($type=="Rider") {
 
-			$sql="SELECT * FROM signup_user where email='$email' ";	
+			$sql="SELECT * FROM signup_user where email='$email'";	
 			$obj=new config();
 			$res=$obj->select($sql);
 
@@ -179,9 +179,9 @@ session_start(); ?>
 			echo '<script>document.getElementById("validation").style.display="block";</script>';
 		}
 
+}
 
-
-}	
+	
 
 
  ?>
