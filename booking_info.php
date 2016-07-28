@@ -68,20 +68,44 @@
 		
 		<div class="col-md-9">
 			<table class="th1 table-striped table-hover table-condensed" style="margin-top:8px;">
- 				<tr><th>Id</th><th>Firstname</th><th>Lastname</th><th>Email</th><th>Password</th><th>City</th><th>Phone</th><th>Adress</th><th>Access</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
+ 				<tr><th>Id</th><th>U_email</th><th>Name</th><th>City</th><th>Phone</th><th>Pick</th><th>Drop</th><th>Date</th><th>Time</th><th>Taxis</th><th>Amount</th><th>K/m</th><th>D_email</th><th>T_minutes</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
 	
 		<?php 
 
-				$sql="SELECT * FROM booking_info";
+				$sql="SELECT * FROM booknow where fares='No'";
 				$obj=new config();
 				$res=$obj->select($sql);
 
 				while($row=$res->fetch_assoc())
 				{ 
- 					
- 				echo "<tr><td>".$row['id']."</a></td><td>".$row['firstname']."</td><td>".$row['lastname']."</td><td>".$row['email']."</td><td>".$row['password']."</td><td>".$row['city']."</td><td>".$row['phone']."</td><td>".$row['adress']."</td>
-				<td><button type='submit' id='refresh' onclick='myFunction' class='btn btn-danger btn-xs' name='Access'><a style='color:white;' href='?nos=".$row['id']."'>Allow</a></button></td><td><button type='submit' class='btn btn-danger btn-xs' name='deny'><a style='color:white;' href='?nos1=".$row['id']."'>Deny</a></button></td></tr>";
-				}?>
+
+					$busy_time=$row['times'];
+					$total_time=$row['total_time'];
+					$book_date=$row['dates'];
+					
+
+ 				echo "<tr><td>".$row['id']."</td><td>".$row['user_email']."</td><td>".$row['name']."</td><td>".$row['city']."</td><td>".$row['phone']."</td><td>".$row['start_destination']."</td><td>".$row['end_destination']."</td>
+ 					  <td>".$row['dates']."</td><td>".$row['times']."</td><td>".$row['taxis']."</td><td>".$row['Amount']."</td><td>".$row['distance']."</td><td>".$row['driver_email']."</td><td>".$row['total_time']."</td>
+ 					  <td><form method='get'><a href='?id=".$row['id']."'><input type='button' name='got_it' class='btn btn-warning btn-xs' value='Got it'></a></form></td>
+ 					  </tr>";
+ 						}
+
+				if (isset($_GET['id'])) {
+
+				   $id=$_GET['id'];	
+				   $sql="INSERT into booking_info VALUES('$id','Available','$busy_time','$total_time','$book_date')";
+				   $sql1="UPDATE booknow SET fares='Yes' where id='$id'";
+		           $obj=new config();
+		           $obj->dbconfig($sql);     
+		           $obj->dbconfig($sql1); 
+		           echo '<script> document.getElementById("refresh").click(); </script>';
+
+					}
+
+				
+
+				 ?>
+
 				</table>
 
 			</div>
@@ -98,8 +122,15 @@
 		</div>
 	</div>
 
-
 	<?php include'footer.php'; ?>
+
+
+	<button visibility="hidden" style="visibility:hidden" id="refresh" onclick="myFunction()"></button>
+	<script>
+function myFunction() {
+    location.reload();
+}
+</script>
 
 </body>
 </html>

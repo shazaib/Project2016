@@ -98,8 +98,13 @@
 		$adress=$_POST['adress'];
 		$access="No";
 		$image="";
+		$busy_time="";
+		$available_time="";
+		$book_date="";
+		$status="Available";
+
 		
-		$sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$city','$phone','$adress','$access','$image')";
+$sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$city','$phone','$adress','$access','$image','$status','$busy_time','$available_time','$book_date')";
 		$obj=new config();
 		$obj->dbconfig($sql);
 
