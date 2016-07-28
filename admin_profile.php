@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User Account</title>
+	<title>Admin Account</title>
 
 
 <!-- jQuery library -->
@@ -57,9 +57,20 @@
 
 			include'account-side-bar-admin.php'; ?>
 				</div>
-  </div>
-</div>
-</div>
+
+
+				<div class="col-lg-9 col-md-9 col-sm-9">
+
+					<div class="artical">
+						<div class="artical-header">
+							<h1 class="artical-header-h1">Profile</h1>
+						</div>
+					</div>
+				</div>	
+
+  			</div><!-- row end -->
+		</div><!-- container end -->
+	</div><!-- main container end -->
 </body>
 </html>
 

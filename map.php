@@ -131,7 +131,7 @@
       <input type="submit" id="submit" value="Find">
     </div>
     <div id="directions-panel"></div>
-    <input type="button" value="Sigin In to Ride"  onclick="location.href='signin'">'
+    <input type="button" value="SignIn To Ride"  onclick="location.href='signin'">'
     </div>
 
 

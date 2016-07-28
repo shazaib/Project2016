@@ -93,6 +93,7 @@
       label{
         font-weight: 600;
       }
+      
     </style>
 
 
@@ -205,7 +206,7 @@ if ($email==NULL) {
           </td>
 
           <td>
-            <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
+            <label> No of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
           </td>
         
        </tr>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User Account</title>
+	<title>Driver Setting</title>
 
 
 <!-- jQuery library -->
@@ -29,7 +29,17 @@
 
 <!-- Account -->
 <link rel="stylesheet" type="text/css" href="account.css">
-   <link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<style type="text/css">
+
+th{
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+
+}
+
+</style>
 
 </head>
 <body>
@@ -59,12 +69,15 @@
 
 				<div class="col-lg-9 col-md-9 col-sm-9">
 				 <div class="artical">
+				 	<div class="artical-header">
+						<h1 class="artical-header-h1">Driver Settings</h1>
+					</div>
 				
 			<form method="post" enctype="multipart/form-data" class="form-inline" >
 		
-		<div class="col-md-9">
+		<!-- <div class="col-md-9"> -->
 			<table class="th1 table-striped table-hover table-condensed" style="margin-top:8px;">
- 				<tr><th>Id</th><th>Firstname</th><th>Lastname</th><th>Email</th><th>Password</th><th>City</th><th>Phone</th><th>Adress</th><th>Access</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
+ 				<tr style="background-color:#ccc;"><th>Id</th><th>Firstname</th><th>Lastname</th><th>Email</th><th>Password</th><th>City</th><th>Phone</th><th>Adress</th><th>Access</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
 	
 		<?php 
 
@@ -80,38 +93,37 @@
 				}?>
 				</table>
 
-			</div>
+			<!-- </div> -->
 
 
-	<?php 
+			<?php 
 
-	if (isset($_GET['nos'])) {
+			if (isset($_GET['nos'])) {
 
-					$num=$_GET['nos'];
-					$title="Yes";
-					$sql="UPDATE signup_driver SET Access='$title' WHERE id='$num'";
-					$obj=new config();
-					$obj->dbconfig($sql);
-					
+				$num=$_GET['nos'];
+				$title="Yes";
+				$sql="UPDATE signup_driver SET Access='$title' WHERE id='$num'";
+				$obj=new config();
+				$obj->dbconfig($sql);
 			} 
 
-	if (isset($_GET['nos1'])) {
+			if (isset($_GET['nos1'])) {
 
-					$num=$_GET['nos1'];
-					$sql="DELETE FROM signup_driver WHERE id='$num'";
-					$obj=new config();
-					$obj->dbconfig($sql);	
-			} ?>					
+				$num=$_GET['nos1'];
+				$sql="DELETE FROM signup_driver WHERE id='$num'";
+				$obj=new config();
+				$obj->dbconfig($sql);	
+			} 
+			?>					
 
 
 				</div><!-- artical end -->
 
 
-				</div>
-
-			</div>
-		</div>
-	</div>
+				</div><!-- col-9 end -->
+			</div><!-- row end -->
+		</div><!-- container end -->
+	</div><!-- main container end -->
 
 
 	<?php include'footer.php'; ?>

@@ -29,7 +29,16 @@
 
 <!-- Account -->
 <link rel="stylesheet" type="text/css" href="account.css">
-   <link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<style type="text/css">
+
+th{
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+}
+
+</style>
 
 </head>
 <body>
@@ -41,7 +50,7 @@
 	</header>
 	
 	<div id="main-container">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-3">
 					<?php 
@@ -62,13 +71,29 @@
 				</div>
 
 				<div class="col-lg-9 col-md-9 col-sm-9">
-				 <div class="artical">
+					<div class="artical">
+					 	<div class="artical-header">
+							<h1 class="artical-header-h1">Booking Info</h1>
+						</div>
 				
 			<form method="post" enctype="multipart/form-data" class="form-inline" >
 		
-		<div class="col-md-9">
+		<!-- <div class="col-md-9"> -->
 			<table class="th1 table-striped table-hover table-condensed" style="margin-top:8px;">
- 				<tr><th>Id</th><th>Firstname</th><th>Lastname</th><th>Email</th><th>Password</th><th>City</th><th>Phone</th><th>Adress</th><th>Access</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
+ 				<tr style="background-color:#ccc;">
+ 					<th>Id</th>
+ 					<th>Firstname</th>
+ 					<th>Lastname</th>
+ 					<th>Email</th>
+ 					<th>Password</th>
+ 					<th>City</th>
+ 					<th>Phone</th>
+ 					<th>Address</th>
+ 					<th>Access</th>
+ 					<th>
+ 						<span class="glyphicon glyphicon-check"></span>
+ 					</th>
+ 				</tr>
 	
 		<?php 
 
@@ -84,7 +109,7 @@
 				}?>
 				</table>
 
-			</div>
+			<!-- </div> -->
 
 
 	
@@ -92,11 +117,11 @@
 				</div><!-- artical end -->
 
 
-				</div>
+				</div><!-- col 9 -->
 
-			</div>
-		</div>
-	</div>
+			</div><!-- row -- >
+		</div><!-- container -->
+	</div><!-- main container -->
 
 
 	<?php include'footer.php'; ?>
