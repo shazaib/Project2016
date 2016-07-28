@@ -61,22 +61,22 @@
 
 <!-- Modal -->
 
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content  modal-win-content">
-        <div class="modal-header modal-win-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">Driver has been registered !</h2>
-        </div>
-        <div class="modal-body">
-          <h5>Mr <?php echo $_POST['fname']; ?>, Welcome to Online Drivo , I hope u drive taxi to make money from Online Drivo </h5>
-        </div>
-        <div class="modal-footer  modal-win-footer">
-          <button type="button" class="btn btn-default  modal-btn" data-dismiss="modal">Thank You</button>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="modal fade" id="myModal" role="dialog">
+	    <div class="modal-dialog modal-sm">
+	      <div class="modal-content  modal-win-content">
+	        <div class="modal-header modal-win-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">Driver has been registered !</h2>
+	        </div>
+	        <div class="modal-body">
+	          <h5>Mr <?php echo $_POST['fname']; ?>, Welcome to Online Drivo , I hope u drive taxi to make money from Online Drivo </h5>
+	        </div>
+	        <div class="modal-footer  modal-win-footer">
+	          <button type="button" class="btn btn-default  modal-btn" data-dismiss="modal">Thank You</button>
+	        </div>
+	      </div>
+	    </div>
+	</div>
 </div>
 
 
@@ -98,12 +98,18 @@
 		$adress=$_POST['adress'];
 		$access="No";
 		$image="";
+		$busy_time="";
+		$available_time="";
+		$book_date="";
+		$status="Available";
+
 		
-		$sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$city','$phone','$adress','$access','$image')";
+$sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$city','$phone','$adress','$access','$image','$status','$busy_time','$available_time','$book_date')";
 		$obj=new config();
 		$obj->dbconfig($sql);
 
-		echo '<script>document.getElementById("btn").click();</script>';					}
+		echo '<script>document.getElementById("btn").click();</script>';					
+	}
  ?>
 <!--End Drvier PHP Coding -->
 

@@ -150,10 +150,8 @@ if ($email==NULL) {
             <label for="sam">User Email :<input type="email" id="sam"  name="useremail" readonly  class="form-control input-sm" value="<?php echo $row['email']; ?>"></label> 
          <?php } ?>
         
+          <br>
 
-            <br>
-
-        <!-- <b>Start:</b> -->
         <label>Start</label>
         <select id="start" required class="form-control input-sm" name="start">
           <option selected disabled >Start Desitination</option>
@@ -193,7 +191,7 @@ if ($email==NULL) {
       <table>
        <tr>
           <td><label for="same1" style="margin-right:3px;">Date :<input type="date" name="date" id="same1" class="form-control input-sm" required></label></td>
-          <td><label for="same2" style="margin-right:3px;">Time :<input type="time" name="time" id="same2" class="form-control input-sm" required></label></td>
+          <td><label for="same2" style="margin-right:3px;">Time :<input type="time" name="times" id="same2" class="form-control input-sm" required></label></td>
           <td>
            <label style="margin-right:3px;">No of Pasangers :
            <select name="taxi" id="taxi" onchange="check()" class="form-control input-sm" required>
@@ -256,8 +254,8 @@ if ($email==NULL) {
     </table>
     <br>
     <br>
-      <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm book-now-btn-pg" id="submit" value="Book Now"></td>
-      <td><div id="error" style="margin-left:50px; color:red; font:italic 17px arial";></div></td></tr></table>
+      <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm book-now-btn-pg" id="submit" value="Book Now"><button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button></td>
+      <td><div id="error" style="margin-left:50px; margin-top:-35px; color:red; font:italic 17px arial";></div></td></tr></table>
 
        </form>
     </br>
@@ -344,6 +342,30 @@ if ($email==NULL) {
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjmANqiA3CjCY2QjYSfI9GapQ8khcICOA&callback=initMap">
     </script>
 
+
+<!-- Modal -->
+
+  <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content  modal-win-content">
+          <div class="modal-header modal-win-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Driver has been registered !</h2>
+          </div>
+          <div class="modal-body">
+            <h5>Please wait... for confirmation email.</h5>
+          </div>
+          <div class="modal-footer  modal-win-footer">
+            <button type="button" class="btn btn-default  modal-btn" data-dismiss="modal">Thank You</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
 </body>
 </html>
 
@@ -359,33 +381,43 @@ if (isset($_POST['ins'])) {
     $start=$_POST['start'];
     $end=$_POST['end'];
     $date=$_POST['date'];
+    $times=$_POST['times']; 
     $time=$_POST['time']; 
     $amount=$_POST['amount'];
     $Distance=$_POST['Distance'];
     $taxis=$_POST['psg'];
     $useremail=$_POST['useremail'];
-    $fares='No';
 
-    $sql="SELECT id FROM booking_info";
+
+    $sql2="SELECT id,status,firstname,email,phone,busy_time,available_time,book_date FROM signup_driver WHERE  Access='Yes' and status='Available' LIMIT 2";
     $obj=new config();
-    $res=$obj->select($sql);
+    $res=$obj->select($sql2);
 
-     while ($row=$res->fetch_assoc()) {
-         
+    while ($row=$res->fetch_assoc()) {
+
+        $key=$row['id'];
         $status=$row['status'];
-        $email=$row['email'];     
+        $driver_email=$row['email'];  
+        $busy_time=$row['busy_time'];
 
-        if ($status=="Available") {
-          
-           $sql="INSERT into booknow VALUES('','$useremail','$name','$city','$num','$start','$end','$date','$time','$taxis','$amount','$Distance','$email','$fares')";
+
+        if ($status=="Available" && $times!=$busy_time) {
+ 
+          $sql="INSERT into booknow VALUES('','$useremail','$name','$city','$num','$start','$end','$date','$times','$taxis','$amount','$Distance','$driver_email','$time','No')";
            $obj=new config();
            $obj->dbconfig($sql);
+
+           echo '<script>document.getElementById("btn").click();</script>';
+
         }   
 		
-		  else{
-
-          echo '<script> document.getElementById("error").innerHTML="Drivers not Available for this time"; </script>';
+		  else {
+          
+          echo '<script> document.getElementById("error").innerHTML="Drivers not Available for this time "; </script>';
+        
         }
+
+        
 
 }
 

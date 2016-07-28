@@ -1,5 +1,5 @@
 	
-	<div class="side-bar">
+	<div style="width:230px;" class="side-bar">
 		<!-- <div class="profile-img"><img src="images/login.jpg"></div> -->
 		<!-- <h1 class="profile-img-name">ADMIN</h1> -->
 		<button class="side-bar-btn btn-img-booking-info" style="border-bottom:1px solid #ccc; border-top:none;" onclick="location.href='booking_info'">Booking info</button></a>
