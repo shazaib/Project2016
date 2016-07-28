@@ -86,21 +86,35 @@
 
  				echo "<tr><td>".$row['id']."</td><td>".$row['user_email']."</td><td>".$row['name']."</td><td>".$row['city']."</td><td>".$row['phone']."</td><td>".$row['start_destination']."</td><td>".$row['end_destination']."</td>
  					  <td>".$row['dates']."</td><td>".$row['times']."</td><td>".$row['taxis']."</td><td>".$row['Amount']."</td><td>".$row['distance']."</td><td>".$row['driver_email']."</td><td>".$row['total_time']."</td>
- 					  <td><form method='get'><a href='?id=".$row['id']."'><input type='button' name='got_it' class='btn btn-warning btn-xs' value='Got it'></a></form></td>
+ 					  <td><form method='get'><a href='?driver_email=".$row['driver_email']."'><input type='button' name='Access' class='btn btn-warning btn-xs' value='Access'></a><a href='?driver_email_delete=".$row['driver_email']."'><input type='button' name='Deny' class='btn btn-warning btn-xs' value='Deny'></a></form></td>
  					  </tr>";
  						}
 
-				if (isset($_GET['id'])) {
+				if (isset($_GET['driver_email'])) {
 
-				   $id=$_GET['id'];	
-				   $sql="INSERT into booking_info VALUES('$id','Available','$busy_time','$total_time','$book_date')";
-				   $sql1="UPDATE booknow SET fares='Yes' where id='$id'";
+
+				   $driver_email=$_GET['driver_email'];
+				   $sql="UPDATE signup_driver SET busy_time='$busy_time',available_time='$total_time',book_date='$book_date' where email='$driver_email'";
+				   $sql1="UPDATE booknow SET fares='Yes' where driver_email='$driver_email'";
 		           $obj=new config();
 		           $obj->dbconfig($sql);     
 		           $obj->dbconfig($sql1); 
-		           echo '<script> document.getElementById("refresh").click(); </script>';
+		      
 
 					}
+
+				if (isset($_GET['driver_email_delete'])) {
+
+
+				   $driver_email_delete=$_GET['driver_email_delete'];
+				   $sql="DELETE FROM  booknow where driver_email='$driver_email_delete'";
+				   $obj=new config();
+				   $obj->dbconfig($sql); 
+
+					}	
+
+
+
 
 				
 
@@ -123,14 +137,6 @@
 	</div>
 
 	<?php include'footer.php'; ?>
-
-
-	<button visibility="hidden" style="visibility:hidden" id="refresh" onclick="myFunction()"></button>
-	<script>
-function myFunction() {
-    location.reload();
-}
-</script>
 
 </body>
 </html>
