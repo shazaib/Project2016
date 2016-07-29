@@ -64,48 +64,25 @@
 		
 		<div class="col-md-9">
 			<table class="th1 table-striped table-hover table-condensed" style="margin-top:8px;">
- 				<tr><th>Id</th><th>Firstname</th><th>Lastname</th><th>Email</th><th>Password</th><th>City</th><th>Phone</th><th>Adress</th><th>Access</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
+ 				<tr><th>Firstname</th><th>Email</th><th>City</th><th>Phone</th><th>Adress</th><th>Status</th><th>B_Time</th><th>A_Time</th><th>Book_Date</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
 	
 		<?php 
 
-				$sql="SELECT * FROM signup_driver where Access='No' ORDER BY id desc";
+				$sql="SELECT * FROM signup_driver where Access='Yes'";
 				$obj=new config();
 				$res=$obj->select($sql);
 
 				while($row=$res->fetch_assoc())
 				{ 
- 					
- 				echo "<tr><td>".$row['id']."</a></td><td>".$row['firstname']."</td><td>".$row['lastname']."</td><td>".$row['email']."</td><td>".$row['password']."</td><td>".$row['city']."</td><td>".$row['phone']."</td><td>".$row['adress']."</td>
-				<td><button type='submit' id='refresh' onclick='myFunction' class='btn btn-danger btn-xs' name='Access'><a style='color:white;' href='?nos=".$row['id']."'>Allow</a></button></td><td><button type='submit' class='btn btn-danger btn-xs' name='deny'><a style='color:white;' href='?nos1=".$row['id']."'>Deny</a></button></td></tr>";
+
+ 				echo "<tr><td>".$row['firstname']."</td><td>".$row['email']."</td><td>".$row['city']."</td><td>".$row['phone']."</td><td>".$row['adress']."</td><td>".$row['status']."</td><td>".$row['busy_time']."</td><td>".$row['available_time']."</td><td>".$row['book_date']."</td></tr>";
+				//<td><button type='submit' id='refresh' onclick='myFunction' class='btn btn-danger btn-xs' name='Access'><a style='color:white;' href='?nos=".$row['id']."'>Allow</a></button></td><td><button type='submit' class='btn btn-danger btn-xs' name='deny'><a style='color:white;' href='?nos1=".$row['id']."'>Deny</a></button></td></tr>";
+				
 				}?>
 				</table>
 
 			</div>
-
-
-	<?php 
-
-	if (isset($_GET['nos'])) {
-
-					$num=$_GET['nos'];
-					$title="Yes";
-					$sql="UPDATE signup_driver SET Access='$title' WHERE id='$num'";
-					$obj=new config();
-					$obj->dbconfig($sql);
-					header("Location:driver_setting");
-					
-			} 
-
-	if (isset($_GET['nos1'])) {
-
-					$num=$_GET['nos1'];
-					$sql="DELETE FROM signup_driver WHERE id='$num'";
-					$obj=new config();
-					$obj->dbconfig($sql);
-					header("Location:driver_setting");	
-			} ?>					
-
-
+		
 				</div><!-- artical end -->
 
 

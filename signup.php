@@ -108,13 +108,13 @@
 	if (isset($_POST['create'])) {
 
 		$person=$_POST['person'];
-		$uname=$_POST['uname'];
+		$uname=ucfirst($_POST['uname']);
 		$email=$_POST['email'];
 		$paswd=$_POST['paswd'];
 		$c_paswd=$_POST['c_paswd'];
 		$num=$_POST['num'];
-		$city=$_POST['city'];
-		$adress=$_POST['adress'];
+		$city=ucfirst($_POST['city']);
+		$adress=ucfirst($_POST['adress']);
 		$image='';
 
 		$sql="INSERT into signup_user VALUES('','$person','$uname','$email','$paswd','$c_paswd','$num','$city','$adress','$image')";

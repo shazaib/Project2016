@@ -66,10 +66,10 @@
       <div class="modal-content  modal-win-content">
         <div class="modal-header modal-win-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">Driver has been registered !</h2>
+          <h2 class="modal-title">Info:</h2>
         </div>
         <div class="modal-body">
-          <h5>Mr <?php echo $_POST['fname']; ?>, Welcome to Online Drivo , I hope u drive taxi to make money from Online Drivo </h5>
+          <h5>Mr <?php echo ucfirst($_POST['fname']); ?>, Welcome to Online Drivo , I hope u drive taxi to make money from Online Drivo </h5>
         </div>
         <div class="modal-footer  modal-win-footer">
           <button type="button" class="btn btn-default  modal-btn" data-dismiss="modal">Thank You</button>
@@ -89,13 +89,13 @@
 
 	if (isset($_POST['btn_submit'])) {
 
-		$fname=$_POST['fname'];
-		$lname=$_POST['lname'];
+		$fname=ucfirst($_POST['fname']);
+		$lname=ucfirst($_POST['lname']);
 		$email=$_POST['email'];
 		$paswd=$_POST['pass'];
-		$city=$_POST['city'];
+		$city=ucfirst($_POST['city']);
 		$phone=$_POST['phone'];
-		$adress=$_POST['adress'];
+		$adress=ucfirst($_POST['adress']);
 		$access="No";
 		$image="";
 		$busy_time="";

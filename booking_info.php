@@ -98,8 +98,8 @@
 				   $sql1="UPDATE booknow SET fares='Yes' where driver_email='$driver_email'";
 		           $obj=new config();
 		           $obj->dbconfig($sql);     
-		           $obj->dbconfig($sql1); 
-		      
+		           $obj->dbconfig($sql1);
+		           header("Location:booking_info");
 
 					}
 
@@ -109,7 +109,8 @@
 				   $driver_email_delete=$_GET['driver_email_delete'];
 				   $sql="DELETE FROM  booknow where driver_email='$driver_email_delete'";
 				   $obj=new config();
-				   $obj->dbconfig($sql); 
+				   $obj->dbconfig($sql);
+				   header("Location:booking_info"); 
 
 					}	
 

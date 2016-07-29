@@ -90,6 +90,7 @@
         color: #000;
       }
 
+
       label{
         font-weight: 600;
       }
@@ -193,47 +194,12 @@ if ($email==NULL) {
        <tr>
           <td><label for="same1" style="margin-right:3px;">Date :<input type="date" name="date" id="same1" class="form-control input-sm" required></label></td>
           <td><label for="same2" style="margin-right:3px;">Time :<input type="time" name="times" id="same2" class="form-control input-sm" required></label></td>
-          <td>
-           <label style="margin-right:3px;">No of Pasangers :
-           <select name="taxi" id="taxi" onchange="check()" class="form-control input-sm" required>
-            <option selected disabled>Number of Passengers </option>
-            <?php for ($i=1; $i <=12 ; $i++) { 
-              echo '<option value="'.$i.'">'.$i.'</option>';
-            } ?>
-            </select>
-           </label>
-          </td>
-
-          <td>
-            <label> No: of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
-          </td>
-        
-       </tr>
+           </tr>
       </table>
 
 
-     
-
-     <script type="text/javascript">
-
-     function check() {
-       var val = document.getElementById('taxi').value;
-       if(val>=1 && val<=4) {
-        document.getElementById('psg').value = 1;
-       } 
-       else if(val>=5 && val<=8) {
-           document.getElementById('psg').value = 2;
-       }
-
-       else if(val>=9 && val<=12) {
-           document.getElementById('psg').value = 3;
-       }   
-      }
-
-     </script>
-       
   
-    
+  
     <table>
     <tr>
     <td>
@@ -343,8 +309,29 @@ if ($email==NULL) {
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjmANqiA3CjCY2QjYSfI9GapQ8khcICOA&callback=initMap">
     </script>
 
+      <button type="button" id="btn" name="btns" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
+
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content  modal-win-content">
+        <div class="modal-header modal-win-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Info:</h2>
+        </div>
+        <div class="modal-body">
+          <h5>Please wait for a while for conformation call</h5>
+        </div>
+        <div class="modal-footer  modal-win-footer">
+          <button type="button" class="btn btn-default  modal-btn" data-dismiss="modal">Thank You</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
+
+
 
 
 
@@ -362,7 +349,6 @@ if (isset($_POST['ins'])) {
     $time=$_POST['time']; 
     $amount=$_POST['amount'];
     $Distance=$_POST['Distance'];
-    $taxis=$_POST['psg'];
     $useremail=$_POST['useremail'];
 
 
@@ -376,13 +362,16 @@ if (isset($_POST['ins'])) {
         $status=$row['status'];
         $driver_email=$row['email'];  
         $busy_time=$row['busy_time'];
-
+         $driver_name=$row['firstname']; 
+         $driver_num=$row['phone'];
 
         if ($status=="Available" && $times!=$busy_time) {
- 
-          $sql="INSERT into booknow VALUES('','$useremail','$name','$city','$num','$start','$end','$date','$times','$taxis','$amount','$Distance','$driver_email','$time','No')";
-           $obj=new config();
-           $obj->dbconfig($sql);
+
+          $sql="INSERT into booknow VALUES('','$useremail','$name','$city','$num','$start','$end','$date','$times','$amount','$Distance','$driver_email','$time','No','$driver_name','$driver_num')";
+          $obj=new config();
+          $obj->dbconfig($sql);
+          echo '<script> document.getElementById("btn").click(); </script>';
+          
 
         }   
 		
