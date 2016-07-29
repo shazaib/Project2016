@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User Account</title>
+	<title>Admin|Booking_Info</title>
 
 
 <!-- jQuery library -->
@@ -29,7 +29,16 @@
 
 <!-- Account -->
 <link rel="stylesheet" type="text/css" href="account.css">
-   <link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<style type="text/css">
+
+th{
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+}
+
+</style>
 
 </head>
 <body>
@@ -37,40 +46,52 @@
 
 	<?php include_once('includes/config.php'); ?>
 	<header>
-		<img src="images/logo3.png">
+		<img style="float:left; margin-left:30px;" src="images/logo3.png">
+		<h1 style="padding:10px;" class="artical-header-h1">Booking Info</h1>
 	</header>
 	
 	<div id="main-container">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-3">
 					<?php 
+						include_once('includes/config.php');
+						session_start();
 
-			 include_once('includes/config.php');
-			 session_start();
+						$email=$_SESSION['email']; 
 
-			 $email=$_SESSION['email']; 
+						if ($email==NULL) {
+						 	header("Location:404");
+						}
 
-			if ($email==NULL) {
-				 	
-				 	header("Location:404");
-				 }
-
-				 include 'account-side-bar-admin.php'; ?>
-
-	
+						include 'account-side-bar-admin.php'; 
+					?>
 				</div>
 
 				<div class="col-lg-9 col-md-9 col-sm-9">
-				 <div class="artical">
+				 <div style="margin-left:-80px;" class="artical">
 				
-			<form method="post" enctype="multipart/form-data" class="form-inline" >
-		
-		<div class="col-md-9">
+			<form method="post" enctype="multipart/form-data" class="form-inline">
 			<table class="th1 table-striped table-hover table-condensed" style="margin-top:8px;">
- 				<tr><th>Id</th><th>U_email</th><th>Name</th><th>City</th><th>Phone</th><th>Pick</th><th>Drop</th><th>Date</th><th>Time</th><th>Taxis</th><th>Amount</th><th>K/m</th><th>D_email</th><th>T_minutes</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
+ 				<tr style="background-color:#ccc;">
+	 				<th>Id</th>
+	 				<th>U_Email</th>
+	 				<th>Name</th>
+	 				<th>City</th>
+	 				<th>Phone</th>
+	 				<th>Pick</th>
+	 				<th>Drop</th>
+	 				<th>Date</th>
+	 				<th>Time</th>
+	 				<th>Taxis</th>
+	 				<th>Amount</th>
+	 				<th>Km</th>
+	 				<th>D_Email</th>
+	 				<th>T_Minutes</th>
+	 				<th><span class="glyphicon glyphicon-check"></span></th>
+ 				</tr>
 	
-		<?php 
+				<?php 
 
 				$sql="SELECT * FROM booknow where fares='No'";
 				$obj=new config();
@@ -82,16 +103,16 @@
 					$busy_time=$row['times'];
 					$total_time=$row['total_time'];
 					$book_date=$row['dates'];
-					
 
  				echo "<tr><td>".$row['id']."</td><td>".$row['user_email']."</td><td>".$row['name']."</td><td>".$row['city']."</td><td>".$row['phone']."</td><td>".$row['start_destination']."</td><td>".$row['end_destination']."</td>
  					  <td>".$row['dates']."</td><td>".$row['times']."</td><td>".$row['taxis']."</td><td>".$row['Amount']."</td><td>".$row['distance']."</td><td>".$row['driver_email']."</td><td>".$row['total_time']."</td>
- 					  <td><form method='get'><a href='?driver_email=".$row['driver_email']."'><input type='button' name='Access' class='btn btn-warning btn-xs' value='Access'></a><a href='?driver_email_delete=".$row['driver_email']."'><input type='button' name='Deny' class='btn btn-warning btn-xs' value='Deny'></a></form></td>
+ 					  <td><form method='get'><a href='?driver_email=".$row['driver_email']."'><input type='button' name='Access' class='btn btn-success btn-xs' value='Access'></a><a href='?driver_email_delete=".$row['driver_email']."'><input style='width:52px;margin-top:5px;' type='button' name='Deny' class='btn btn-xs btn-danger' value='Deny'></a></form></td>
  					  </tr>";
  						}
 
 				if (isset($_GET['driver_email'])) {
 
+<<<<<<< HEAD
 
 				   $driver_email=$_GET['driver_email'];
 				   $sql="UPDATE signup_driver SET busy_time='$busy_time',available_time='$total_time',book_date='$book_date' where email='$driver_email'";
@@ -111,19 +132,29 @@
 				   $obj=new config();
 				   $obj->dbconfig($sql);
 				   header("Location:booking_info"); 
+=======
+					   $driver_email=$_GET['driver_email'];
+					   $sql="UPDATE signup_driver SET busy_time='$busy_time',available_time='$total_time',book_date='$book_date' where email='$driver_email'";
+					   $sql1="UPDATE booknow SET fares='Yes' where driver_email='$driver_email'";
+				          $obj=new config();
+				          $obj->dbconfig($sql);     
+				          $obj->dbconfig($sql1); 		      
+				   	}
+
+				if (isset($_GET['driver_email_delete'])) {
+					   $driver_email_delete=$_GET['driver_email_delete'];
+					   $sql="DELETE FROM  booknow where driver_email='$driver_email_delete'";
+					   $obj=new config();
+					   $obj->dbconfig($sql); 
+>>>>>>> a62932404f07a5871f6b851baa4d8bdc049b571c
 
 					}	
-
-
-
-
-				
 
 				 ?>
 
 				</table>
 
-			</div>
+			<!-- </div> -->
 
 
 	
@@ -131,7 +162,7 @@
 				</div><!-- artical end -->
 
 
-				</div>
+				
 
 			</div>
 		</div>

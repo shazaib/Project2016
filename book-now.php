@@ -94,6 +94,7 @@
       label{
         font-weight: 600;
       }
+      
     </style>
 
 
@@ -150,10 +151,8 @@ if ($email==NULL) {
             <label for="sam">User Email :<input type="email" id="sam"  name="useremail" readonly  class="form-control input-sm" value="<?php echo $row['email']; ?>"></label> 
          <?php } ?>
         
+          <br>
 
-            <br>
-
-        <!-- <b>Start:</b> -->
         <label>Start</label>
         <select id="start" required class="form-control input-sm" name="start">
           <option selected disabled >Start Desitination</option>
@@ -194,7 +193,26 @@ if ($email==NULL) {
        <tr>
           <td><label for="same1" style="margin-right:3px;">Date :<input type="date" name="date" id="same1" class="form-control input-sm" required></label></td>
           <td><label for="same2" style="margin-right:3px;">Time :<input type="time" name="times" id="same2" class="form-control input-sm" required></label></td>
+<<<<<<< HEAD
            </tr>
+=======
+          <td>
+           <label style="margin-right:3px;">No of Pasangers :
+           <select name="taxi" id="taxi" onchange="check()" class="form-control input-sm" required>
+            <option selected disabled>Number of Passengers </option>
+            <?php for ($i=1; $i <=12 ; $i++) { 
+              echo '<option value="'.$i.'">'.$i.'</option>';
+            } ?>
+            </select>
+           </label>
+          </td>
+
+          <td>
+            <label> No of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
+          </td>
+        
+       </tr>
+>>>>>>> a62932404f07a5871f6b851baa4d8bdc049b571c
       </table>
 
 
@@ -221,7 +239,7 @@ if ($email==NULL) {
     </table>
     <br>
     <br>
-      <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm book-now-btn-pg" id="submit" value="Book Now"></td>
+      <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm book-now-btn-pg" id="submit" value="Book Now"><button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button></td>
       <td><div id="error" style="margin-left:50px; margin-top:-35px; color:red; font:italic 17px arial";></div></td></tr></table>
 
        </form>
@@ -309,6 +327,7 @@ if ($email==NULL) {
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjmANqiA3CjCY2QjYSfI9GapQ8khcICOA&callback=initMap">
     </script>
 
+<<<<<<< HEAD
       <button type="button" id="btn" name="btns" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
 
     <div class="modal fade" id="myModal" role="dialog">
@@ -328,6 +347,32 @@ if ($email==NULL) {
     </div>
   </div>
 
+=======
+
+<!-- Modal -->
+
+  <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content  modal-win-content">
+          <div class="modal-header modal-win-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Driver has been registered !</h2>
+          </div>
+          <div class="modal-body">
+            <h5>Please wait... for confirmation email.</h5>
+          </div>
+          <div class="modal-footer  modal-win-footer">
+            <button type="button" class="btn btn-default  modal-btn" data-dismiss="modal">Thank You</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+>>>>>>> a62932404f07a5871f6b851baa4d8bdc049b571c
 </body>
 </html>
 
@@ -372,6 +417,8 @@ if (isset($_POST['ins'])) {
           $obj->dbconfig($sql);
           echo '<script> document.getElementById("btn").click(); </script>';
           
+
+           echo '<script>document.getElementById("btn").click();</script>';
 
         }   
 		

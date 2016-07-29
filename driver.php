@@ -34,7 +34,7 @@
 							<input class="form-input" type="password" name="pass" placeholder="Password" pattern=".{8,}" title="Allow eight or more characters" required><br>
 							<input class="form-input" type="text" name="city" placeholder="City" pattern="[A-Za-z]{1,15}" required><br>
 							<input class="form-input" type="text" name="phone" placeholder="Phone" pattern="^\d{11}$" title="eg: 0900-1234567" required><br>
-							<input class="form-input" type="text" name="adress" placeholder="Adress" pattern=".{5,15}" title="eg: Nazimabad R900" required><br>
+							<input class="form-input" type="text" name="adress" placeholder="Address" pattern=".{5,15}" title="eg: Nazimabad R900" required><br>
 						<button type="submit" name="btn_submit" class="form-btn">Submit</button>
 						</br>
 						<button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
@@ -61,6 +61,7 @@
 
 <!-- Modal -->
 
+<<<<<<< HEAD
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content  modal-win-content">
@@ -77,6 +78,24 @@
       </div>
     </div>
   </div>
+=======
+	<div class="modal fade" id="myModal" role="dialog">
+	    <div class="modal-dialog modal-sm">
+	      <div class="modal-content  modal-win-content">
+	        <div class="modal-header modal-win-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">Driver has been registered !</h2>
+	        </div>
+	        <div class="modal-body">
+	          <h5>Mr <?php echo $_POST['fname']; ?>, Welcome to Online Drivo , I hope u drive taxi to make money from Online Drivo </h5>
+	        </div>
+	        <div class="modal-footer  modal-win-footer">
+	          <button type="button" class="btn btn-default  modal-btn" data-dismiss="modal">Thank You</button>
+	        </div>
+	      </div>
+	    </div>
+	</div>
+>>>>>>> a62932404f07a5871f6b851baa4d8bdc049b571c
 </div>
 
 
@@ -108,7 +127,8 @@ $sql="INSERT into signup_driver VALUES('','$fname','$lname','$email','$paswd','$
 		$obj=new config();
 		$obj->dbconfig($sql);
 
-		echo '<script>document.getElementById("btn").click();</script>';					}
+		echo '<script>document.getElementById("btn").click();</script>';					
+	}
  ?>
 <!--End Drvier PHP Coding -->
 

@@ -96,6 +96,18 @@ header{
 	background-position: left;
 }
 
+.btn-img-booking-info{
+	background: url(images/booking-info.png) no-repeat;
+	background-position: left;
+}
+
+.btn-img-driver-setting{
+	background: url(images/driver-setting.png) no-repeat;
+	background-position: left;
+}
+
+
+
 .artical{
 	/*width: 100%;*/
 	height: 800px;

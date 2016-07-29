@@ -114,7 +114,72 @@
 			<!------------------------ Price ---------------------------->
 
 				<div class="price">
+
 					<div class="container">
+					    <div class="row">
+					    <h1 class="price-h1">our price</h1>
+							<div class="col-md-12 col-sm-12">
+					                <div id="Carousel" class="carousel slide">
+					                 
+					                <ol class="carousel-indicators">
+					                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+					                    <li data-target="#Carousel" data-slide-to="1"></li>
+					                    <!-- <li data-target="#Carousel" data-slide-to="2"></li> -->
+					                </ol>
+					                 
+					                <!-- Carousel items -->
+					                <div class="carousel-inner">
+					                    
+					                <div class="item active">
+					                	<div class="row">
+					                	  <div class="col-md-3"><a href="#" class="thumbnail icon-margin"><img src="http://www.wenthusiasts.com/wp-content/themes/wenthusiasts/images/headers/samsservices2.png" alt="Image" style="max-width:100%;"></a></div>
+					                	  <div class="col-md-3"><a href="#" class="thumbnail icon-margin"><img src="http://www.wenthusiasts.com/wp-content/uploads/2014/08/a5.jpg" alt="Image" style="max-width:100%;"></a></div>
+					                	  <div class="col-md-3"><a href="#" class="thumbnail icon-margin"><img src="http://www.wenthusiasts.com/wp-content/uploads/2014/08/a11.jpg" alt="Image" style="max-width:100%;"></a></div>
+					                	  <div class="col-md-3"><a href="#" class="thumbnail icon-margin"><img src="http://www.wenthusiasts.com/wp-content/themes/wenthusiasts/images/headers/burgercrave5.png" alt="Image" style="max-width:100%;"></a></div>
+					                	</div><!--.row-->
+					                </div><!--.item-->
+					                 
+					                <div class="item">
+					                	<div class="row">
+					                		<div class="col-md-3"><a href="#" class="thumbnail icon-margin"><img src="http://www.wenthusiasts.com/wp-content/themes/wenthusiasts/images/headers/reflectioncafe3.png" alt="Image" style="max-width:100%;"></a></div>
+					                		<div class="col-md-3"><a href="#" class="thumbnail icon-margin"><img src="http://www.wenthusiasts.com/wp-content/uploads/2014/08/a41.jpg" alt="Image" style="max-width:100%;"></a></div>
+					                		<div class="col-md-3"><a href="#" class="thumbnail icon-margin"><img src="http://www.wenthusiasts.com/wp-content/themes/wenthusiasts/images/headers/arabella6.png" alt="Image" style="max-width:100%;"></a></div>
+					                		<div class="col-md-3"><a href="#" class="thumbnail icon-margin"><img src="http://www.wenthusiasts.com/wp-content/uploads/2014/08/a31.jpg" alt="Image" style="max-width:100%;"></a></div>
+					                	</div><!--.row-->
+					                </div><!--.item-->
+					                 
+					                 
+					                </div><!--.carousel-inner-->
+
+					                  <a style="margin-top:100px;" data-slide="prev" href="#Carousel" class="left carousel-control">
+					                  	<span style="margin:-11px 0px 0px -14px;font-size: 20px;" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								        <span class="sr-only">Previous</span>
+					                  </a>
+					                  <a style="margin-top:100px;" data-slide="next" href="#Carousel" class="right carousel-control">
+					                  	<span style="margin:-11px -14px 0px 0px;font-size: 20px;" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								      	<span class="sr-only">Next</span>
+					                  </a>
+
+					                </div><!--.Carousel-->
+					                 
+							</div>
+						</div>
+					</div><!--.container-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- <div class="container">
 						<div class="row">
 							<h1 class="price-h1">our price</h1>
 							<div class="col-md-4 col-sm-4">
@@ -133,7 +198,7 @@
 								<h1 style="font-size:35px; font-weight:600; color:#ffd405; padding:0;" class="price-h1">Rs 100<span style="font-size:20px; color:#000;">/KM</span></h1>
 							</div>
 						</div>	
-					</div>
+					</div> -->
 				</div>
 
 
@@ -143,10 +208,16 @@
 	<?php include'footer.php'; ?>
 
 
-<!-------------------Parallax Scrolling---------------------->
+<!------------------- slider script ---------------------->
 	
-	<!-- <script>
-	    $.stellar();
-	</script> -->
+	<!-- Latest compiled Bootstrap JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	 <script>
+	    $(document).ready(function() {
+    $('#myCarousel').carousel({
+	    interval: 1000
+	})
+});
+	</script> 
 
-<!-------------------Parallax Scrolling end---------------------->
+<!------------------- slider script end ---------------------->

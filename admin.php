@@ -60,10 +60,6 @@
 <form method="post">
 	<div class="container" style="text-align:-webkit-center; text-align:-moz-center; text-align:-ms-center;">
 		<div class="row">
-
-			
-
-
 			<div class="col-md-12 col-sm-12 col-xs-12">
 			<img src="images/logo3.png" style="margin-top:100px;">
 				<div class="login">
