@@ -102,7 +102,7 @@ th{
 
 			if (isset($_GET['nos1'])) {
 
-<<<<<<< HEAD
+
 					$num=$_GET['nos'];
 					$title="Yes";
 					$sql="UPDATE signup_driver SET Access='$title' WHERE id='$num'";
@@ -119,16 +119,11 @@ th{
 					$obj=new config();
 					$obj->dbconfig($sql);
 					header("Location:driver_setting");	
-			} ?>					
-=======
-				$num=$_GET['nos1'];
-				$sql="DELETE FROM signup_driver WHERE id='$num'";
-				$obj=new config();
-				$obj->dbconfig($sql);	
+			
 			} 
 
 			?>					
->>>>>>> a62932404f07a5871f6b851baa4d8bdc049b571c
+
 
 
 				</div><!-- artical end -->

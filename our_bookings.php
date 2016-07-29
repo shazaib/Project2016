@@ -57,21 +57,13 @@ td{
 
 <body>
 
-
-
-if ($email==NULL) {
- 	header("Location:404");
- }
-
-
-
-
 	<header>
-		<img src="images/logo3.png">
+		<img style="float:left; margin-left:30px;" src="images/logo3.png">
+		<h1 style="padding:10px;" class="artical-header-h1">Our bookings</h1>
 	</header>
 	
 	<div id="main-container">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-3">
 
@@ -91,15 +83,15 @@ if ($email==NULL) {
 				</div>
 
 				<div class="col-lg-9 col-md-9 col-sm-9">
-				 <div class="artical">
-					<div class="artical-header">
+				 <div class="artical" style="margin-left:-80px;">
+					<!-- <div class="artical-header">
 						<h1 class="artical-header-h1">Our Bookings</h1>
-					</div>
+					</div> -->
 					
 					<div class="artical-content" style="padding-top:20px; float:left; margin:0px 0px 0px 0px;">
 						<div style="overflow-x:auto;">
 							<table  style="float:left; width:100%;">
-								
+												
 								<th>Id</th>	
 								<th>Username</th>
 								<th>User_email</th>
@@ -113,6 +105,7 @@ if ($email==NULL) {
 								<th>Driver_name</th>
 								<th>Driver_email</th>
 								<th>Driver_num</th>
+
 								<?php 
 
 
@@ -123,7 +116,6 @@ if ($email==NULL) {
 								 	while($row=$res->fetch_assoc()) {
 								 	
 								 									      ?>
-
 
 								<tr>
 									<td><?php echo $row['start_destination']; ?></td>

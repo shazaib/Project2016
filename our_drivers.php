@@ -31,15 +31,23 @@
 <link rel="stylesheet" type="text/css" href="account.css">
    <link rel="stylesheet" type="text/css" href="styles.css">
 
+<style type="text/css">
+th{
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+}
+</style>
+
 </head>
 <body>
 
 	<header>
-		<img src="images/logo3.png">
+		<img style="float:left; margin-left:30px;" src="images/logo3.png">
+		<h1 style="padding:10px;" class="artical-header-h1">Our Drivers</h1>
 	</header>
 	
 	<div id="main-container">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-3">
 					<?php 
@@ -62,9 +70,9 @@
 				
 			<form method="post" enctype="multipart/form-data" class="form-inline" >
 		
-		<div class="col-md-9">
-			<table class="th1 table-striped table-hover table-condensed" style="margin-top:8px;">
- 				<tr><th>Firstname</th><th>Email</th><th>City</th><th>Phone</th><th>Adress</th><th>Status</th><th>B_Time</th><th>A_Time</th><th>Book_Date</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
+		<!-- <div class="col-md-9"> -->
+			<table class="th1 table-striped table-hover table-condensed" style="margin-top:8px;margin-left: -150px;">
+ 				<tr style="background-color:#ccc;"><th>Firstname</th><th>Email</th><th>City</th><th>Phone</th><th>Adress</th><th>Status</th><th>B_Time</th><th>A_Time</th><th>Book_Date</th><th><span class="glyphicon glyphicon-check"></span><span class="glyphicon glyphicon-hand-left"></span></th></tr>
 	
 		<?php 
 
@@ -81,7 +89,7 @@
 				}?>
 				</table>
 
-			</div>
+			<!-- </div> -->
 		
 				</div><!-- artical end -->
 

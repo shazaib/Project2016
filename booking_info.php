@@ -83,7 +83,6 @@ th{
 	 				<th>Drop</th>
 	 				<th>Date</th>
 	 				<th>Time</th>
-	 				<th>Taxis</th>
 	 				<th>Amount</th>
 	 				<th>Km</th>
 	 				<th>D_Email</th>
@@ -105,14 +104,13 @@ th{
 					$book_date=$row['dates'];
 
  				echo "<tr><td>".$row['id']."</td><td>".$row['user_email']."</td><td>".$row['name']."</td><td>".$row['city']."</td><td>".$row['phone']."</td><td>".$row['start_destination']."</td><td>".$row['end_destination']."</td>
- 					  <td>".$row['dates']."</td><td>".$row['times']."</td><td>".$row['taxis']."</td><td>".$row['Amount']."</td><td>".$row['distance']."</td><td>".$row['driver_email']."</td><td>".$row['total_time']."</td>
+ 					  <td>".$row['dates']."</td><td>".$row['times']."</td><td>".$row['Amount']."</td><td>".$row['distance']."</td><td>".$row['driver_email']."</td><td>".$row['total_time']."</td>
  					  <td><form method='get'><a href='?driver_email=".$row['driver_email']."'><input type='button' name='Access' class='btn btn-success btn-xs' value='Access'></a><a href='?driver_email_delete=".$row['driver_email']."'><input style='width:52px;margin-top:5px;' type='button' name='Deny' class='btn btn-xs btn-danger' value='Deny'></a></form></td>
  					  </tr>";
  						}
 
 				if (isset($_GET['driver_email'])) {
 
-<<<<<<< HEAD
 
 				   $driver_email=$_GET['driver_email'];
 				   $sql="UPDATE signup_driver SET busy_time='$busy_time',available_time='$total_time',book_date='$book_date' where email='$driver_email'";
@@ -132,23 +130,9 @@ th{
 				   $obj=new config();
 				   $obj->dbconfig($sql);
 				   header("Location:booking_info"); 
-=======
-					   $driver_email=$_GET['driver_email'];
-					   $sql="UPDATE signup_driver SET busy_time='$busy_time',available_time='$total_time',book_date='$book_date' where email='$driver_email'";
-					   $sql1="UPDATE booknow SET fares='Yes' where driver_email='$driver_email'";
-				          $obj=new config();
-				          $obj->dbconfig($sql);     
-				          $obj->dbconfig($sql1); 		      
+
 				   	}
-
-				if (isset($_GET['driver_email_delete'])) {
-					   $driver_email_delete=$_GET['driver_email_delete'];
-					   $sql="DELETE FROM  booknow where driver_email='$driver_email_delete'";
-					   $obj=new config();
-					   $obj->dbconfig($sql); 
->>>>>>> a62932404f07a5871f6b851baa4d8bdc049b571c
-
-					}	
+	
 
 				 ?>
 
@@ -156,13 +140,7 @@ th{
 
 			<!-- </div> -->
 
-
-	
-
 				</div><!-- artical end -->
-
-
-				
 
 			</div>
 		</div>
