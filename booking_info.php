@@ -72,6 +72,7 @@ th{
 				 <div style="margin-left:-80px;" class="artical">
 				
 			<form method="post" enctype="multipart/form-data" class="form-inline">
+			<div class="table-responsive">
 			<table class="th1 table-striped table-hover table-condensed" style="margin-top:8px;">
  				<tr style="background-color:#ccc;">
 	 				<th>Id</th>
@@ -140,6 +141,7 @@ th{
 				 ?>
 
 				</table>
+			</div>
 
 			<!-- </div> -->
 
