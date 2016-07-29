@@ -118,11 +118,14 @@ th{
 		           $obj=new config();
 		           $obj->dbconfig($sql);     
 		           $obj->dbconfig($sql1);
-		           header("Location:booking_info");
+		           echo '<script>document.location.href = "booking_info";</script>';
+
 
 					}
 
-				if (isset($_GET['driver_email_delete'])) {
+
+			
+				  if (isset($_GET['driver_email_delete'])) {
 
 
 				   $driver_email_delete=$_GET['driver_email_delete'];
