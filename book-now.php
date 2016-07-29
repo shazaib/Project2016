@@ -93,6 +93,7 @@
 
       label{
         font-weight: 600;
+        margin-right: 4px;
       }
       
     </style>
@@ -144,10 +145,25 @@ if ($email==NULL) {
           <form method="post">
         <div id="right-panel">
           <form method="post">
+          <table style="margin-bottom:-20px; margin-top:20px;">
+          <tr>
+        <td>
         <label for="same">Name :<input type="text" id="same"  name="name"  readonly class="form-control input-sm" value="<?php echo $row['username']; ?>"> </label>
+        </td>
+        <td>
         <label for="sames">City :<input type="text" id="sames"  name="city" readonly  class="form-control input-sm" value="<?php echo $row['city']; ?>"> </label>
+        </td>
+
+        <td>
         <label for="samess">Cell Number :<input type="text" id="samess"  name="num" readonly  class="form-control input-sm" value="<?php echo $row['phone_no']; ?>"></label> 
-            <label for="sam">User Email :<input type="email" id="sam"  name="useremail" readonly  class="form-control input-sm" value="<?php echo $row['email']; ?>"></label> 
+        </td>
+
+        <td>
+        <label for="sam">User Email :<input type="email" id="sam"  name="useremail" readonly  class="form-control input-sm" value="<?php echo $row['email']; ?>"></label> 
+        </td>
+        </tr>
+         </table>
+
          <?php } ?>
         
           <br>
@@ -191,31 +207,24 @@ if ($email==NULL) {
        <tr>
           <td><label for="same1" style="margin-right:3px;">Date :<input type="date" name="date" id="same1" class="form-control input-sm" required></label></td>
           <td><label for="same2" style="margin-right:3px;">Time :<input type="time" name="times" id="same2" class="form-control input-sm" required></label></td>
+           
+          <td>
+          <label style="margin-right:4px;">Total amount
+          <input readonly id="amount"  class="form-control input-sm" placeholder="Amount" name="amount" type="text"></label>
+          </td>
 
-           </tr>
+          <td>
+            <label style="margin-right:4px;">Distance
+            <input readonly id="Distance"  class="form-control input-sm" placeholder="Distance" name="Distance" type="text" ></label>
+          </td>
+          
+          <td>
+            <label style="margin-right:4px;">Total Time
+            <input readonly id="time" class="form-control input-sm" placeholder="Time" name="time" type="text"></label>
+          </td>
        </tr>
-
       </table>
 
-    <table>
-    <tr>
-    <td>
-    <label style="margin-right:4px;">Total amount
-    <input readonly id="amount"  class="form-control input-sm" placeholder="Amount" name="amount" type="text"></label>
-    </td>
-
-    <td>
-      <label style="margin-right:4px;">Distance
-      <input readonly id="Distance"  class="form-control input-sm" placeholder="Distance" name="Distance" type="text" ></label>
-    </td>
-    
-    <td>
-      <label style="margin-right:4px;">Time
-      <input readonly id="time" class="form-control input-sm" placeholder="Time" name="time" type="text"></label>
-    </td>
-
-    </tr>
-    </table>
     <br>
     <br>
       <table><tr><td><input type="submit" name="ins"  class="btn btn-danger input-sm book-now-btn-pg" id="submit" value="Book Now"><button type="button" id="btn" name="btn" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button></td>
@@ -229,7 +238,6 @@ if ($email==NULL) {
    </form>
    
     <div id="directions-panel" hidden></div>
-    <!-- </div> -->
 
     <br>
 
