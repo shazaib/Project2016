@@ -117,7 +117,7 @@
 
 					<div class="container">
 					    <div class="row">
-					    <h1 class="price-h1">our price</h1>
+					    <h1 class="price-h1">our clients</h1>
 							<div class="col-md-12 col-sm-12">
 					                <div id="Carousel" class="carousel slide">
 					                 

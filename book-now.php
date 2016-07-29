@@ -119,7 +119,6 @@ if ($email==NULL) {
   while ($row=$res->fetch_assoc()) {
   
  
-
  ?>
 
 	<header>
@@ -183,7 +182,6 @@ if ($email==NULL) {
 
     </select>
 
-
     
     <!-- multiple waypoints remove -->
     <select multiple id="waypoints" hidden></select>
@@ -193,31 +191,12 @@ if ($email==NULL) {
        <tr>
           <td><label for="same1" style="margin-right:3px;">Date :<input type="date" name="date" id="same1" class="form-control input-sm" required></label></td>
           <td><label for="same2" style="margin-right:3px;">Time :<input type="time" name="times" id="same2" class="form-control input-sm" required></label></td>
-<<<<<<< HEAD
-           </tr>
-=======
-          <td>
-           <label style="margin-right:3px;">No of Pasangers :
-           <select name="taxi" id="taxi" onchange="check()" class="form-control input-sm" required>
-            <option selected disabled>Number of Passengers </option>
-            <?php for ($i=1; $i <=12 ; $i++) { 
-              echo '<option value="'.$i.'">'.$i.'</option>';
-            } ?>
-            </select>
-           </label>
-          </td>
 
-          <td>
-            <label> No of taxis : <input id="psg"  class="form-control input-sm" placeholder="No of Taxi" name="psg" readonly type="text"></label>
-          </td>
-        
+           </tr>
        </tr>
->>>>>>> a62932404f07a5871f6b851baa4d8bdc049b571c
+
       </table>
 
-
-  
-  
     <table>
     <tr>
     <td>
@@ -327,7 +306,7 @@ if ($email==NULL) {
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjmANqiA3CjCY2QjYSfI9GapQ8khcICOA&callback=initMap">
     </script>
 
-<<<<<<< HEAD
+
       <button type="button" id="btn" name="btns" data-toggle="modal" data-target="#myModal" visibility="hidden" style="visibility:hidden"></button>
 
     <div class="modal fade" id="myModal" role="dialog">
@@ -347,7 +326,7 @@ if ($email==NULL) {
     </div>
   </div>
 
-=======
+
 
 <!-- Modal -->
 
@@ -370,9 +349,6 @@ if ($email==NULL) {
 
 
 
-
-
->>>>>>> a62932404f07a5871f6b851baa4d8bdc049b571c
 </body>
 </html>
 
