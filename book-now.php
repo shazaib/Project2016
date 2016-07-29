@@ -399,10 +399,17 @@ if (isset($_POST['ins'])) {
           $sql="INSERT into booknow VALUES('','$useremail','$name','$city','$num','$start','$end','$date','$times','$amount','$Distance','$driver_email','$time','No','$driver_name','$driver_num')";
           $obj=new config();
           $obj->dbconfig($sql);
+
+          $To=$email;
+          $sub="info";
+          $message="Wait for a while for a conformation call ";
+          $hdr="From : online_drivo@gmail.com";
+          mail($To,$sub,$message,$hdr);
+
           echo '<script> document.getElementById("btn").click(); </script>';
           
 
-           echo '<script>document.getElementById("btn").click();</script>';
+          
 
         }   
 		

@@ -119,6 +119,21 @@ th{
 		           $obj=new config();
 		           $obj->dbconfig($sql);     
 		           $obj->dbconfig($sql1);
+
+                   $To=$useremail;
+		           $sub="info";
+		           $message="Your booking is conform. If any problem call us 800 666 7777 .";
+		           $hdr="From : online_drivo@gmail.com";
+		           mail($To,$sub,$message,$hdr);
+
+
+		          $To_1=$driveremail;
+		          $sub_1="info";
+		          $message_1="your job is that pickup the user from ".$start. "and drop at ".$end. " . user number is ".$phone." ";
+		          $hdr_1="From : online_drivo@gmail.com";
+		          mail($To_1,$sub_1,$message_1,$hdr_1);
+
+
 		           echo '<script>document.location.href = "booking_info";</script>';
 
 
